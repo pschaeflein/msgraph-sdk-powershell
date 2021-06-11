@@ -16,7 +16,7 @@ function Set-NuSpecValues(
         Set-Dependencies -XmlDocument $XmlDocument -MetadataElement $MetadataElement -Dependencies $Dependencies
         Set-ElementValue -XmlDocument $XmlDocument -MetadataElement $MetadataElement -ElementName "version" -ElementValue $VersionNumber
         Set-ElementValue -XmlDocument $XmlDocument -MetadataElement $MetadataElement -ElementName "iconUrl" -ElementValue $IconUrl
-        
+
         if($ReleaseNotes){
             Set-ElementValue -XmlDocument $XmlDocument -MetadataElement $MetadataElement -ElementName "releaseNotes" -ElementValue $ReleaseNotes
         }
@@ -74,13 +74,13 @@ function Set-Dependencies(
         $NewDependenciesElement = $XmlDocument.CreateElement("dependencies", $XmlDocument.DocumentElement.NamespaceURI)
         $MetadataElement.AppendChild($NewDependenciesElement)
     } else {
-        $MetadataElement["dependencies"].RemoveAll()   
+        $MetadataElement["dependencies"].RemoveAll()
     }
 
     foreach($Dependency in $Dependencies){
         $NewDependencyElement = $XmlDocument.CreateElement("dependency", $XmlDocument.DocumentElement.NamespaceURI)
         $NewDependencyElement.SetAttribute("id", $Dependency.ModuleName)
-        $NewDependencyElement.SetAttribute("version", $Dependency.ModuleVersion ?? $Dependency.RequiredVersion)
+        $NewDependencyElement.SetAttribute("version", "[$($Dependency.ModuleVersion ?? $Dependency.RequiredVersion)]")
 
         $MetadataElement["dependencies"].AppendChild($NewDependencyElement)
     }
