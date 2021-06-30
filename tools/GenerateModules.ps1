@@ -74,8 +74,7 @@ if ($ExistingAuthModule.Version -like '*preview*' ) {
     $RequiredGraphModules += @{ ModuleName = $ExistingAuthModule.Name ; ModuleVersion = $version }
 }
 else {
-    # $RequiredGraphModules += @{ ModuleName = $ExistingAuthModule.Name ; ModuleVersion = $ExistingAuthModule.Version }
-    $RequiredGraphModules += @{ ModuleName = $ExistingAuthModule.Name ; ModuleVersion = "1.5.5" }
+    $RequiredGraphModules += @{ ModuleName = $ExistingAuthModule.Name ; ModuleVersion = $ExistingAuthModule.Version }
 }
 
 if ($UpdateAutoRest) {
