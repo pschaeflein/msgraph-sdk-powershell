@@ -86,7 +86,7 @@ elseif ($VersionState.Equals([VersionState]::Valid) -or $VersionState.Equals([Ve
     }
     else {
         # $RequiredGraphModules += @{ ModuleName = $ExistingAuthModule.Name ; ModuleVersion = $ExistingAuthModule.Version }
-        $RequiredGraphModules += @{ ModuleName = $ExistingAuthModule.Name ; ModuleVersion = "1.5.4" }
+        $RequiredGraphModules += @{ ModuleName = $ExistingAuthModule.Name ; ModuleVersion = "1.5.5" }
     }
 
     foreach ($RequiredModule in $ModuleMapping.Keys) {
@@ -103,7 +103,7 @@ elseif ($VersionState.Equals([VersionState]::Valid) -or $VersionState.Equals([Ve
             }
             else {
                 # $RequiredGraphModules += @{ ModuleName = $ExistingWorkloadModule.Name ; RequiredVersion = $ExistingWorkloadModule.Version }
-                $RequiredGraphModules += @{ ModuleName = $ExistingWorkloadModule.Name ; RequiredVersion = "1.5.4" }
+                $RequiredGraphModules += @{ ModuleName = $ExistingWorkloadModule.Name ; RequiredVersion = "1.5.5" }
             }
         }
         else {
