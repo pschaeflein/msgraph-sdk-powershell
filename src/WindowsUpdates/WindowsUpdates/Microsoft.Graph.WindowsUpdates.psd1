@@ -12,7 +12,7 @@
 RootModule = './Microsoft.Graph.WindowsUpdates.psm1'
 
 # Version number of this module.
-ModuleVersion = '1.5.5'
+ModuleVersion = '1.6.0'
 
 # Supported PSEditions
 CompatiblePSEditions = 'Core', 'Desktop'
@@ -51,7 +51,7 @@ DotNetFrameworkVersion = '4.7.2'
 # ProcessorArchitecture = ''
 
 # Modules that must be imported into the global environment prior to importing this module
-RequiredModules = @(@{ModuleName = 'Microsoft.Graph.Authentication'; ModuleVersion = '1.5.4'; })
+RequiredModules = @(@{ModuleName = 'Microsoft.Graph.Authentication'; ModuleVersion = '1.6.0'; })
 
 # Assemblies that must be loaded prior to importing this module
 RequiredAssemblies = './bin/Microsoft.Graph.WindowsUpdates.private.dll'
