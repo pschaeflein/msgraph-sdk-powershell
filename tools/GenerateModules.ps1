@@ -30,7 +30,7 @@ Import-Module PowerShellGet
 
 # Install Powershell-yaml
 if (!(Get-Module -Name powershell-yaml -ListAvailable)) {
-    Install-Module powershell-yaml -Force   
+    Install-Module powershell-yaml -Force
 }
 
 # Set NODE max memory to 8 Gb.
@@ -74,7 +74,8 @@ if ($ExistingAuthModule.Version -like '*preview*' ) {
     $RequiredGraphModules += @{ ModuleName = $ExistingAuthModule.Name ; ModuleVersion = $version }
 }
 else {
-    $RequiredGraphModules += @{ ModuleName = $ExistingAuthModule.Name ; ModuleVersion = $ExistingAuthModule.Version }
+    # $RequiredGraphModules += @{ ModuleName = $ExistingAuthModule.Name ; ModuleVersion = $ExistingAuthModule.Version }
+    $RequiredGraphModules += @{ ModuleName = $ExistingAuthModule.Name ; ModuleVersion = "1.5.4" }
 }
 
 if ($UpdateAutoRest) {
@@ -94,7 +95,7 @@ $ModulesToGenerate | ForEach-Object -ThrottleLimit $ModulesToGenerate.Count -Par
         EqualToFeed
         NotOnFeed
     }
-    
+
     $ModuleName = $_
     $FullyQualifiedModuleName = "$using:ModulePrefix.$ModuleName"
     Write-Host -ForegroundColor Green "Generating '$FullyQualifiedModuleName' module..."
@@ -106,7 +107,7 @@ $ModulesToGenerate | ForEach-Object -ThrottleLimit $ModulesToGenerate.Count -Par
         Write-Warning "[Generation skipped] : Module '$ModuleName' not found at $ProfileReadmePath."
         break
     }
-    
+
     # Copy AutoRest readme.md config is none exists.
     if (-not (Test-Path "$ModuleProjectDir\readme.md")) {
         New-Item -Path $ModuleProjectDir -Type Directory -Force
@@ -198,7 +199,7 @@ $ModulesToGenerate | ForEach-Object -ThrottleLimit $ModulesToGenerate.Count -Par
                     if ($_ -match '\$exportsPath = \$PSScriptRoot') {
                         $updatedLine = '  $exportsPath = Join-Path $PSScriptRoot "../exports"'
                     }
-                    
+
                     # Remove duplicate instance.Name declarations in internal.psm1
                     # Main .psm1 already handles this.
                     if ($_ -match '\$\(\$instance.Name\)') {
