@@ -45,7 +45,7 @@ if ($null -eq $NuspecMetadata["version"]) {
     # Module version not set in module manifest (psd1).
     Write-Error "Version number is not set on $ModulePrefix module. Please set 'version' in $ModuleMetadataJson."
 }
-  
+
 # Validate module version with the one on PSGallery.
 [VersionState]$VersionState = & $ValidateUpdatedModuleVersionPS1 -ModuleName $ModulePrefix -NextVersion $NuspecMetadata["version"]
 
@@ -78,7 +78,7 @@ elseif ($VersionState.Equals([VersionState]::Valid) -or $VersionState.Equals([Ve
     Find-Module "Microsoft.Graph.Authentication" -Repository $RepositoryName -AllowPrerelease:$AllowPreRelease
     $ExistingAuthModule = Find-Module "Microsoft.Graph.Authentication" -Repository $RepositoryName -AllowPrerelease:$AllowPreRelease
     Install-Module $ExistingAuthModule.Name -Repository $RepositoryName -Force -AllowClobber -AllowPrerelease:$AllowPreRelease
-    
+
     Write-Host "Adding dependency: $($ExistingAuthModule.Name) $($ExistingAuthModule.Version)" -ForegroundColor Green
     if ($ExistingAuthModule.Version -like '*preview*' ) {
         $version = $ExistingAuthModule.Version.Remove($ExistingAuthModule.Version.IndexOf('-'))
@@ -98,11 +98,12 @@ elseif ($VersionState.Equals([VersionState]::Valid) -or $VersionState.Equals([Ve
             #Remove "-preview" from Version Name if present
             if ($ExistingWorkloadModule.Version -like '*preview*' ) {
                 $version = $ExistingWorkloadModule.Version.Remove($ExistingWorkloadModule.Version.IndexOf('-'))
-                $RequiredGraphModules += @{ ModuleName = $ExistingWorkloadModule.Name ; RequiredVersion = $version }
+                # $RequiredGraphModules += @{ ModuleName = $ExistingWorkloadModule.Name ; RequiredVersion = $version }
+                $RequiredGraphModules += @{ ModuleName = $ExistingWorkloadModule.Name ; RequiredVersion = "1.5.4" }
             }
             else {
                 $RequiredGraphModules += @{ ModuleName = $ExistingWorkloadModule.Name ; RequiredVersion = $ExistingWorkloadModule.Version }
-            }   
+            }
         }
         else {
             Write-Warning "Skipped: $ModulePrefix.$RequiredModule"
