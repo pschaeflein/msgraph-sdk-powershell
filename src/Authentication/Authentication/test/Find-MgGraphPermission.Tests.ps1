@@ -23,7 +23,7 @@ Describe "The Find-MgGraphPermission Command" {
         It 'Executes successfully with no parameters' {
             { Find-MgGraphPermission | Out-Null } | Should -Not -Throw
             Assert-MockCalled Invoke-MgGraphRequest
-            $fromInvokeMgGraphRequest | Should -Be $true
+            isFromMgGraphRequest | Should -Be $true
             { Find-MgGraphPermission -Online | Out-Null } | Should -Not -Throw
         }
     }
@@ -37,7 +37,7 @@ Describe "The Find-MgGraphPermission Command" {
             { Find-MgGraphPermission | Out-Null } | Should -Not -Throw
             Assert-MockCalled Invoke-MgGraphRequest
             $permissions_MsGraphServicePrincipal | Should -Not -Be $null
-            $fromInvokeMgGraphRequest | Should -Be $true
+            $permissions_FromInvokeMgGraphRequest | Should -Be $true
             { Find-MgGraphPermission -Online | Out-Null } | Should -Not -Throw
         }
 
@@ -49,7 +49,7 @@ Describe "The Find-MgGraphPermission Command" {
             $test.length | Should -Be 4
             $test.PermissionType[0] | Should -Be 'Delegated'
             $permissions_MsGraphServicePrincipal | Should -Not -Be $null
-            $fromInvokeMgGraphRequest | Should -Be $true
+            $permissions_FromInvokeMgGraphRequest | Should -Be $true
             { Find-MgGraphPermission 'ReadWrite' -Online | Out-Null } | Should -Not -Throw
             $testOnline = Find-MgGraphPermission 'ReadWrite' -Online
             $testOnline.length | Should -Be 4
@@ -61,13 +61,13 @@ Describe "The Find-MgGraphPermission Command" {
             $test = Find-MgGraphPermission 'Nigeria has the best jollof'
             $test | Should -Be $null
             $permissions_MsGraphServicePrincipal | Should -Not -Be $null
-            $fromInvokeMgGraphRequest | Should -Be $true
+            $permissions_FromInvokeMgGraphRequest | Should -Be $true
             { Find-MgGraphPermission 'Nigeria has the best jollof' -Online | Out-Null } | Should -Not -Throw
         }
     }
 
     Context "When executing the command without a connection to MS Graph" {
-        BeforeAll {
+        BeforeEach {
             Mock Invoke-MgGraphRequest {
                 Throw [System.Management.Automation.ValidationMetadataException]::new('mock connection error message')
             }
@@ -77,21 +77,24 @@ Describe "The Find-MgGraphPermission Command" {
             { Find-MgGraphPermission | Out-Null } | Should -Not -Throw
             Assert-MockCalled Invoke-MgGraphRequest
             $permissions_MsGraphServicePrincipal | Should -Not -Be $null
-            $fromInvokeMgGraphRequest | Should -Be $false
+            $permissions_FromInvokeMgGraphRequest | Should -Be $false
             { Find-MgGraphPermission -Online | Out-Null } | Should -Throw 'mock connection error message'
         }
 
         It "Retrieves the expected set of delegated and app-only permissions when a search string is specified" {
             { Find-MgGraphPermission 'ReadWrite' | Out-Null } | Should -Not -Throw
-            Assert-MockCalled Invoke-MgGraphRequest
+            Assert-MockCalled Invoke-MgGraphRequest -Exactly 2
+            $test = Find-MgGraphPermission 'email'
+            Assert-MockCalled Invoke-MgGraphRequest -Exactly 2
             $test = Find-MgGraphPermission 'mail'
+
             $test | Should -Not -Be $null
             $test.length | Should -Be 17
             $test.Consent[0] | Should -Be 'User'
             $test.PermissionType[-1] | Should -Be 'Application'
             $test.Id.GetType() | Should -Be 'System.Object[]'
             $permissions_MsGraphServicePrincipal | Should -Not -Be $null
-            $fromInvokeMgGraphRequest | Should -Be $false
+            $permissions_FromInvokeMgGraphRequest | Should -Be $false
             { Find-MgGraphPermission 'ReadWrite' -Online | Out-Null } | Should -Throw 'mock connection error message'
         }
 
@@ -101,7 +104,7 @@ Describe "The Find-MgGraphPermission Command" {
             $test = Find-MgGraphPermission 'Nigeria has the best jollof'
             $test | Should -Be $null
             $permissions_MsGraphServicePrincipal | Should -Not -Be $null
-            $fromInvokeMgGraphRequest | Should -Be $false
+            $permissions_FromInvokeMgGraphRequest | Should -Be $false
             { Find-MgGraphPermission 'Nigeria has the best jollof' -Online | Out-Null } | Should -Throw 'mock connection error message'
         }
     }
@@ -117,9 +120,10 @@ Describe "The Find-MgGraphPermission Command" {
             { Find-MgGraphPermission | Out-Null } | Should -Not -Throw
             Assert-MockCalled Invoke-MgGraphRequest
             $permissions_MsGraphServicePrincipal | Should -Not -Be $null
-            $fromInvokeMgGraphRequest | Should -Be $false
+            $permissions_FromInvokeMgGraphRequest | Should -Be $false
             { Find-MgGraphPermission -Online | Out-Null } | Should -Throw 'mock connection error message'
 
+            # Restoring the connection that was set to fail in the BeforeEach
             Mock Invoke-MgGraphRequest{
                 $permissionData
             }
@@ -127,7 +131,7 @@ Describe "The Find-MgGraphPermission Command" {
             { Find-MgGraphPermission | Out-Null } | Should -Not -Throw
             Assert-MockCalled Invoke-MgGraphRequest
             $permissions_MsGraphServicePrincipal | Should -Not -Be $null
-            $fromInvokeMgGraphRequest | Should -Be $true
+            $permissions_FromInvokeMgGraphRequest | Should -Be $true
             { Find-MgGraphPermission -Online | Out-Null } | Should -Not -Throw
 
         }
@@ -139,9 +143,10 @@ Describe "The Find-MgGraphPermission Command" {
             $test | Should -Not -Be $null
             $test.length | Should -Be 225
             $permissions_MsGraphServicePrincipal | Should -Not -Be $null
-            $fromInvokeMgGraphRequest | Should -Be $false
+            $permissions_FromInvokeMgGraphRequest | Should -Be $false
             { Find-MgGraphPermission 'ReadWrite' -Online | Out-Null } | Should -Throw 'mock connection error message'
 
+            # Restoring the connection that was set to fail in the BeforeEach
             Mock Invoke-MgGraphRequest{
                 $permissionData
             }
@@ -152,7 +157,7 @@ Describe "The Find-MgGraphPermission Command" {
             $test | Should -Not -Be $null
             $test.length | Should -Be 4
             $permissions_MsGraphServicePrincipal | Should -Not -Be $null
-            $fromInvokeMgGraphRequest | Should -Be $true
+            $permissions_FromInvokeMgGraphRequest | Should -Be $true
             { Find-MgGraphPermission 'Readwrite' -Online | Out-Null } | Should -Not -Throw
         }
 
@@ -161,9 +166,10 @@ Describe "The Find-MgGraphPermission Command" {
             Assert-MockCalled Invoke-MgGraphRequest
             $test = Find-MgGraphPermission 'Nigeria has the best jollof' | Should -Be $null
             $permissions_MsGraphServicePrincipal | Should -Not -Be $null
-            $fromInvokeMgGraphRequest | Should -Be $false
+            $permissions_FromInvokeMgGraphRequest | Should -Be $false
             { Find-MgGraphPermission 'Nigeria has the best jollof' -Online | Out-Null } | Should -Throw 'mock connection error message'
 
+            # Restoring the connection that was set to fail in the BeforeEach
             Mock Invoke-MgGraphRequest{
                 $permissionData
             }
@@ -173,7 +179,7 @@ Describe "The Find-MgGraphPermission Command" {
             $test = Find-MgGraphPermission 'Nigeria has the best jollof'
             $test | Should -Be $null
             $permissions_MsGraphServicePrincipal | Should -Not -Be $null
-            $fromInvokeMgGraphRequest | Should -Be $true
+            $permissions_FromInvokeMgGraphRequest | Should -Be $true
             { Find-MgGraphPermission 'Nigeria has the best jollof' -Online | Out-Null } | Should -Not -Throw
         }
     }
@@ -189,9 +195,10 @@ Describe "The Find-MgGraphPermission Command" {
             { Find-MgGraphPermission | Out-Null } | Should -Not -Throw
             Assert-MockCalled Invoke-MgGraphRequest
             $permissions_MsGraphServicePrincipal | Should -Not -Be $null
-            $fromInvokeMgGraphRequest | Should -Be $false
+            $permissions_FromInvokeMgGraphRequest | Should -Be $false
             { Find-MgGraphPermission -Online | Out-Null } | Should -Throw 'mock authentication error message'
 
+            # Restoring the connection that was set to fail in the BeforeEach
             Mock Invoke-MgGraphRequest{
                 $permissionData
             }
@@ -199,7 +206,7 @@ Describe "The Find-MgGraphPermission Command" {
             { Find-MgGraphPermission | Out-Null } | Should -Not -Throw
             Assert-MockCalled Invoke-MgGraphRequest
             $permissions_MsGraphServicePrincipal | Should -Not -Be $null
-            $fromInvokeMgGraphRequest | Should -Be $true
+            $permissions_FromInvokeMgGraphRequest | Should -Be $true
             { Find-MgGraphPermission -Online | Out-Null } | Should -Not -Throw
 
         }
@@ -211,9 +218,10 @@ Describe "The Find-MgGraphPermission Command" {
             $test | Should -Not -Be $null
             $test.length | Should -Be 225
             $permissions_MsGraphServicePrincipal | Should -Not -Be $null
-            $fromInvokeMgGraphRequest | Should -Be $false
+            $permissions_FromInvokeMgGraphRequest | Should -Be $false
             { Find-MgGraphPermission 'ReadWrite' -Online | Out-Null } | Should -Throw 'mock authentication error message'
 
+            # Restoring the connection that was set to fail in the BeforeEach
             Mock Invoke-MgGraphRequest{
                 $permissionData
             }
@@ -224,7 +232,7 @@ Describe "The Find-MgGraphPermission Command" {
             $test | Should -Not -Be $null
             $test.length | Should -Be 4
             $permissions_MsGraphServicePrincipal | Should -Not -Be $null
-            $fromInvokeMgGraphRequest | Should -Be $true
+            $permissions_FromInvokeMgGraphRequest | Should -Be $true
             { Find-MgGraphPermission 'ReadWrite' -Online | Out-Null } | Should -Not -Throw
         }
 
@@ -233,9 +241,10 @@ Describe "The Find-MgGraphPermission Command" {
             Assert-MockCalled Invoke-MgGraphRequest
             $test = Find-MgGraphPermission 'Nigeria has the best jollof' | Should -Be $null
             $permissions_MsGraphServicePrincipal | Should -Not -Be $null
-            $fromInvokeMgGraphRequest | Should -Be $false
+            $permissions_FromInvokeMgGraphRequest | Should -Be $false
             { Find-MgGraphPermission 'Nigeria has the best jollof' -Online | Out-Null } | Should -Throw 'mock authentication error message'
 
+            # Restoring the connection that was set to fail in the BeforeEach
             Mock Invoke-MgGraphRequest{
                 $permissionData
             }
@@ -245,7 +254,7 @@ Describe "The Find-MgGraphPermission Command" {
             $test = Find-MgGraphPermission 'Nigeria has the best jollof'
             $test | Should -Be $null
             $permissions_MsGraphServicePrincipal | Should -Not -Be $null
-            $fromInvokeMgGraphRequest | Should -Be $true
+            $permissions_FromInvokeMgGraphRequest | Should -Be $true
             { Find-MgGraphPermission 'Nigeria has the best jollof' -Online | Out-Null } | Should -Not -Throw
         }
     }
