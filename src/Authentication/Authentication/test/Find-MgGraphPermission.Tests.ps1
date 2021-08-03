@@ -1,13 +1,9 @@
 # ------------------------------------------------------------------------------
 # Copyright (c) Microsoft Corporation. All Rights Reserved. Licensed under the MIT License. See License in the project root for license information.
 # ------------------------------------------------------------------------------
+
 Describe "The Find-MgGraphPermission Command" {
     BeforeAll{
-        . (join-path $PSScriptRoot  ..\custom\Find-MgGraphPermission.ps1)
-        . (Join-Path $PSScriptRoot  .\Find-MgGraphPermissionTestfile.ps1)
-    }
-
-    BeforeAll {
         . (join-path $PSScriptRoot  ..\custom\Find-MgGraphPermission.ps1)
         . (Join-Path $PSScriptRoot  .\Find-MgGraphPermissionTestfile.ps1)
     }
@@ -19,8 +15,8 @@ Describe "The Find-MgGraphPermission Command" {
             Mock Invoke-MgGraphRequest {
                 [PSCustomObject] @{
                     Value = [PSCustomObject] @{
-                        Oauth2PermissionScopes = @()
-                        AppRoles = @()
+                        oauth2PermissionScopes = @()
+                        appRoles = @()
                     }
                 }
             }
@@ -50,7 +46,9 @@ Describe "The Find-MgGraphPermission Command" {
 
         It "Retrieves the expected set of delegated and app-only permissions when a search string is specified" {
             { Find-MgGraphPermission 'ReadWrite' | Out-Null } | Should -Not -Throw
-            Assert-MockCalled Invoke-MgGraphRequest
+            Assert-MockCalled Invoke-MgGraphRequest -Exactly 1
+            $test = Find-MgGraphPermission 'email'
+            Assert-MockCalled Invoke-MgGraphRequest -Exactly 1
             $test = Find-MgGraphPermission 'ReadWrite'
             $test.GetType() | Should -Be 'System.Object[]'
             $test.length | Should -Be 4
@@ -89,13 +87,10 @@ Describe "The Find-MgGraphPermission Command" {
             { Find-MgGraphPermission -Online | Out-Null } | Should -Throw 'mock connection error message'
         }
 
-        It "Retrieves the expected set of delegated and app-only permissions when a search string is specified" -pending {
+        It "Retrieves the expected set of delegated and app-only permissions when a search string is specified" {
             { Find-MgGraphPermission 'ReadWrite' | Out-Null } | Should -Not -Throw
-            Assert-MockCalled Invoke-MgGraphRequest -Exactly 2
-            $test = Find-MgGraphPermission 'email'
-            Assert-MockCalled Invoke-MgGraphRequest -Exactly 2
+            Assert-MockCalled Invoke-MgGraphRequest
             $test = Find-MgGraphPermission 'mail'
-
             $test | Should -Not -Be $null
             $test.length | Should -Be 17
             $test.Consent[0] | Should -Be 'User'
@@ -161,7 +156,6 @@ Describe "The Find-MgGraphPermission Command" {
             }
 
             { Find-MgGraphPermission mail | Out-Null } | Should -Not -Throw
-            Assert-MockCalled Invoke-MgGraphRequest
             $test = Find-MgGraphPermission 'ReadWrite'
             $test | Should -Not -Be $null
             $test.length | Should -Be 4
