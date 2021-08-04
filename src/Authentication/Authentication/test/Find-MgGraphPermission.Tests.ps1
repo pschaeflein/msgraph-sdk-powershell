@@ -8,7 +8,11 @@ Describe "The Find-MgGraphPermission Command" {
         . (Join-Path $PSScriptRoot  .\Find-MgGraphPermissionTestfile.ps1)
     }
 
-    function isFromMgGraphRequest { }
+    BeforeAll {
+        . (join-path $PSScriptRoot  ..\custom\Find-MgGraphPermission.ps1)
+        . (Join-Path $PSScriptRoot  .\Find-MgGraphPermissionTestfile.ps1)
+    }
+
     Context "When executing the command with empty service principal results from MS Graph"  {
         BeforeAll {
 
