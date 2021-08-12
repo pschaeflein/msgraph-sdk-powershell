@@ -25,8 +25,15 @@ $env = @{}
 if (Test-Path -Path $envFilePath) {
     # Load dummy auth configuration.
     $env = Get-Content (Join-Path $PSScriptRoot $envFile) | ConvertFrom-Json -AsHashTable
-    [Microsoft.Graph.PowerShell.Authentication.GraphSession]::Instance.AuthContext = New-Object Microsoft.Graph.PowerShell.Authentication.AuthContext -Property @{
-        ClientId = $env.ClientId
-        TenantId = $env.TenantId
-    }
+    $env:DEFAULTUSERID = $env.DefaultUserIdentifier
+} else{
+    $env.TenantIdentifier = ${env:TENANTIDENTIFIER}
+    $env.ClientIdentifier = ${env:CLIENTIDENTIFIER}
+    $env.CertificateThumbprint = ${env:CERTIFICATETHUMBPRINT}
+}
+$PSDefaultParameterValues+=@{"Connect-MgGraph:TenantId"=$env.TenantIdentifier; "Connect-MgGraph:ClientId"=$env.ClientIdentifier; "Connect-MgGraph:CertificateThumbprint"=$env.CertificateThumbprint}
+[Microsoft.Graph.PowerShell.Authentication.GraphSession]::Instance.AuthContext = New-Object Microsoft.Graph.PowerShell.Authentication.AuthContext -Property @{
+    ClientId              = $env.ClientIdentifier
+    TenantId              = $env.TenantIdentifier
+    CertificateThumbprint = $env.CertificateThumbprint
 }

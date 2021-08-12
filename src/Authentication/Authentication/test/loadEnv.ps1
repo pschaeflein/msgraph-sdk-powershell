@@ -11,8 +11,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ----------------------------------------------------------------------------------
+$envFile = 'env.json'
+if ($TestMode -eq 'live') {
+    $envFile = 'localEnv.json'
+}
 
-$envFile = 'localEnv.json'
 if (Test-Path -Path (Join-Path $PSScriptRoot $envFile)) {
     $envFilePath = Join-Path $PSScriptRoot $envFile
 } else {
@@ -20,11 +23,17 @@ if (Test-Path -Path (Join-Path $PSScriptRoot $envFile)) {
 }
 $env = @{}
 if (Test-Path -Path $envFilePath) {
-    $env = Get-Content (Join-Path $PSScriptRoot $envFile) | ConvertFrom-Json
+    # Load dummy auth configuration.
+    $env = Get-Content (Join-Path $PSScriptRoot $envFile) | ConvertFrom-Json -AsHashTable
     $env:DEFAULTUSERID = $env.DefaultUserIdentifier
-} else {
+} else{
     $env.TenantIdentifier = ${env:TENANTIDENTIFIER}
     $env.ClientIdentifier = ${env:CLIENTIDENTIFIER}
     $env.CertificateThumbprint = ${env:CERTIFICATETHUMBPRINT}
 }
-$PSDefaultParameterValues=@{"Connect-MgGraph:TenantId"=$env.TenantIdentifier; "Connect-MgGraph:ClientId"=$env.ClientIdentifier; "Connect-MgGraph:CertificateThumbprint"=$env.CertificateThumbprint}
+$PSDefaultParameterValues+=@{"Connect-MgGraph:TenantId"=$env.TenantIdentifier; "Connect-MgGraph:ClientId"=$env.ClientIdentifier; "Connect-MgGraph:CertificateThumbprint"=$env.CertificateThumbprint}
+[Microsoft.Graph.PowerShell.Authentication.GraphSession]::Instance.AuthContext = New-Object Microsoft.Graph.PowerShell.Authentication.AuthContext -Property @{
+    ClientId              = $env.ClientIdentifier
+    TenantId              = $env.TenantIdentifier
+    CertificateThumbprint = $env.CertificateThumbprint
+}

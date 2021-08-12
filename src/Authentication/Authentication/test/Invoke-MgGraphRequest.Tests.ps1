@@ -5,13 +5,12 @@
     }
     . ($loadEnvPath)
     $ModuleName = "Microsoft.Graph.Authentication"
-    $ModulePath = Join-Path $PSScriptRoot "..\artifacts\$ModuleName.psd1"
+    $ModulePath = Join-Path $PSScriptRoot "..\artifacts\$ModuleName.psm1"
     Import-Module $ModulePath -Force
-    $PSDefaultParameterValues=@{"Connect-MgGraph:TenantId"=${env:TENANTIDENTIFIER}; "Connect-MgGraph:ClientId"=${env:CLIENTIDENTIFIER}; "Connect-MgGraph:CertificateThumbprint"=${env:CERTIFICATETHUMBPRINT}}
 }
 Describe 'Invoke-MgGraphRequest Collection Results' {
     BeforeAll {
-         Connect-MgGraph
+         Connect-MgGraph -Debug -Verbose
     }
     It 'ShouldReturnPsObject' {
          Invoke-MgGraphRequest -OutputType PSObject -Uri "https://graph.microsoft.com/v1.0/users" | Should -BeOfType [System.Management.Automation.PSObject]
@@ -47,7 +46,7 @@ Describe 'Invoke-MgGraphRequest Collection Results' {
 }
 Describe 'Invoke-MgGraphRequest Single Entity' {
     BeforeAll {
-         Connect-MgGraph
+         Connect-MgGraph -Debug -Verbose
     }
     It 'ShouldReturnPsObject' {
          $psObject = Invoke-MgGraphRequest -OutputType PSObject -Uri "https://graph.microsoft.com/v1.0/users/${env:DEFAULTUSERID}" | Should -BeOfType [System.Management.Automation.PSObject]

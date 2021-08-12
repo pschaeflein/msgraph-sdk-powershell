@@ -21,7 +21,7 @@ $AuthModulePSd1 = Join-Path $PSScriptRoot "../src/Authentication/Authentication/
 
 # Import required modules.
 Import-Module -Name Pester
-Import-Module $AuthModulePSd1
+Import-Module $AuthModulePSd1 -Force -ErrorAction Continue
 Import-Module -Name $modulePsd1.FullName
 
 # Replace AutoREST loadEnv.ps1 with our local scipt.
