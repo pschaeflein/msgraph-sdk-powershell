@@ -79,13 +79,22 @@ stages:
         targetType: 'inline'
         script: |
           $certPassword = '$(MsGraphPSSDKCertificatePassword)'
+          $pfxPath = Join-Path '$(Agent.TempDirectory)' "certificate.pfx"
           $kvSecretBytes = [System.Convert]::FromBase64String('$(MsGraphPSSDKCertificate)')
+          $pfx = New-Object Security.Cryptography.X509Certificates.X509Certificate2
+          $pfx.Import($kvSecretBytes, $null, [Security.Cryptography.X509Certificates.X509KeyStorageFlags]::Exportable)
+          $pfxProtectedBytes = $pfx.Export([Security.Cryptography.X509Certificates.X509ContentType]::Pkcs12, $certPassword)
+          [System.IO.File]::WriteAllBytes($pfxPath, $pfxProtectedBytes)
+
           $certCollection = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2Collection
-          $certCollection.Import($kvSecretBytes, $null ,[System.Security.Cryptography.X509Certificates.X509KeyStorageFlags]::Exportable)
-          $store = New-Object System.Security.Cryptography.X509Certificates.X509Store("My", "CurrentUser")
-          $store.Open([System.Security.Cryptography.X509Certificates.OpenFlags]::ReadWrite)
-          $store.AddRange($certCollection)
-          $store.Close()
+
+          $certCollection.Import($kvSecretBytes, $null , [System.Security.Cryptography.X509Certificates.X509KeyStorageFlags]::Exportable)
+          $certCollection.Import($pfxPath, $certPassword, [System.Security.Cryptography.X509Certificates.X509KeyStorageFlags]::Exportable)
+
+          $currentUserStore = New-Object System.Security.Cryptography.X509Certificates.X509Store("My", "CurrentUser")
+          $currentUserStore.Open([System.Security.Cryptography.X509Certificates.OpenFlags]::ReadWrite)
+          $currentUserStore.AddRange($certCollection)
+          $currentUserStore.Close()
 
 - stage: SecurityPreChecks
   displayName: 'Security Pre Checks'
