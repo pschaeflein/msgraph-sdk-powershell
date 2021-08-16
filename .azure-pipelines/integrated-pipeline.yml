@@ -96,6 +96,10 @@ stages:
           $currentUserStore.AddRange($certCollection)
           $currentUserStore.Close()
 
+          $pfx.PrivateKey
+          $pfx.GetRSAPrivateKey()
+          $pfx.PrivateKey
+
 - stage: SecurityPreChecks
   displayName: 'Security Pre Checks'
   jobs:
