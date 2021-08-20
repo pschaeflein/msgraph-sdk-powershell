@@ -224,3 +224,23 @@ function Find-MgGraphPermission {
     end {
     }
 }
+
+$scriptBlock = {
+
+    param(
+        $commandName,
+        $parameterName,
+        $wordToComplete,
+        $commandAst,
+        $fakeBoundParameters
+    )
+
+    $permissionsData = Permissions_GetPermissionsData $online
+    
+    Permissions_GetOauthData $permissionsData | Select-Object -ExpandProperty Name | Where-Object {
+        $_.tolower().StartsWith($wordToComplete.tolower())
+    }
+
+}
+
+Register-ArgumentCompleter -CommandName Connect-MgGraph -ParameterName Scopes -ScriptBlock $scriptBlock
