@@ -10,8 +10,8 @@ Param(
 if (-not (Test-Path $OpenApiDocOutput)) {
     New-Item -Path $OpenApiDocOutput -Type Directory
 }
-  
-$OpenApiBaseUrl = "https://graphexplorerapi.azurewebsites.net"
+
+$OpenApiBaseUrl = "https://devxapidemo.azurewebsites.net"
 $OpenApiServiceUrl = ("$OpenApiBaseUrl/`$openapi?tags={0}&title=$ModuleName&openapiversion=3&style=Powershell&graphVersion=$GraphVersion" -f $ModuleRegex)
 if ($ForceRefresh.IsPresent) {
     $OpenApiServiceUrl = "$OpenApiServiceUrl&forceRefresh=true"
@@ -45,7 +45,7 @@ while (-not $Completed) {
                         $mPow = [math]::Pow(2, $Retrycount)
                         $DelayInSeconds = $mPow * $Delay
                     }
-    
+
                     Write-Warning "Request to $OpenApiServiceUrl failed. Retrying in $DelayInSeconds seconds."
                     Start-Sleep $DelayInSeconds
                     $Retrycount++

@@ -1958,6 +1958,8 @@ paths:
                 - isMuted desc
                 - mediaStreams
                 - mediaStreams desc
+                - metadata
+                - metadata desc
                 - recordingInfo
                 - recordingInfo desc
               type: string
@@ -1976,6 +1978,7 @@ paths:
                 - isInLobby
                 - isMuted
                 - mediaStreams
+                - metadata
                 - recordingInfo
               type: string
         - name: $expand
@@ -2081,6 +2084,7 @@ paths:
                 - isInLobby
                 - isMuted
                 - mediaStreams
+                - metadata
                 - recordingInfo
               type: string
         - name: $expand
@@ -2821,6 +2825,79 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/communications/presences/{presence-id}/microsoft.graph.clearPresence':
+    post:
+      tags:
+        - communications.Actions
+      summary: Invoke action clearPresence
+      operationId: communications.presences_clearPresence
+      parameters:
+        - name: presence-id
+          in: path
+          description: 'key: id of presence'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: presence
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                sessionId:
+                  type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/communications/presences/{presence-id}/microsoft.graph.setPresence':
+    post:
+      tags:
+        - communications.Actions
+      summary: Invoke action setPresence
+      operationId: communications.presences_setPresence
+      parameters:
+        - name: presence-id
+          in: path
+          description: 'key: id of presence'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: presence
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                sessionId:
+                  type: string
+                availability:
+                  type: string
+                activity:
+                  type: string
+                expirationDuration:
+                  pattern: '^-?P([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+([.][0-9]+)?S)?)?$'
+                  type: string
+                  format: duration
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
   '/users/{user-id}/onlineMeetings':
     get:
       tags:
@@ -3578,6 +3655,10 @@ components:
               items:
                 $ref: '#/components/schemas/microsoft.graph.mediaStream'
               description: The list of media streams.
+            metadata:
+              type: string
+              description: A blob of data provided by the participant in the roster.
+              nullable: true
             recordingInfo:
               $ref: '#/components/schemas/microsoft.graph.recordingInfo'
           additionalProperties:

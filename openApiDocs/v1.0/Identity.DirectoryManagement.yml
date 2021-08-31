@@ -395,6 +395,44 @@ paths:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
       x-ms-docs-operation-type: operation
+  '/contacts/{orgContact-id}/directReports/{directoryObject-id}/$ref':
+    delete:
+      tags:
+        - contacts.directoryObject
+      summary: Delete ref of navigation property directReports for contacts
+      description: The contact's direct reports. (The users and contacts that have their manager property set to this contact.) Read-only. Nullable. Supports $expand.
+      operationId: contacts_DeleteRefDirectReports
+      parameters:
+        - name: orgContact-id
+          in: path
+          description: 'key: id of orgContact'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: orgContact
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+        - name: '@id'
+          in: query
+          description: Delete Uri
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
   '/contacts/{orgContact-id}/directReports/$ref':
     get:
       tags:
@@ -699,6 +737,44 @@ paths:
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/contacts/{orgContact-id}/memberOf/{directoryObject-id}/$ref':
+    delete:
+      tags:
+        - contacts.directoryObject
+      summary: Delete ref of navigation property memberOf for contacts
+      description: Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
+      operationId: contacts_DeleteRefMemberOf
+      parameters:
+        - name: orgContact-id
+          in: path
+          description: 'key: id of orgContact'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: orgContact
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+        - name: '@id'
+          in: query
+          description: Delete Uri
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
   '/contacts/{orgContact-id}/memberOf/$ref':
     get:
@@ -1058,6 +1134,43 @@ paths:
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/contacts/{orgContact-id}/transitiveMemberOf/{directoryObject-id}/$ref':
+    delete:
+      tags:
+        - contacts.directoryObject
+      summary: Delete ref of navigation property transitiveMemberOf for contacts
+      operationId: contacts_DeleteRefTransitiveMemberOf
+      parameters:
+        - name: orgContact-id
+          in: path
+          description: 'key: id of orgContact'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: orgContact
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+        - name: '@id'
+          in: query
+          description: Delete Uri
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
   '/contacts/{orgContact-id}/transitiveMemberOf/$ref':
     get:
@@ -2427,6 +2540,44 @@ paths:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
       x-ms-docs-operation-type: operation
+  '/devices/{device-id}/memberOf/{directoryObject-id}/$ref':
+    delete:
+      tags:
+        - devices.directoryObject
+      summary: Delete ref of navigation property memberOf for devices
+      description: Groups that this device is a member of. Read-only. Nullable. Supports $expand.
+      operationId: devices_DeleteRefMemberOf
+      parameters:
+        - name: device-id
+          in: path
+          description: 'key: id of device'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: device
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+        - name: '@id'
+          in: query
+          description: Delete Uri
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
   '/devices/{device-id}/memberOf/$ref':
     get:
       tags:
@@ -2787,6 +2938,44 @@ paths:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
       x-ms-docs-operation-type: operation
+  '/devices/{device-id}/registeredOwners/{directoryObject-id}/$ref':
+    delete:
+      tags:
+        - devices.directoryObject
+      summary: Delete ref of navigation property registeredOwners for devices
+      description: 'The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable. Supports $expand.'
+      operationId: devices_DeleteRefRegisteredOwners
+      parameters:
+        - name: device-id
+          in: path
+          description: 'key: id of device'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: device
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+        - name: '@id'
+          in: query
+          description: Delete Uri
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
   '/devices/{device-id}/registeredOwners/$ref':
     get:
       tags:
@@ -2963,6 +3152,44 @@ paths:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
       x-ms-docs-operation-type: operation
+  '/devices/{device-id}/registeredUsers/{directoryObject-id}/$ref':
+    delete:
+      tags:
+        - devices.directoryObject
+      summary: Delete ref of navigation property registeredUsers for devices
+      description: 'Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.'
+      operationId: devices_DeleteRefRegisteredUsers
+      parameters:
+        - name: device-id
+          in: path
+          description: 'key: id of device'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: device
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+        - name: '@id'
+          in: query
+          description: Delete Uri
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
   '/devices/{device-id}/registeredUsers/$ref':
     get:
       tags:
@@ -3138,6 +3365,44 @@ paths:
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/$ref':
+    delete:
+      tags:
+        - devices.directoryObject
+      summary: Delete ref of navigation property transitiveMemberOf for devices
+      description: Groups that this device is a member of. This operation is transitive. Supports $expand.
+      operationId: devices_DeleteRefTransitiveMemberOf
+      parameters:
+        - name: device-id
+          in: path
+          description: 'key: id of device'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: device
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+        - name: '@id'
+          in: query
+          description: Delete Uri
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
   '/devices/{device-id}/transitiveMemberOf/$ref':
     get:
@@ -3410,6 +3675,7 @@ paths:
       tags:
         - directory.administrativeUnit
       summary: Get administrativeUnits from directory
+      description: Conceptual container for user and group directory objects.
       operationId: directory_ListAdministrativeUnits
       parameters:
         - $ref: '#/components/parameters/top'
@@ -3499,6 +3765,7 @@ paths:
       tags:
         - directory.administrativeUnit
       summary: Create new navigation property to administrativeUnits for directory
+      description: Conceptual container for user and group directory objects.
       operationId: directory_CreateAdministrativeUnits
       requestBody:
         description: New navigation property
@@ -3522,6 +3789,7 @@ paths:
       tags:
         - directory.administrativeUnit
       summary: Get administrativeUnits from directory
+      description: Conceptual container for user and group directory objects.
       operationId: directory_GetAdministrativeUnits
       parameters:
         - name: administrativeUnit-id
@@ -3592,6 +3860,7 @@ paths:
       tags:
         - directory.administrativeUnit
       summary: Update the navigation property administrativeUnits in directory
+      description: Conceptual container for user and group directory objects.
       operationId: directory_UpdateAdministrativeUnits
       parameters:
         - name: administrativeUnit-id
@@ -3618,6 +3887,7 @@ paths:
       tags:
         - directory.administrativeUnit
       summary: Delete navigation property administrativeUnits for directory
+      description: Conceptual container for user and group directory objects.
       operationId: directory_DeleteAdministrativeUnits
       parameters:
         - name: administrativeUnit-id
@@ -3953,6 +4223,44 @@ paths:
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/directory/administrativeUnits/{administrativeUnit-id}/members/{directoryObject-id}/$ref':
+    delete:
+      tags:
+        - directory.administrativeUnit
+      summary: Delete ref of navigation property members for directory
+      description: 'Users and groups that are members of this Adminsitrative Unit. HTTP Methods: GET (list members), POST (add members), DELETE (remove members).'
+      operationId: directory.administrativeUnits_DeleteRefMembers
+      parameters:
+        - name: administrativeUnit-id
+          in: path
+          description: 'key: id of administrativeUnit'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: administrativeUnit
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+        - name: '@id'
+          in: query
+          description: Delete Uri
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
   '/directory/administrativeUnits/{administrativeUnit-id}/members/$ref':
     get:
@@ -4518,7 +4826,6 @@ paths:
       summary: Get entities from directoryRoles
       operationId: directoryRoles.directoryRole_ListDirectoryRole
       parameters:
-        - $ref: '#/components/parameters/top'
         - $ref: '#/components/parameters/skip'
         - $ref: '#/components/parameters/search'
         - $ref: '#/components/parameters/filter'
@@ -4821,6 +5128,44 @@ paths:
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/directoryRoles/{directoryRole-id}/members/{directoryObject-id}/$ref':
+    delete:
+      tags:
+        - directoryRoles.directoryObject
+      summary: Delete ref of navigation property members for directoryRoles
+      description: 'Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable.'
+      operationId: directoryRoles_DeleteRefMembers
+      parameters:
+        - name: directoryRole-id
+          in: path
+          description: 'key: id of directoryRole'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryRole
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+        - name: '@id'
+          in: query
+          description: Delete Uri
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
   '/directoryRoles/{directoryRole-id}/members/$ref':
     get:
@@ -5474,7 +5819,6 @@ paths:
       summary: Get entities from directoryRoleTemplates
       operationId: directoryRoleTemplates.directoryRoleTemplate_ListDirectoryRoleTemplate
       parameters:
-        - $ref: '#/components/parameters/top'
         - $ref: '#/components/parameters/skip'
         - $ref: '#/components/parameters/search'
         - $ref: '#/components/parameters/filter'
@@ -6314,6 +6658,44 @@ paths:
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/domains/{domain-id}/domainNameReferences/{directoryObject-id}/$ref':
+    delete:
+      tags:
+        - domains.directoryObject
+      summary: Delete ref of navigation property domainNameReferences for domains
+      description: 'Read-only, Nullable'
+      operationId: domains_DeleteRefDomainNameReferences
+      parameters:
+        - name: domain-id
+          in: path
+          description: 'key: id of domain'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: domain
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+        - name: '@id'
+          in: query
+          description: Delete Uri
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
   '/domains/{domain-id}/domainNameReferences/$ref':
     get:
@@ -7395,6 +7777,612 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/organization/{organization-id}/branding/backgroundImage':
+    get:
+      tags:
+        - organization.organizationalBranding
+      summary: Get media content for the navigation property branding from organization
+      operationId: organization_GetBrandingBackgroundImage
+      parameters:
+        - name: organization-id
+          in: path
+          description: 'key: id of organization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organization
+      responses:
+        '200':
+          description: Retrieved media content
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    put:
+      tags:
+        - organization.organizationalBranding
+      summary: Update media content for the navigation property branding in organization
+      operationId: organization_SetBrandingBackgroundImage
+      parameters:
+        - name: organization-id
+          in: path
+          description: 'key: id of organization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organization
+      requestBody:
+        description: New media content.
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/organization/{organization-id}/branding/bannerLogo':
+    get:
+      tags:
+        - organization.organizationalBranding
+      summary: Get media content for the navigation property branding from organization
+      operationId: organization_GetBrandingBannerLogo
+      parameters:
+        - name: organization-id
+          in: path
+          description: 'key: id of organization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organization
+      responses:
+        '200':
+          description: Retrieved media content
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    put:
+      tags:
+        - organization.organizationalBranding
+      summary: Update media content for the navigation property branding in organization
+      operationId: organization_SetBrandingBannerLogo
+      parameters:
+        - name: organization-id
+          in: path
+          description: 'key: id of organization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organization
+      requestBody:
+        description: New media content.
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/organization/{organization-id}/branding/localizations':
+    get:
+      tags:
+        - organization.organizationalBranding
+      summary: Get localizations from organization
+      operationId: organization.branding_ListLocalizations
+      parameters:
+        - name: organization-id
+          in: path
+          description: 'key: id of organization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organization
+        - $ref: '#/components/parameters/top'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/count'
+        - name: $orderby
+          in: query
+          description: Order items by property values
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - id desc
+                - backgroundColor
+                - backgroundColor desc
+                - backgroundImage
+                - backgroundImage desc
+                - bannerLogo
+                - bannerLogo desc
+                - signInPageText
+                - signInPageText desc
+                - squareLogo
+                - squareLogo desc
+                - usernameHintText
+                - usernameHintText desc
+              type: string
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - backgroundColor
+                - backgroundImage
+                - bannerLogo
+                - signInPageText
+                - squareLogo
+                - usernameHintText
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                title: Collection of organizationalBrandingLocalization
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/microsoft.graph.organizationalBrandingLocalization'
+                  '@odata.nextLink':
+                    type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-pageable:
+        nextLinkName: '@odata.nextLink'
+        operationName: listMore
+      x-ms-docs-operation-type: operation
+    post:
+      tags:
+        - organization.organizationalBranding
+      summary: Create new navigation property to localizations for organization
+      operationId: organization.branding_CreateLocalizations
+      parameters:
+        - name: organization-id
+          in: path
+          description: 'key: id of organization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organization
+      requestBody:
+        description: New navigation property
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.organizationalBrandingLocalization'
+        required: true
+      responses:
+        '201':
+          description: Created navigation property.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.organizationalBrandingLocalization'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/organization/{organization-id}/branding/localizations/{organizationalBrandingLocalization-id}':
+    get:
+      tags:
+        - organization.organizationalBranding
+      summary: Get localizations from organization
+      operationId: organization.branding_GetLocalizations
+      parameters:
+        - name: organization-id
+          in: path
+          description: 'key: id of organization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organization
+        - name: organizationalBrandingLocalization-id
+          in: path
+          description: 'key: id of organizationalBrandingLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organizationalBrandingLocalization
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - backgroundColor
+                - backgroundImage
+                - bannerLogo
+                - signInPageText
+                - squareLogo
+                - usernameHintText
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.organizationalBrandingLocalization'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    patch:
+      tags:
+        - organization.organizationalBranding
+      summary: Update the navigation property localizations in organization
+      operationId: organization.branding_UpdateLocalizations
+      parameters:
+        - name: organization-id
+          in: path
+          description: 'key: id of organization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organization
+        - name: organizationalBrandingLocalization-id
+          in: path
+          description: 'key: id of organizationalBrandingLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organizationalBrandingLocalization
+      requestBody:
+        description: New navigation property values
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.organizationalBrandingLocalization'
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    delete:
+      tags:
+        - organization.organizationalBranding
+      summary: Delete navigation property localizations for organization
+      operationId: organization.branding_DeleteLocalizations
+      parameters:
+        - name: organization-id
+          in: path
+          description: 'key: id of organization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organization
+        - name: organizationalBrandingLocalization-id
+          in: path
+          description: 'key: id of organizationalBrandingLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organizationalBrandingLocalization
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/organization/{organization-id}/branding/localizations/{organizationalBrandingLocalization-id}/backgroundImage':
+    get:
+      tags:
+        - organization.organizationalBranding
+      summary: Get media content for the navigation property localizations from organization
+      operationId: organization.branding_GetLocalizationsBackgroundImage
+      parameters:
+        - name: organization-id
+          in: path
+          description: 'key: id of organization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organization
+        - name: organizationalBrandingLocalization-id
+          in: path
+          description: 'key: id of organizationalBrandingLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organizationalBrandingLocalization
+      responses:
+        '200':
+          description: Retrieved media content
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    put:
+      tags:
+        - organization.organizationalBranding
+      summary: Update media content for the navigation property localizations in organization
+      operationId: organization.branding_SetLocalizationsBackgroundImage
+      parameters:
+        - name: organization-id
+          in: path
+          description: 'key: id of organization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organization
+        - name: organizationalBrandingLocalization-id
+          in: path
+          description: 'key: id of organizationalBrandingLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organizationalBrandingLocalization
+      requestBody:
+        description: New media content.
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/organization/{organization-id}/branding/localizations/{organizationalBrandingLocalization-id}/bannerLogo':
+    get:
+      tags:
+        - organization.organizationalBranding
+      summary: Get media content for the navigation property localizations from organization
+      operationId: organization.branding_GetLocalizationsBannerLogo
+      parameters:
+        - name: organization-id
+          in: path
+          description: 'key: id of organization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organization
+        - name: organizationalBrandingLocalization-id
+          in: path
+          description: 'key: id of organizationalBrandingLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organizationalBrandingLocalization
+      responses:
+        '200':
+          description: Retrieved media content
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    put:
+      tags:
+        - organization.organizationalBranding
+      summary: Update media content for the navigation property localizations in organization
+      operationId: organization.branding_SetLocalizationsBannerLogo
+      parameters:
+        - name: organization-id
+          in: path
+          description: 'key: id of organization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organization
+        - name: organizationalBrandingLocalization-id
+          in: path
+          description: 'key: id of organizationalBrandingLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organizationalBrandingLocalization
+      requestBody:
+        description: New media content.
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/organization/{organization-id}/branding/localizations/{organizationalBrandingLocalization-id}/squareLogo':
+    get:
+      tags:
+        - organization.organizationalBranding
+      summary: Get media content for the navigation property localizations from organization
+      operationId: organization.branding_GetLocalizationsSquareLogo
+      parameters:
+        - name: organization-id
+          in: path
+          description: 'key: id of organization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organization
+        - name: organizationalBrandingLocalization-id
+          in: path
+          description: 'key: id of organizationalBrandingLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organizationalBrandingLocalization
+      responses:
+        '200':
+          description: Retrieved media content
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    put:
+      tags:
+        - organization.organizationalBranding
+      summary: Update media content for the navigation property localizations in organization
+      operationId: organization.branding_SetLocalizationsSquareLogo
+      parameters:
+        - name: organization-id
+          in: path
+          description: 'key: id of organization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organization
+        - name: organizationalBrandingLocalization-id
+          in: path
+          description: 'key: id of organizationalBrandingLocalization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organizationalBrandingLocalization
+      requestBody:
+        description: New media content.
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/organization/{organization-id}/branding/squareLogo':
+    get:
+      tags:
+        - organization.organizationalBranding
+      summary: Get media content for the navigation property branding from organization
+      operationId: organization_GetBrandingSquareLogo
+      parameters:
+        - name: organization-id
+          in: path
+          description: 'key: id of organization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organization
+      responses:
+        '200':
+          description: Retrieved media content
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    put:
+      tags:
+        - organization.organizationalBranding
+      summary: Update media content for the navigation property branding in organization
+      operationId: organization_SetBrandingSquareLogo
+      parameters:
+        - name: organization-id
+          in: path
+          description: 'key: id of organization'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: organization
+      requestBody:
+        description: New media content.
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
   '/organization/{organization-id}/extensions':
     get:
       tags:
@@ -7952,11 +8940,7 @@ paths:
       summary: Get entities from subscribedSkus
       operationId: subscribedSkus.subscribedSku_ListSubscribedSku
       parameters:
-        - $ref: '#/components/parameters/top'
-        - $ref: '#/components/parameters/skip'
         - $ref: '#/components/parameters/search'
-        - $ref: '#/components/parameters/filter'
-        - $ref: '#/components/parameters/count'
         - name: $orderby
           in: query
           description: Order items by property values
@@ -8002,18 +8986,6 @@ paths:
                 - servicePlans
                 - skuId
                 - skuPartNumber
-              type: string
-        - name: $expand
-          in: query
-          description: Expand related entities
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - '*'
               type: string
       responses:
         '200':
@@ -8092,18 +9064,6 @@ paths:
                 - servicePlans
                 - skuId
                 - skuPartNumber
-              type: string
-        - name: $expand
-          in: query
-          description: Expand related entities
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - '*'
               type: string
       responses:
         '200':
@@ -8707,6 +9667,7 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.administrativeUnit'
+              description: Conceptual container for user and group directory objects.
             deletedItems:
               type: array
               items:
@@ -9039,6 +10000,13 @@ components:
                 $ref: '#/components/schemas/microsoft.graph.organizationalBrandingLocalization'
           additionalProperties:
             type: object
+    microsoft.graph.organizationalBrandingLocalization:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.organizationalBrandingProperties'
+        - title: organizationalBrandingLocalization
+          type: object
+          additionalProperties:
+            type: object
     microsoft.graph.subscribedSku:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'
@@ -9308,6 +10276,7 @@ components:
         - sccm
         - office365
       type: string
+      description: Mobile device management authority.
     microsoft.graph.certificateBasedAuthConfiguration:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'
@@ -9354,13 +10323,6 @@ components:
               type: string
               description: 'String that shows as the hint in the username textbox on the sign in screen. This text must be Unicode, without links or code, and can''t exceed 64 characters.'
               nullable: true
-          additionalProperties:
-            type: object
-    microsoft.graph.organizationalBrandingLocalization:
-      allOf:
-        - $ref: '#/components/schemas/microsoft.graph.organizationalBrandingProperties'
-        - title: organizationalBrandingLocalization
-          type: object
           additionalProperties:
             type: object
     microsoft.graph.licenseUnitsDetail:

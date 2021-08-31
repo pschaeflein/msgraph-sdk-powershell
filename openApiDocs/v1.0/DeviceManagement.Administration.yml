@@ -4217,6 +4217,7 @@ components:
         - rejected
         - unresponsive
       type: string
+      description: Partner state of this tenant.
     microsoft.graph.deviceManagementPartnerAppType:
       title: deviceManagementPartnerAppType
       enum:
@@ -4224,6 +4225,7 @@ components:
         - singleTenantApp
         - multiTenantApp
       type: string
+      description: Partner App Type.
     microsoft.graph.deviceManagementExchangeConnectorType:
       title: deviceManagementExchangeConnectorType
       enum:
@@ -4232,6 +4234,7 @@ components:
         - serviceToService
         - dedicated
       type: string
+      description: The type of Exchange Connector.
     microsoft.graph.deviceManagementExchangeConnectorStatus:
       title: deviceManagementExchangeConnectorStatus
       enum:
@@ -4240,6 +4243,7 @@ components:
         - connected
         - disconnected
       type: string
+      description: The current status of the Exchange Connector.
     microsoft.graph.iosUpdatesInstallStatus:
       title: iosUpdatesInstallStatus
       enum:
@@ -4282,6 +4286,7 @@ components:
         - enabled
         - unresponsive
       type: string
+      description: Partner state of this tenant.
     microsoft.graph.remoteAssistanceOnboardingStatus:
       title: remoteAssistanceOnboardingStatus
       enum:
@@ -4289,6 +4294,7 @@ components:
         - onboarding
         - onboarded
       type: string
+      description: The current TeamViewer connector status
     microsoft.graph.rolePermission:
       title: rolePermission
       type: object

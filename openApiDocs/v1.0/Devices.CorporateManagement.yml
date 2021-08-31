@@ -2628,6 +2628,42 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: action
+  '/deviceAppManagement/managedAppPolicies/{managedAppPolicy-id}/microsoft.graph.targetedManagedAppProtection/microsoft.graph.targetApps':
+    post:
+      tags:
+        - deviceAppManagement.Actions
+      summary: Invoke action targetApps
+      operationId: deviceAppManagement.managedAppPolicies.microsoft.graph.targetedManagedAppProtection_targetApps
+      parameters:
+        - name: managedAppPolicy-id
+          in: path
+          description: 'key: id of managedAppPolicy'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: managedAppPolicy
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                apps:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/microsoft.graph.managedMobileApp'
+                appGroupType:
+                  $ref: '#/components/schemas/microsoft.graph.targetedManagedAppGroupType'
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
   '/deviceAppManagement/managedAppPolicies/{managedAppPolicy-id}/microsoft.graph.windowsInformationProtection/microsoft.graph.assign':
     post:
       tags:
@@ -3308,6 +3344,49 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: action
+  '/deviceAppManagement/managedAppRegistrations/{managedAppRegistration-id}/appliedPolicies/{managedAppPolicy-id}/microsoft.graph.targetedManagedAppProtection/microsoft.graph.targetApps':
+    post:
+      tags:
+        - deviceAppManagement.Actions
+      summary: Invoke action targetApps
+      operationId: deviceAppManagement.managedAppRegistrations.appliedPolicies.microsoft.graph.targetedManagedAppProtection_targetApps
+      parameters:
+        - name: managedAppRegistration-id
+          in: path
+          description: 'key: id of managedAppRegistration'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: managedAppRegistration
+        - name: managedAppPolicy-id
+          in: path
+          description: 'key: id of managedAppPolicy'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: managedAppPolicy
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                apps:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/microsoft.graph.managedMobileApp'
+                appGroupType:
+                  $ref: '#/components/schemas/microsoft.graph.targetedManagedAppGroupType'
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
   '/deviceAppManagement/managedAppRegistrations/{managedAppRegistration-id}/appliedPolicies/{managedAppPolicy-id}/microsoft.graph.windowsInformationProtection/microsoft.graph.assign':
     post:
       tags:
@@ -3716,6 +3795,49 @@ paths:
                   type: array
                   items:
                     $ref: '#/components/schemas/microsoft.graph.targetedManagedAppPolicyAssignment'
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/deviceAppManagement/managedAppRegistrations/{managedAppRegistration-id}/intendedPolicies/{managedAppPolicy-id}/microsoft.graph.targetedManagedAppProtection/microsoft.graph.targetApps':
+    post:
+      tags:
+        - deviceAppManagement.Actions
+      summary: Invoke action targetApps
+      operationId: deviceAppManagement.managedAppRegistrations.intendedPolicies.microsoft.graph.targetedManagedAppProtection_targetApps
+      parameters:
+        - name: managedAppRegistration-id
+          in: path
+          description: 'key: id of managedAppRegistration'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: managedAppRegistration
+        - name: managedAppPolicy-id
+          in: path
+          description: 'key: id of managedAppPolicy'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: managedAppPolicy
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                apps:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/microsoft.graph.managedMobileApp'
+                appGroupType:
+                  $ref: '#/components/schemas/microsoft.graph.targetedManagedAppGroupType'
               additionalProperties:
                 type: object
         required: true
@@ -8119,6 +8241,44 @@ paths:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
       x-ms-docs-operation-type: operation
+  '/deviceAppManagement/mobileApps/{mobileApp-id}/categories/{mobileAppCategory-id}/$ref':
+    delete:
+      tags:
+        - deviceAppManagement.mobileApp
+      summary: Delete ref of navigation property categories for deviceAppManagement
+      description: The list of categories for this app.
+      operationId: deviceAppManagement.mobileApps_DeleteRefCategories
+      parameters:
+        - name: mobileApp-id
+          in: path
+          description: 'key: id of mobileApp'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: mobileApp
+        - name: mobileAppCategory-id
+          in: path
+          description: 'key: id of mobileAppCategory'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: mobileAppCategory
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+        - name: '@id'
+          in: query
+          description: Delete Uri
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
   '/deviceAppManagement/mobileApps/{mobileApp-id}/categories/$ref':
     get:
       tags:
@@ -9145,6 +9305,8 @@ paths:
                   type: array
                   items:
                     $ref: '#/components/schemas/microsoft.graph.managedMobileApp'
+                appGroupType:
+                  $ref: '#/components/schemas/microsoft.graph.targetedManagedAppGroupType'
               additionalProperties:
                 type: object
         required: true
@@ -10160,6 +10322,44 @@ paths:
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/users/{user-id}/managedAppRegistrations/{managedAppRegistration-id}/$ref':
+    delete:
+      tags:
+        - users.managedAppRegistration
+      summary: Delete ref of navigation property managedAppRegistrations for users
+      description: Zero or more managed app registrations that belong to the user.
+      operationId: users_DeleteRefManagedAppRegistrations
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: managedAppRegistration-id
+          in: path
+          description: 'key: id of managedAppRegistration'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: managedAppRegistration
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+        - name: '@id'
+          in: query
+          description: Delete Uri
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/managedAppRegistrations/$ref':
     get:
@@ -11771,6 +11971,15 @@ components:
           additionalProperties:
             type: object
           description: The type for deployment of groups or apps.
+    microsoft.graph.targetedManagedAppGroupType:
+      title: targetedManagedAppGroupType
+      enum:
+        - selectedPublicApps
+        - allCoreMicrosoftApps
+        - allMicrosoftApps
+        - allApps
+      type: string
+      description: Indicates a collection of apps to target which can be one of several pre-defined lists of apps or a manually selected list of apps
     microsoft.graph.managedAppRegistration:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'
@@ -13036,16 +13245,17 @@ components:
         - whenDeviceLockedExceptOpenFiles
         - whenDeviceLocked
       type: string
+      description: Represents the level to which app data is encrypted for managed apps
     microsoft.graph.keyValuePair:
       title: keyValuePair
       type: object
       properties:
         name:
           type: string
-          description: 'Name for this key-value pair. Possible names are: AdditionalWSFedEndpointCheckResult,  AllowedAuthenticationClassReferencesCheckResult, AlwaysRequireAuthenticationCheckResult,   AutoUpdateEnabledCheckResult, ClaimsProviderNameCheckResult, EncryptClaimsCheckResult,  EncryptedNameIdRequiredCheckResult, MonitoringEnabledCheckResult,NotBeforeSkewCheckResult,  RequestMFAFromClaimsProvidersCheckResult, SignedSamlRequestsRequiredCheckResult, AdditionalAuthenticationRulesCheckResult, TokenLifetimeCheckResult,  DelegationAuthorizationRulesCheckResult, IssuanceAuthorizationRulesCheckResult, IssuanceTransformRulesCheckResult.'
+          description: Name for this key-value pair
         value:
           type: string
-          description: 'Value for this key-value pair. Possible result values are 0 (when the validation check passed), 1 (when the validation check failed), or 2 (when the validation check is a warning).'
+          description: Value for this key-value pair
           nullable: true
       additionalProperties:
         type: object
@@ -13062,6 +13272,7 @@ components:
         - none
         - rootedDevice
       type: string
+      description: The reason for which a user has been flagged
     microsoft.graph.mimeContent:
       title: mimeContent
       type: object
@@ -13086,6 +13297,7 @@ components:
         - uninstall
         - availableWithoutEnrollment
       type: string
+      description: Possible values for the install intent chosen by the admin.
     microsoft.graph.installState:
       title: installState
       enum:
@@ -13096,6 +13308,7 @@ components:
         - uninstallFailed
         - unknown
       type: string
+      description: Possible values for install state.
     microsoft.graph.windowsInformationProtection:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.managedAppPolicy'
@@ -13227,6 +13440,7 @@ components:
         - processing
         - published
       type: string
+      description: Indicates the publishing state of an app.
     microsoft.graph.mobileAppAssignmentSettings:
       title: mobileAppAssignmentSettings
       type: object
@@ -13255,6 +13469,7 @@ components:
         - completed
         - failed
       type: string
+      description: Possible sync statuses associated with an Apple Volume Purchase Program token.
     microsoft.graph.vppTokenState:
       title: vppTokenState
       enum:
@@ -13264,12 +13479,14 @@ components:
         - invalid
         - assignedToExternalMDM
       type: string
+      description: Possible states associated with an Apple Volume Purchase Program token.
     microsoft.graph.vppTokenAccountType:
       title: vppTokenAccountType
       enum:
         - business
         - education
       type: string
+      description: Possible types of an Apple Volume Purchase Program token.
     microsoft.graph.windowsInformationProtectionPinCharacterRequirements:
       title: windowsInformationProtectionPinCharacterRequirements
       enum:
@@ -13277,6 +13494,7 @@ components:
         - requireAtLeastOne
         - allow
       type: string
+      description: Pin Character Requirements
     microsoft.graph.complianceState:
       title: complianceState
       enum:
@@ -13288,6 +13506,7 @@ components:
         - inGracePeriod
         - configManager
       type: string
+      description: Compliance state.
     microsoft.graph.configurationManagerClientEnabledFeatures:
       title: configurationManagerClientEnabledFeatures
       type: object
@@ -13353,6 +13572,7 @@ components:
         - appleUserEnrollment
         - appleUserEnrollmentWithServiceAccount
       type: string
+      description: Possible ways of adding a mobile device to management.
     microsoft.graph.deviceHealthAttestationState:
       title: deviceHealthAttestationState
       type: object
@@ -13500,6 +13720,7 @@ components:
         - notRegisteredPendingEnrollment
         - unknown
       type: string
+      description: Device registration status.
     microsoft.graph.deviceManagementExchangeAccessState:
       title: deviceManagementExchangeAccessState
       enum:
@@ -13509,6 +13730,7 @@ components:
         - blocked
         - quarantined
       type: string
+      description: Device Exchange Access State.
     microsoft.graph.deviceManagementExchangeAccessStateReason:
       title: deviceManagementExchangeAccessStateReason
       enum:
@@ -13529,6 +13751,7 @@ components:
         - compromisedPassword
         - deviceNotKnownWithManagedApp
       type: string
+      description: Device Exchange Access State Reason.
     microsoft.graph.managedDeviceOwnerType:
       title: managedDeviceOwnerType
       enum:
@@ -13536,6 +13759,7 @@ components:
         - company
         - personal
       type: string
+      description: Owner type of device.
     microsoft.graph.managementAgentType:
       title: managementAgentType
       enum:
@@ -13551,6 +13775,7 @@ components:
         - jamf
         - googleCloudDevicePolicyController
       type: string
+      description: Management agent type.
     microsoft.graph.managedDevicePartnerReportedHealthState:
       title: managedDevicePartnerReportedHealthState
       enum:
@@ -13565,6 +13790,7 @@ components:
         - compromised
         - misconfigured
       type: string
+      description: Available health states for the Device Health API
     microsoft.graph.policyPlatformType:
       title: policyPlatformType
       enum:
@@ -13577,6 +13803,7 @@ components:
         - androidWorkProfile
         - all
       type: string
+      description: Supported platform types for policies.
     microsoft.graph.deviceCompliancePolicySettingState:
       title: deviceCompliancePolicySettingState
       type: object
@@ -13699,8 +13926,10 @@ components:
       enum:
         - oneDriveForBusiness
         - sharePoint
+        - box
         - localStorage
       type: string
+      description: Storage locations where managed apps can potentially store their data
     microsoft.graph.managedAppDataTransferLevel:
       title: managedAppDataTransferLevel
       enum:
@@ -13708,6 +13937,7 @@ components:
         - managedApps
         - none
       type: string
+      description: Data can be transferred from/to these classes of apps
     microsoft.graph.managedAppClipboardSharingLevel:
       title: managedAppClipboardSharingLevel
       enum:
@@ -13716,18 +13946,21 @@ components:
         - managedApps
         - blocked
       type: string
+      description: Represents the level to which the device's clipboard may be shared between apps
     microsoft.graph.managedBrowserType:
       title: managedBrowserType
       enum:
         - notConfigured
         - microsoftEdge
       type: string
+      description: Type of managed browser
     microsoft.graph.managedAppPinCharacterSet:
       title: managedAppPinCharacterSet
       enum:
         - numeric
         - alphanumericAndSymbol
       type: string
+      description: Character set which is to be used for a user's app PIN
     microsoft.graph.windowsInformationProtectionDataRecoveryCertificate:
       title: windowsInformationProtectionDataRecoveryCertificate
       type: object
@@ -13761,6 +13994,7 @@ components:
         - encryptAuditAndPrompt
         - encryptAuditAndBlock
       type: string
+      description: Possible values for WIP Protection enforcement levels
     microsoft.graph.windowsInformationProtectionResourceCollection:
       title: windowsInformationProtectionResourceCollection
       type: object
@@ -13869,6 +14103,7 @@ components:
         - failed
         - notSupported
       type: string
+      description: State of the action on the device
     microsoft.graph.settingSource:
       title: settingSource
       type: object
@@ -13881,6 +14116,8 @@ components:
           type: string
           description: Not yet documented
           nullable: true
+        sourceType:
+          $ref: '#/components/schemas/microsoft.graph.settingSourceType'
       additionalProperties:
         type: object
     odata.error.main:
@@ -13925,6 +14162,12 @@ components:
       additionalProperties:
         type: object
       description: Proxied Domain
+    microsoft.graph.settingSourceType:
+      title: settingSourceType
+      enum:
+        - deviceConfiguration
+        - deviceIntent
+      type: string
     odata.error.detail:
       required:
         - code
