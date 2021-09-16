@@ -11,7 +11,6 @@ paths:
       tags:
         - users.userActivity
       summary: Get activities from users
-      description: The user's activities across devices. Read-only. Nullable.
       operationId: users_ListActivities
       parameters:
         - name: user-id
@@ -131,7 +130,6 @@ paths:
       tags:
         - users.userActivity
       summary: Create new navigation property to activities for users
-      description: The user's activities across devices. Read-only. Nullable.
       operationId: users_CreateActivities
       parameters:
         - name: user-id
@@ -163,7 +161,6 @@ paths:
       tags:
         - users.userActivity
       summary: Get activities from users
-      description: The user's activities across devices. Read-only. Nullable.
       operationId: users_GetActivities
       parameters:
         - name: user-id
@@ -239,7 +236,6 @@ paths:
       tags:
         - users.userActivity
       summary: Update the navigation property activities in users
-      description: The user's activities across devices. Read-only. Nullable.
       operationId: users_UpdateActivities
       parameters:
         - name: user-id
@@ -273,7 +269,6 @@ paths:
       tags:
         - users.userActivity
       summary: Delete navigation property activities for users
-      description: The user's activities across devices. Read-only. Nullable.
       operationId: users_DeleteActivities
       parameters:
         - name: user-id
@@ -306,7 +301,6 @@ paths:
       tags:
         - users.userActivity
       summary: Get historyItems from users
-      description: Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
       operationId: users.activities_ListHistoryItems
       parameters:
         - name: user-id
@@ -418,7 +412,6 @@ paths:
       tags:
         - users.userActivity
       summary: Create new navigation property to historyItems for users
-      description: Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
       operationId: users.activities_CreateHistoryItems
       parameters:
         - name: user-id
@@ -457,7 +450,6 @@ paths:
       tags:
         - users.userActivity
       summary: Get historyItems from users
-      description: Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
       operationId: users.activities_GetHistoryItems
       parameters:
         - name: user-id
@@ -536,7 +528,6 @@ paths:
       tags:
         - users.userActivity
       summary: Update the navigation property historyItems in users
-      description: Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
       operationId: users.activities_UpdateHistoryItems
       parameters:
         - name: user-id
@@ -577,7 +568,6 @@ paths:
       tags:
         - users.userActivity
       summary: Delete navigation property historyItems for users
-      description: Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
       operationId: users.activities_DeleteHistoryItems
       parameters:
         - name: user-id
@@ -617,7 +607,6 @@ paths:
       tags:
         - users.userActivity
       summary: Get activity from users
-      description: Optional. NavigationProperty/Containment; navigation property to the associated activity.
       operationId: users.activities.historyItems_GetActivity
       parameters:
         - name: user-id
@@ -702,7 +691,6 @@ paths:
       tags:
         - users.userActivity
       summary: Get ref of activity from users
-      description: Optional. NavigationProperty/Containment; navigation property to the associated activity.
       operationId: users.activities.historyItems_GetRefActivity
       parameters:
         - name: user-id
@@ -747,7 +735,6 @@ paths:
       tags:
         - users.userActivity
       summary: Update the ref of navigation property activity in users
-      description: Optional. NavigationProperty/Containment; navigation property to the associated activity.
       operationId: users.activities.historyItems_SetRefActivity
       parameters:
         - name: user-id
@@ -790,7 +777,6 @@ paths:
       tags:
         - users.userActivity
       summary: Delete ref of navigation property activity for users
-      description: Optional. NavigationProperty/Containment; navigation property to the associated activity.
       operationId: users.activities.historyItems_DeleteRefActivity
       parameters:
         - name: user-id
@@ -835,50 +821,40 @@ components:
           properties:
             activationUrl:
               type: string
-              description: Required. URL used to launch the activity in the best native experience represented by the appId. Might launch a web-based app if no native app exists.
             activitySourceHost:
               type: string
-              description: 'Required. URL for the domain representing the cross-platform identity mapping for the app. Mapping is stored either as a JSON file hosted on the domain or configurable via Windows Dev Center. The JSON file is named cross-platform-app-identifiers and is hosted at root of your HTTPS domain, either at the top level domain or include a sub domain. For example: https://contoso.com or https://myapp.contoso.com but NOT https://myapp.contoso.com/somepath. You must have a unique file and domain (or sub domain) per cross-platform app identity. For example, a separate file and domain is needed for Word vs. PowerPoint.'
             appActivityId:
               type: string
-              description: Required. The unique activity ID in the context of the app - supplied by caller and immutable thereafter.
             appDisplayName:
               type: string
-              description: Optional. Short text description of the app used to generate the activity for use in cases when the app is not installed on the user’s local device.
               nullable: true
             contentInfo:
               $ref: '#/components/schemas/microsoft.graph.Json'
             contentUrl:
               type: string
-              description: 'Optional. Used in the event the content can be rendered outside of a native or web-based app experience (for example, a pointer to an item in an RSS feed).'
               nullable: true
             createdDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: Set by the server. DateTime in UTC when the object was created on the server.
               format: date-time
               nullable: true
             expirationDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: Set by the server. DateTime in UTC when the object expired on the server.
               format: date-time
               nullable: true
             fallbackUrl:
               type: string
-              description: 'Optional. URL used to launch the activity in a web-based app, if available.'
               nullable: true
             lastModifiedDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: Set by the server. DateTime in UTC when the object was modified on the server.
               format: date-time
               nullable: true
             status:
               $ref: '#/components/schemas/microsoft.graph.status'
             userTimezone:
               type: string
-              description: Optional. The timezone in which the user's device used to generate the activity was located at activity creation time; values supplied as Olson IDs in order to support cross-platform representation.
               nullable: true
             visualElements:
               $ref: '#/components/schemas/microsoft.graph.visualInfo'
@@ -886,7 +862,6 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.activityHistoryItem'
-              description: Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
           additionalProperties:
             type: object
     microsoft.graph.activityHistoryItem:
@@ -899,43 +874,36 @@ components:
               maximum: 2147483647
               minimum: -2147483648
               type: integer
-              description: 'Optional. The duration of active user engagement. if not supplied, this is calculated from the startedDateTime and lastActiveDateTime.'
               format: int32
               nullable: true
             createdDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: Set by the server. DateTime in UTC when the object was created on the server.
               format: date-time
               nullable: true
             expirationDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: Optional. UTC DateTime when the historyItem will undergo hard-delete. Can be set by the client.
               format: date-time
               nullable: true
             lastActiveDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'Optional. UTC DateTime when the historyItem (activity session) was last understood as active or finished - if null, historyItem status should be Ongoing.'
               format: date-time
               nullable: true
             lastModifiedDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: Set by the server. DateTime in UTC when the object was modified on the server.
               format: date-time
               nullable: true
             startedDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: Required. UTC DateTime when the historyItem (activity session) was started. Required for timeline history.
               format: date-time
             status:
               $ref: '#/components/schemas/microsoft.graph.status'
             userTimezone:
               type: string
-              description: Optional. The timezone in which the user's device used to generate the activity was located at activity creation time. Values supplied as Olson IDs in order to support cross-platform representation.
               nullable: true
             activity:
               $ref: '#/components/schemas/microsoft.graph.userActivity'
@@ -947,7 +915,6 @@ components:
       properties:
         id:
           type: string
-          description: Read-only.
       additionalProperties:
         type: object
     microsoft.graph.Json:
@@ -972,17 +939,14 @@ components:
           $ref: '#/components/schemas/microsoft.graph.imageInfo'
         backgroundColor:
           type: string
-          description: Optional. Background color used to render the activity in the UI - brand color for the application source of the activity. Must be a valid hex color
           nullable: true
         content:
           $ref: '#/components/schemas/microsoft.graph.Json'
         description:
           type: string
-          description: 'Optional. Longer text description of the user''s unique activity (example: document name, first sentence, and/or metadata)'
           nullable: true
         displayText:
           type: string
-          description: 'Required. Short text description of the user''s unique activity (for example, document name in cases where an activity refers to document creation)'
       additionalProperties:
         type: object
     odata.error:
@@ -1000,18 +964,15 @@ components:
       properties:
         addImageQuery:
           type: boolean
-          description: Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example – a high contrast image
           nullable: true
         alternateText:
           type: string
-          description: Optional; alt-text accessible content for the image
           nullable: true
         alternativeText:
           type: string
           nullable: true
         iconUrl:
           type: string
-          description: Optional; URI that points to an icon which represents the application used to generate the activity
           nullable: true
       additionalProperties:
         type: object

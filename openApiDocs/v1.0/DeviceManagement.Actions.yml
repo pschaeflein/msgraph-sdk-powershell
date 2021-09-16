@@ -1965,25 +1965,20 @@ components:
       properties:
         calendarSyncEnabled:
           type: boolean
-          description: Not yet documented
           nullable: true
         deviceAccount:
           $ref: '#/components/schemas/microsoft.graph.windowsDeviceAccount'
         deviceAccountEmail:
           type: string
-          description: Not yet documented
           nullable: true
         exchangeServer:
           type: string
-          description: Not yet documented
           nullable: true
         passwordRotationEnabled:
           type: boolean
-          description: Not yet documented
           nullable: true
         sessionInitiationProtocalAddress:
           type: string
-          description: Not yet documented
           nullable: true
       additionalProperties:
         type: object
@@ -1993,7 +1988,6 @@ components:
       properties:
         id:
           type: string
-          description: Read-only.
       additionalProperties:
         type: object
     microsoft.graph.deviceAndAppManagementAssignmentTarget:
@@ -2057,7 +2051,6 @@ components:
       properties:
         password:
           type: string
-          description: Not yet documented
           nullable: true
       additionalProperties:
         type: object

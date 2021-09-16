@@ -11,7 +11,6 @@ paths:
       tags:
         - users.inferenceClassification
       summary: Get inferenceClassification from users
-      description: Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance.
       operationId: users_GetInferenceClassification
       parameters:
         - name: user-id
@@ -66,7 +65,6 @@ paths:
       tags:
         - users.inferenceClassification
       summary: Update the navigation property inferenceClassification in users
-      description: Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance.
       operationId: users_UpdateInferenceClassification
       parameters:
         - name: user-id
@@ -93,7 +91,6 @@ paths:
       tags:
         - users.inferenceClassification
       summary: Delete navigation property inferenceClassification for users
-      description: Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance.
       operationId: users_DeleteInferenceClassification
       parameters:
         - name: user-id
@@ -119,7 +116,6 @@ paths:
       tags:
         - users.inferenceClassification
       summary: Get overrides from users
-      description: 'A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.'
       operationId: users.inferenceClassification_ListOverrides
       parameters:
         - name: user-id
@@ -204,7 +200,6 @@ paths:
       tags:
         - users.inferenceClassification
       summary: Create new navigation property to overrides for users
-      description: 'A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.'
       operationId: users.inferenceClassification_CreateOverrides
       parameters:
         - name: user-id
@@ -236,7 +231,6 @@ paths:
       tags:
         - users.inferenceClassification
       summary: Get overrides from users
-      description: 'A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.'
       operationId: users.inferenceClassification_GetOverrides
       parameters:
         - name: user-id
@@ -293,7 +287,6 @@ paths:
       tags:
         - users.inferenceClassification
       summary: Update the navigation property overrides in users
-      description: 'A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.'
       operationId: users.inferenceClassification_UpdateOverrides
       parameters:
         - name: user-id
@@ -327,7 +320,6 @@ paths:
       tags:
         - users.inferenceClassification
       summary: Delete navigation property overrides for users
-      description: 'A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.'
       operationId: users.inferenceClassification_DeleteOverrides
       parameters:
         - name: user-id
@@ -360,7 +352,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Get mailFolders from users
-      description: The user's mail folders. Read-only. Nullable.
       operationId: users_ListMailFolders
       parameters:
         - name: user-id
@@ -472,7 +463,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Create new navigation property to mailFolders for users
-      description: The user's mail folders. Read-only. Nullable.
       operationId: users_CreateMailFolders
       parameters:
         - name: user-id
@@ -504,7 +494,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Get mailFolders from users
-      description: The user's mail folders. Read-only. Nullable.
       operationId: users_GetMailFolders
       parameters:
         - name: user-id
@@ -609,7 +598,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Update the navigation property mailFolders in users
-      description: The user's mail folders. Read-only. Nullable.
       operationId: users_UpdateMailFolders
       parameters:
         - name: user-id
@@ -643,7 +631,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Delete navigation property mailFolders for users
-      description: The user's mail folders. Read-only. Nullable.
       operationId: users_DeleteMailFolders
       parameters:
         - name: user-id
@@ -676,7 +663,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Get childFolders from users
-      description: The collection of child folders in the mailFolder.
       operationId: users.mailFolders_ListChildFolders
       parameters:
         - name: user-id
@@ -795,7 +781,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Create new navigation property to childFolders for users
-      description: The collection of child folders in the mailFolder.
       operationId: users.mailFolders_CreateChildFolders
       parameters:
         - name: user-id
@@ -834,7 +819,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Get childFolders from users
-      description: The collection of child folders in the mailFolder.
       operationId: users.mailFolders_GetChildFolders
       parameters:
         - name: user-id
@@ -952,7 +936,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Update the navigation property childFolders in users
-      description: The collection of child folders in the mailFolder.
       operationId: users.mailFolders_UpdateChildFolders
       parameters:
         - name: user-id
@@ -993,7 +976,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Delete navigation property childFolders for users
-      description: The collection of child folders in the mailFolder.
       operationId: users.mailFolders_DeleteChildFolders
       parameters:
         - name: user-id
@@ -1033,7 +1015,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Get messageRules from users
-      description: The collection of rules that apply to the user's Inbox folder.
       operationId: users.mailFolders_ListMessageRules
       parameters:
         - name: user-id
@@ -1143,7 +1124,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Create new navigation property to messageRules for users
-      description: The collection of rules that apply to the user's Inbox folder.
       operationId: users.mailFolders_CreateMessageRules
       parameters:
         - name: user-id
@@ -1182,7 +1162,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Get messageRules from users
-      description: The collection of rules that apply to the user's Inbox folder.
       operationId: users.mailFolders_GetMessageRules
       parameters:
         - name: user-id
@@ -1252,7 +1231,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Update the navigation property messageRules in users
-      description: The collection of rules that apply to the user's Inbox folder.
       operationId: users.mailFolders_UpdateMessageRules
       parameters:
         - name: user-id
@@ -1293,7 +1271,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Delete navigation property messageRules for users
-      description: The collection of rules that apply to the user's Inbox folder.
       operationId: users.mailFolders_DeleteMessageRules
       parameters:
         - name: user-id
@@ -1333,7 +1310,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Get messages from users
-      description: The collection of messages in the mailFolder.
       operationId: users.mailFolders_ListMessages
       parameters:
         - name: user-id
@@ -1528,7 +1504,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Create new navigation property to messages for users
-      description: The collection of messages in the mailFolder.
       operationId: users.mailFolders_CreateMessages
       parameters:
         - name: user-id
@@ -1567,7 +1542,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Get messages from users
-      description: The collection of messages in the mailFolder.
       operationId: users.mailFolders_GetMessages
       parameters:
         - name: user-id
@@ -1703,7 +1677,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Update the navigation property messages in users
-      description: The collection of messages in the mailFolder.
       operationId: users.mailFolders_UpdateMessages
       parameters:
         - name: user-id
@@ -1744,7 +1717,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Delete navigation property messages for users
-      description: The collection of messages in the mailFolder.
       operationId: users.mailFolders_DeleteMessages
       parameters:
         - name: user-id
@@ -1864,7 +1836,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Get attachments from users
-      description: The fileAttachment and itemAttachment attachments for the message.
       operationId: users.mailFolders.messages_ListAttachments
       parameters:
         - name: user-id
@@ -1972,7 +1943,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Create new navigation property to attachments for users
-      description: The fileAttachment and itemAttachment attachments for the message.
       operationId: users.mailFolders.messages_CreateAttachments
       parameters:
         - name: user-id
@@ -2018,7 +1988,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Get attachments from users
-      description: The fileAttachment and itemAttachment attachments for the message.
       operationId: users.mailFolders.messages_GetAttachments
       parameters:
         - name: user-id
@@ -2092,7 +2061,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Update the navigation property attachments in users
-      description: The fileAttachment and itemAttachment attachments for the message.
       operationId: users.mailFolders.messages_UpdateAttachments
       parameters:
         - name: user-id
@@ -2140,7 +2108,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Delete navigation property attachments for users
-      description: The fileAttachment and itemAttachment attachments for the message.
       operationId: users.mailFolders.messages_DeleteAttachments
       parameters:
         - name: user-id
@@ -2187,7 +2154,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Get extensions from users
-      description: The collection of open extensions defined for the message. Nullable.
       operationId: users.mailFolders.messages_ListExtensions
       parameters:
         - name: user-id
@@ -2280,7 +2246,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Create new navigation property to extensions for users
-      description: The collection of open extensions defined for the message. Nullable.
       operationId: users.mailFolders.messages_CreateExtensions
       parameters:
         - name: user-id
@@ -2326,7 +2291,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Get extensions from users
-      description: The collection of open extensions defined for the message. Nullable.
       operationId: users.mailFolders.messages_GetExtensions
       parameters:
         - name: user-id
@@ -2395,7 +2359,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Update the navigation property extensions in users
-      description: The collection of open extensions defined for the message. Nullable.
       operationId: users.mailFolders.messages_UpdateExtensions
       parameters:
         - name: user-id
@@ -2443,7 +2406,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Delete navigation property extensions for users
-      description: The collection of open extensions defined for the message. Nullable.
       operationId: users.mailFolders.messages_DeleteExtensions
       parameters:
         - name: user-id
@@ -2490,7 +2452,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Get mentions from users
-      description: 'A collection of mentions in the message, ordered by the createdDateTime from the newest to the oldest. By default, a GET /messages does not return this property unless you apply $expand on the property.'
       operationId: users.mailFolders.messages_ListMentions
       parameters:
         - name: user-id
@@ -2607,7 +2568,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Create new navigation property to mentions for users
-      description: 'A collection of mentions in the message, ordered by the createdDateTime from the newest to the oldest. By default, a GET /messages does not return this property unless you apply $expand on the property.'
       operationId: users.mailFolders.messages_CreateMentions
       parameters:
         - name: user-id
@@ -2653,7 +2613,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Get mentions from users
-      description: 'A collection of mentions in the message, ordered by the createdDateTime from the newest to the oldest. By default, a GET /messages does not return this property unless you apply $expand on the property.'
       operationId: users.mailFolders.messages_GetMentions
       parameters:
         - name: user-id
@@ -2730,7 +2689,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Update the navigation property mentions in users
-      description: 'A collection of mentions in the message, ordered by the createdDateTime from the newest to the oldest. By default, a GET /messages does not return this property unless you apply $expand on the property.'
       operationId: users.mailFolders.messages_UpdateMentions
       parameters:
         - name: user-id
@@ -2778,7 +2736,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Delete navigation property mentions for users
-      description: 'A collection of mentions in the message, ordered by the createdDateTime from the newest to the oldest. By default, a GET /messages does not return this property unless you apply $expand on the property.'
       operationId: users.mailFolders.messages_DeleteMentions
       parameters:
         - name: user-id
@@ -2825,7 +2782,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Get multiValueExtendedProperties from users
-      description: The collection of multi-value extended properties defined for the message. Nullable.
       operationId: users.mailFolders.messages_ListMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -2921,7 +2877,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Create new navigation property to multiValueExtendedProperties for users
-      description: The collection of multi-value extended properties defined for the message. Nullable.
       operationId: users.mailFolders.messages_CreateMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -2967,7 +2922,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Get multiValueExtendedProperties from users
-      description: The collection of multi-value extended properties defined for the message. Nullable.
       operationId: users.mailFolders.messages_GetMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -3037,7 +2991,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Update the navigation property multiValueExtendedProperties in users
-      description: The collection of multi-value extended properties defined for the message. Nullable.
       operationId: users.mailFolders.messages_UpdateMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -3085,7 +3038,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Delete navigation property multiValueExtendedProperties for users
-      description: The collection of multi-value extended properties defined for the message. Nullable.
       operationId: users.mailFolders.messages_DeleteMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -3132,7 +3084,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Get singleValueExtendedProperties from users
-      description: The collection of single-value extended properties defined for the message. Nullable.
       operationId: users.mailFolders.messages_ListSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -3228,7 +3179,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Create new navigation property to singleValueExtendedProperties for users
-      description: The collection of single-value extended properties defined for the message. Nullable.
       operationId: users.mailFolders.messages_CreateSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -3274,7 +3224,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Get singleValueExtendedProperties from users
-      description: The collection of single-value extended properties defined for the message. Nullable.
       operationId: users.mailFolders.messages_GetSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -3344,7 +3293,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Update the navigation property singleValueExtendedProperties in users
-      description: The collection of single-value extended properties defined for the message. Nullable.
       operationId: users.mailFolders.messages_UpdateSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -3392,7 +3340,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Delete navigation property singleValueExtendedProperties for users
-      description: The collection of single-value extended properties defined for the message. Nullable.
       operationId: users.mailFolders.messages_DeleteSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -3439,7 +3386,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Get multiValueExtendedProperties from users
-      description: The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
       operationId: users.mailFolders_ListMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -3528,7 +3474,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Create new navigation property to multiValueExtendedProperties for users
-      description: The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
       operationId: users.mailFolders_CreateMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -3567,7 +3512,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Get multiValueExtendedProperties from users
-      description: The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
       operationId: users.mailFolders_GetMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -3630,7 +3574,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Update the navigation property multiValueExtendedProperties in users
-      description: The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
       operationId: users.mailFolders_UpdateMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -3671,7 +3614,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Delete navigation property multiValueExtendedProperties for users
-      description: The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
       operationId: users.mailFolders_DeleteMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -3711,7 +3653,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Get singleValueExtendedProperties from users
-      description: The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
       operationId: users.mailFolders_ListSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -3800,7 +3741,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Create new navigation property to singleValueExtendedProperties for users
-      description: The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
       operationId: users.mailFolders_CreateSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -3839,7 +3779,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Get singleValueExtendedProperties from users
-      description: The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
       operationId: users.mailFolders_GetSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -3902,7 +3841,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Update the navigation property singleValueExtendedProperties in users
-      description: The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
       operationId: users.mailFolders_UpdateSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -3943,7 +3881,6 @@ paths:
       tags:
         - users.mailFolder
       summary: Delete navigation property singleValueExtendedProperties for users
-      description: The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
       operationId: users.mailFolders_DeleteSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -4250,7 +4187,6 @@ paths:
       tags:
         - users.message
       summary: Get messages from users
-      description: The messages in a mailbox or folder. Read-only. Nullable.
       operationId: users_ListMessages
       parameters:
         - name: user-id
@@ -4438,7 +4374,6 @@ paths:
       tags:
         - users.message
       summary: Create new navigation property to messages for users
-      description: The messages in a mailbox or folder. Read-only. Nullable.
       operationId: users_CreateMessages
       parameters:
         - name: user-id
@@ -4470,7 +4405,6 @@ paths:
       tags:
         - users.message
       summary: Get messages from users
-      description: The messages in a mailbox or folder. Read-only. Nullable.
       operationId: users_GetMessages
       parameters:
         - name: user-id
@@ -4594,7 +4528,6 @@ paths:
       tags:
         - users.message
       summary: Update the navigation property messages in users
-      description: The messages in a mailbox or folder. Read-only. Nullable.
       operationId: users_UpdateMessages
       parameters:
         - name: user-id
@@ -4628,7 +4561,6 @@ paths:
       tags:
         - users.message
       summary: Delete navigation property messages for users
-      description: The messages in a mailbox or folder. Read-only. Nullable.
       operationId: users_DeleteMessages
       parameters:
         - name: user-id
@@ -4727,7 +4659,6 @@ paths:
       tags:
         - users.message
       summary: Get attachments from users
-      description: The fileAttachment and itemAttachment attachments for the message.
       operationId: users.messages_ListAttachments
       parameters:
         - name: user-id
@@ -4828,7 +4759,6 @@ paths:
       tags:
         - users.message
       summary: Create new navigation property to attachments for users
-      description: The fileAttachment and itemAttachment attachments for the message.
       operationId: users.messages_CreateAttachments
       parameters:
         - name: user-id
@@ -4867,7 +4797,6 @@ paths:
       tags:
         - users.message
       summary: Get attachments from users
-      description: The fileAttachment and itemAttachment attachments for the message.
       operationId: users.messages_GetAttachments
       parameters:
         - name: user-id
@@ -4934,7 +4863,6 @@ paths:
       tags:
         - users.message
       summary: Update the navigation property attachments in users
-      description: The fileAttachment and itemAttachment attachments for the message.
       operationId: users.messages_UpdateAttachments
       parameters:
         - name: user-id
@@ -4975,7 +4903,6 @@ paths:
       tags:
         - users.message
       summary: Delete navigation property attachments for users
-      description: The fileAttachment and itemAttachment attachments for the message.
       operationId: users.messages_DeleteAttachments
       parameters:
         - name: user-id
@@ -5015,7 +4942,6 @@ paths:
       tags:
         - users.message
       summary: Get extensions from users
-      description: The collection of open extensions defined for the message. Nullable.
       operationId: users.messages_ListExtensions
       parameters:
         - name: user-id
@@ -5101,7 +5027,6 @@ paths:
       tags:
         - users.message
       summary: Create new navigation property to extensions for users
-      description: The collection of open extensions defined for the message. Nullable.
       operationId: users.messages_CreateExtensions
       parameters:
         - name: user-id
@@ -5140,7 +5065,6 @@ paths:
       tags:
         - users.message
       summary: Get extensions from users
-      description: The collection of open extensions defined for the message. Nullable.
       operationId: users.messages_GetExtensions
       parameters:
         - name: user-id
@@ -5202,7 +5126,6 @@ paths:
       tags:
         - users.message
       summary: Update the navigation property extensions in users
-      description: The collection of open extensions defined for the message. Nullable.
       operationId: users.messages_UpdateExtensions
       parameters:
         - name: user-id
@@ -5243,7 +5166,6 @@ paths:
       tags:
         - users.message
       summary: Delete navigation property extensions for users
-      description: The collection of open extensions defined for the message. Nullable.
       operationId: users.messages_DeleteExtensions
       parameters:
         - name: user-id
@@ -5283,7 +5205,6 @@ paths:
       tags:
         - users.message
       summary: Get mentions from users
-      description: 'A collection of mentions in the message, ordered by the createdDateTime from the newest to the oldest. By default, a GET /messages does not return this property unless you apply $expand on the property.'
       operationId: users.messages_ListMentions
       parameters:
         - name: user-id
@@ -5393,7 +5314,6 @@ paths:
       tags:
         - users.message
       summary: Create new navigation property to mentions for users
-      description: 'A collection of mentions in the message, ordered by the createdDateTime from the newest to the oldest. By default, a GET /messages does not return this property unless you apply $expand on the property.'
       operationId: users.messages_CreateMentions
       parameters:
         - name: user-id
@@ -5432,7 +5352,6 @@ paths:
       tags:
         - users.message
       summary: Get mentions from users
-      description: 'A collection of mentions in the message, ordered by the createdDateTime from the newest to the oldest. By default, a GET /messages does not return this property unless you apply $expand on the property.'
       operationId: users.messages_GetMentions
       parameters:
         - name: user-id
@@ -5502,7 +5421,6 @@ paths:
       tags:
         - users.message
       summary: Update the navigation property mentions in users
-      description: 'A collection of mentions in the message, ordered by the createdDateTime from the newest to the oldest. By default, a GET /messages does not return this property unless you apply $expand on the property.'
       operationId: users.messages_UpdateMentions
       parameters:
         - name: user-id
@@ -5543,7 +5461,6 @@ paths:
       tags:
         - users.message
       summary: Delete navigation property mentions for users
-      description: 'A collection of mentions in the message, ordered by the createdDateTime from the newest to the oldest. By default, a GET /messages does not return this property unless you apply $expand on the property.'
       operationId: users.messages_DeleteMentions
       parameters:
         - name: user-id
@@ -5583,7 +5500,6 @@ paths:
       tags:
         - users.message
       summary: Get multiValueExtendedProperties from users
-      description: The collection of multi-value extended properties defined for the message. Nullable.
       operationId: users.messages_ListMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -5672,7 +5588,6 @@ paths:
       tags:
         - users.message
       summary: Create new navigation property to multiValueExtendedProperties for users
-      description: The collection of multi-value extended properties defined for the message. Nullable.
       operationId: users.messages_CreateMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -5711,7 +5626,6 @@ paths:
       tags:
         - users.message
       summary: Get multiValueExtendedProperties from users
-      description: The collection of multi-value extended properties defined for the message. Nullable.
       operationId: users.messages_GetMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -5774,7 +5688,6 @@ paths:
       tags:
         - users.message
       summary: Update the navigation property multiValueExtendedProperties in users
-      description: The collection of multi-value extended properties defined for the message. Nullable.
       operationId: users.messages_UpdateMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -5815,7 +5728,6 @@ paths:
       tags:
         - users.message
       summary: Delete navigation property multiValueExtendedProperties for users
-      description: The collection of multi-value extended properties defined for the message. Nullable.
       operationId: users.messages_DeleteMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -5855,7 +5767,6 @@ paths:
       tags:
         - users.message
       summary: Get singleValueExtendedProperties from users
-      description: The collection of single-value extended properties defined for the message. Nullable.
       operationId: users.messages_ListSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -5944,7 +5855,6 @@ paths:
       tags:
         - users.message
       summary: Create new navigation property to singleValueExtendedProperties for users
-      description: The collection of single-value extended properties defined for the message. Nullable.
       operationId: users.messages_CreateSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -5983,7 +5893,6 @@ paths:
       tags:
         - users.message
       summary: Get singleValueExtendedProperties from users
-      description: The collection of single-value extended properties defined for the message. Nullable.
       operationId: users.messages_GetSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -6046,7 +5955,6 @@ paths:
       tags:
         - users.message
       summary: Update the navigation property singleValueExtendedProperties in users
-      description: The collection of single-value extended properties defined for the message. Nullable.
       operationId: users.messages_UpdateSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -6087,7 +5995,6 @@ paths:
       tags:
         - users.message
       summary: Delete navigation property singleValueExtendedProperties for users
-      description: The collection of single-value extended properties defined for the message. Nullable.
       operationId: users.messages_DeleteSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -6134,7 +6041,6 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.inferenceClassificationOverride'
-              description: 'A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.'
           additionalProperties:
             type: object
     microsoft.graph.inferenceClassificationOverride:
@@ -6159,64 +6065,52 @@ components:
               maximum: 2147483647
               minimum: -2147483648
               type: integer
-              description: The number of immediate child mailFolders in the current mailFolder.
               format: int32
               nullable: true
             displayName:
               type: string
-              description: The mailFolder's display name.
               nullable: true
             isHidden:
               type: boolean
-              description: Indicates whether the mailFolder is hidden. This property can be set only when creating the folder. Find more information in Hidden mail folders.
               nullable: true
             parentFolderId:
               type: string
-              description: The unique identifier for the mailFolder's parent mailFolder.
               nullable: true
             totalItemCount:
               maximum: 2147483647
               minimum: -2147483648
               type: integer
-              description: The number of items in the mailFolder.
               format: int32
               nullable: true
             unreadItemCount:
               maximum: 2147483647
               minimum: -2147483648
               type: integer
-              description: The number of items in the mailFolder marked as unread.
               format: int32
               nullable: true
             wellKnownName:
               type: string
-              description: 'The well-known folder name for the folder. The possible values are listed above. This property is only set for default folders created by Outlook. For other folders, this property is null.'
               nullable: true
             childFolders:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.mailFolder'
-              description: The collection of child folders in the mailFolder.
             messageRules:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.messageRule'
-              description: The collection of rules that apply to the user's Inbox folder.
             messages:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.message'
-              description: The collection of messages in the mailFolder.
             multiValueExtendedProperties:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.multiValueLegacyExtendedProperty'
-              description: The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
             singleValueExtendedProperties:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.singleValueLegacyExtendedProperty'
-              description: The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
             userConfigurations:
               type: array
               items:
@@ -6235,27 +6129,22 @@ components:
               $ref: '#/components/schemas/microsoft.graph.messageRulePredicates'
             displayName:
               type: string
-              description: The display name of the rule.
               nullable: true
             exceptions:
               $ref: '#/components/schemas/microsoft.graph.messageRulePredicates'
             hasError:
               type: boolean
-              description: Indicates whether the rule is in an error condition. Read-only.
               nullable: true
             isEnabled:
               type: boolean
-              description: Indicates whether the rule is enabled to be applied to messages.
               nullable: true
             isReadOnly:
               type: boolean
-              description: Indicates if the rule is read-only and cannot be modified or deleted by the rules REST API.
               nullable: true
             sequence:
               maximum: 2147483647
               minimum: -2147483648
               type: integer
-              description: 'Indicates the order in which the rule is executed, among other rules.'
               format: int32
               nullable: true
           additionalProperties:
@@ -6270,25 +6159,20 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.recipient'
-              description: 'The Bcc: recipients for the message.'
             body:
               $ref: '#/components/schemas/microsoft.graph.itemBody'
             bodyPreview:
               type: string
-              description: 'The first 255 characters of the message body. It is in text format. If the message contains instances of mention, this property would contain a concatenation of these mentions as well.'
               nullable: true
             ccRecipients:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.recipient'
-              description: 'The Cc: recipients for the message.'
             conversationId:
               type: string
-              description: The ID of the conversation the email belongs to.
               nullable: true
             conversationIndex:
               type: string
-              description: Indicates the position of the message within the conversation.
               format: base64url
               nullable: true
             flag:
@@ -6297,7 +6181,6 @@ components:
               $ref: '#/components/schemas/microsoft.graph.recipient'
             hasAttachments:
               type: boolean
-              description: 'Indicates whether the message has attachments. This property doesn''t include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as <IMG src=''cid:image001.jpg@01D26CD8.6C05F070''>.'
               nullable: true
             importance:
               $ref: '#/components/schemas/microsoft.graph.importance'
@@ -6307,61 +6190,49 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.internetMessageHeader'
-              description: A collection of message headers defined by RFC5322. The set includes message headers indicating the network path taken by a message from the sender to the recipient. It can also contain custom message headers that hold app data for the message.  Returned only on applying a $select query option. Read-only.
             internetMessageId:
               type: string
-              description: The message ID in the format specified by RFC2822.
               nullable: true
             isDeliveryReceiptRequested:
               type: boolean
-              description: Indicates whether a read receipt is requested for the message.
               nullable: true
             isDraft:
               type: boolean
-              description: Indicates whether the message is a draft. A message is a draft if it hasn't been sent yet.
               nullable: true
             isRead:
               type: boolean
-              description: Indicates whether the message has been read.
               nullable: true
             isReadReceiptRequested:
               type: boolean
-              description: Indicates whether a read receipt is requested for the message.
               nullable: true
             mentionsPreview:
               $ref: '#/components/schemas/microsoft.graph.mentionsPreview'
             parentFolderId:
               type: string
-              description: The unique identifier for the message's parent mailFolder.
               nullable: true
             receivedDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'The date and time the message was received.  The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.'
               format: date-time
               nullable: true
             replyTo:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.recipient'
-              description: The email addresses to use when replying.
             sender:
               $ref: '#/components/schemas/microsoft.graph.recipient'
             sentDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'The date and time the message was sent.  The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.'
               format: date-time
               nullable: true
             subject:
               type: string
-              description: The subject of the message.
               nullable: true
             toRecipients:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.recipient'
-              description: 'The To: recipients for the message.'
             uniqueBody:
               $ref: '#/components/schemas/microsoft.graph.itemBody'
             unsubscribeData:
@@ -6374,33 +6245,27 @@ components:
               nullable: true
             webLink:
               type: string
-              description: 'The URL to open the message in Outlook on the web.You can append an ispopout argument to the end of the URL to change how the message is displayed. If ispopout is not present or if it is set to 1, then the message is shown in a popout window. If ispopout is set to 0, then the browser will show the message in the Outlook on the web review pane.The message will open in the browser if you are logged in to your mailbox via Outlook on the web. You will be prompted to login if you are not already logged in with the browser.This URL cannot be accessed from within an iFrame.'
               nullable: true
             attachments:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.attachment'
-              description: The fileAttachment and itemAttachment attachments for the message.
             extensions:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.extension'
-              description: The collection of open extensions defined for the message. Nullable.
             mentions:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.mention'
-              description: 'A collection of mentions in the message, ordered by the createdDateTime from the newest to the oldest. By default, a GET /messages does not return this property unless you apply $expand on the property.'
             multiValueExtendedProperties:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.multiValueLegacyExtendedProperty'
-              description: The collection of multi-value extended properties defined for the message. Nullable.
             singleValueExtendedProperties:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.singleValueLegacyExtendedProperty'
-              description: The collection of single-value extended properties defined for the message. Nullable.
           additionalProperties:
             type: object
     microsoft.graph.attachment:
@@ -6411,26 +6276,21 @@ components:
           properties:
             contentType:
               type: string
-              description: The MIME type.
               nullable: true
             isInline:
               type: boolean
-              description: 'true if the attachment is an inline attachment; otherwise, false.'
             lastModifiedDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z'
               format: date-time
               nullable: true
             name:
               type: string
-              description: The display name of the attachment. This does not need to be the actual file name.
               nullable: true
             size:
               maximum: 2147483647
               minimum: -2147483648
               type: integer
-              description: The length of the attachment in bytes.
               format: int32
           additionalProperties:
             type: object
@@ -6449,34 +6309,28 @@ components:
           properties:
             application:
               type: string
-              description: The name of the application where the mention is created. Optional. Not used and defaulted as null for message.
               nullable: true
             clientReference:
               type: string
-              description: A unique identifier that represents a parent of the resource instance. Optional. Not used and defaulted as null for message.
               nullable: true
             createdBy:
               $ref: '#/components/schemas/microsoft.graph.emailAddress'
             createdDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: The date and time that the mention is created on the client.
               format: date-time
               nullable: true
             deepLink:
               type: string
-              description: A deep web link to the context of the mention in the resource instance. Optional. Not used and defaulted as null for message.
               nullable: true
             mentioned:
               $ref: '#/components/schemas/microsoft.graph.emailAddress'
             mentionText:
               type: string
-              description: 'Optional. Not used and defaulted as null for message. To get the mentions in a message, see the bodyPreview property of the message instead.'
               nullable: true
             serverCreatedDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: The date and time that the mention is created on the server. Optional. Not used and defaulted as null for message.
               format: date-time
               nullable: true
           additionalProperties:
@@ -6492,7 +6346,6 @@ components:
               items:
                 type: string
                 nullable: true
-              description: A collection of property values.
           additionalProperties:
             type: object
     microsoft.graph.singleValueLegacyExtendedProperty:
@@ -6503,7 +6356,6 @@ components:
           properties:
             value:
               type: string
-              description: A property value.
               nullable: true
           additionalProperties:
             type: object
@@ -6525,7 +6377,6 @@ components:
       properties:
         id:
           type: string
-          description: Read-only.
       additionalProperties:
         type: object
     microsoft.graph.inferenceClassificationType:
@@ -6540,11 +6391,9 @@ components:
       properties:
         address:
           type: string
-          description: The email address of an entity instance.
           nullable: true
         name:
           type: string
-          description: The display name of an entity instance.
           nullable: true
       additionalProperties:
         type: object
@@ -6557,47 +6406,37 @@ components:
           items:
             type: string
             nullable: true
-          description: A list of categories to be assigned to a message.
         copyToFolder:
           type: string
-          description: The ID of a folder that a message is to be copied to.
           nullable: true
         delete:
           type: boolean
-          description: Indicates whether a message should be moved to the Deleted Items folder.
           nullable: true
         forwardAsAttachmentTo:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.recipient'
-          description: The email addresses of the recipients to which a message should be forwarded as an attachment.
         forwardTo:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.recipient'
-          description: The email addresses of the recipients to which a message should be forwarded.
         markAsRead:
           type: boolean
-          description: Indicates whether a message should be marked as read.
           nullable: true
         markImportance:
           $ref: '#/components/schemas/microsoft.graph.importance'
         moveToFolder:
           type: string
-          description: The ID of the folder that a message will be moved to.
           nullable: true
         permanentDelete:
           type: boolean
-          description: Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder.
           nullable: true
         redirectTo:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.recipient'
-          description: The email address to which a message should be redirected.
         stopProcessingRules:
           type: boolean
-          description: Indicates whether subsequent rules should be evaluated.
           nullable: true
       additionalProperties:
         type: object
@@ -6610,127 +6449,101 @@ components:
           items:
             type: string
             nullable: true
-          description: Represents the strings that should appear in the body of an incoming message in order for the condition or exception to apply.
         bodyOrSubjectContains:
           type: array
           items:
             type: string
             nullable: true
-          description: Represents the strings that should appear in the body or subject of an incoming message in order for the condition or exception to apply.
         categories:
           type: array
           items:
             type: string
             nullable: true
-          description: Represents the categories that an incoming message should be labeled with in order for the condition or exception to apply.
         fromAddresses:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.recipient'
-          description: Represents the specific sender email addresses of an incoming message in order for the condition or exception to apply.
         hasAttachments:
           type: boolean
-          description: Indicates whether an incoming message must have attachments in order for the condition or exception to apply.
           nullable: true
         headerContains:
           type: array
           items:
             type: string
             nullable: true
-          description: Represents the strings that appear in the headers of an incoming message in order for the condition or exception to apply.
         importance:
           $ref: '#/components/schemas/microsoft.graph.importance'
         isApprovalRequest:
           type: boolean
-          description: Indicates whether an incoming message must be an approval request in order for the condition or exception to apply.
           nullable: true
         isAutomaticForward:
           type: boolean
-          description: Indicates whether an incoming message must be automatically forwarded in order for the condition or exception to apply.
           nullable: true
         isAutomaticReply:
           type: boolean
-          description: Indicates whether an incoming message must be an auto reply in order for the condition or exception to apply.
           nullable: true
         isEncrypted:
           type: boolean
-          description: Indicates whether an incoming message must be encrypted in order for the condition or exception to apply.
           nullable: true
         isMeetingRequest:
           type: boolean
-          description: Indicates whether an incoming message must be a meeting request in order for the condition or exception to apply.
           nullable: true
         isMeetingResponse:
           type: boolean
-          description: Indicates whether an incoming message must be a meeting response in order for the condition or exception to apply.
           nullable: true
         isNonDeliveryReport:
           type: boolean
-          description: Indicates whether an incoming message must be a non-delivery report in order for the condition or exception to apply.
           nullable: true
         isPermissionControlled:
           type: boolean
-          description: Indicates whether an incoming message must be permission controlled (RMS-protected) in order for the condition or exception to apply.
           nullable: true
         isReadReceipt:
           type: boolean
-          description: Indicates whether an incoming message must be a read receipt in order for the condition or exception to apply.
           nullable: true
         isSigned:
           type: boolean
-          description: Indicates whether an incoming message must be S/MIME-signed in order for the condition or exception to apply.
           nullable: true
         isVoicemail:
           type: boolean
-          description: Indicates whether an incoming message must be a voice mail in order for the condition or exception to apply.
           nullable: true
         messageActionFlag:
           $ref: '#/components/schemas/microsoft.graph.messageActionFlag'
         notSentToMe:
           type: boolean
-          description: Indicates whether the owner of the mailbox must not be a recipient of an incoming message in order for the condition or exception to apply.
           nullable: true
         recipientContains:
           type: array
           items:
             type: string
             nullable: true
-          description: Represents the strings that appear in either the toRecipients or ccRecipients properties of an incoming message in order for the condition or exception to apply.
         senderContains:
           type: array
           items:
             type: string
             nullable: true
-          description: Represents the strings that appear in the from property of an incoming message in order for the condition or exception to apply.
         sensitivity:
           $ref: '#/components/schemas/microsoft.graph.sensitivity'
         sentCcMe:
           type: boolean
-          description: Indicates whether the owner of the mailbox must be in the ccRecipients property of an incoming message in order for the condition or exception to apply.
           nullable: true
         sentOnlyToMe:
           type: boolean
-          description: Indicates whether the owner of the mailbox must be the only recipient in an incoming message in order for the condition or exception to apply.
           nullable: true
         sentToAddresses:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.recipient'
-          description: Represents the email addresses that an incoming message must have been sent to in order for the condition or exception to apply.
         sentToMe:
           type: boolean
-          description: Indicates whether the owner of the mailbox must be in the toRecipients property of an incoming message in order for the condition or exception to apply.
           nullable: true
         sentToOrCcMe:
           type: boolean
-          description: Indicates whether the owner of the mailbox must be in either a toRecipients or ccRecipients property of an incoming message in order for the condition or exception to apply.
           nullable: true
         subjectContains:
           type: array
           items:
             type: string
             nullable: true
-          description: Represents the strings that appear in the subject of an incoming message in order for the condition or exception to apply.
         withinSizeRange:
           $ref: '#/components/schemas/microsoft.graph.sizeRange'
       additionalProperties:
@@ -6746,21 +6559,17 @@ components:
               items:
                 type: string
                 nullable: true
-              description: The categories associated with the item
             changeKey:
               type: string
-              description: 'Identifies the version of the item. Every time the item is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.'
               nullable: true
             createdDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z'
               format: date-time
               nullable: true
             lastModifiedDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z'
               format: date-time
               nullable: true
           additionalProperties:
@@ -6779,7 +6588,6 @@ components:
       properties:
         content:
           type: string
-          description: The content of the item.
           nullable: true
         contentType:
           $ref: '#/components/schemas/microsoft.graph.bodyType'
@@ -6812,11 +6620,9 @@ components:
       properties:
         name:
           type: string
-          description: Represents the key in a key-value pair.
           nullable: true
         value:
           type: string
-          description: The value in a key-value pair.
           nullable: true
       additionalProperties:
         type: object
@@ -6826,7 +6632,6 @@ components:
       properties:
         isMentioned:
           type: boolean
-          description: True if the signed-in user is mentioned in the parent resource instance. Read-only. Supports filter.
           nullable: true
       additionalProperties:
         type: object
@@ -6870,14 +6675,12 @@ components:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: The maximum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply.
           format: int32
           nullable: true
         minimumSize:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: The minimum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply.
           format: int32
           nullable: true
       additionalProperties:
@@ -6894,10 +6697,8 @@ components:
       properties:
         dateTime:
           type: string
-          description: 'A single point of time in a combined date and time representation ({date}T{time}). For example, ''2019-04-16T09:00:00''.'
         timeZone:
           type: string
-          description: 'Represents a time zone, for example, ''Pacific Standard Time''. See below for possible values.'
           nullable: true
       additionalProperties:
         type: object

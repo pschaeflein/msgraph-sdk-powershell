@@ -11662,7 +11662,7 @@ components:
               description: Whether the account is enabled for syncing applications from the Microsoft Store for Business.
             microsoftStoreForBusinessLanguage:
               type: string
-              description: 'The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.'
+              description: 'The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is <languagecode2>-<country/regioncode2>, where <languagecode2> is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.'
               nullable: true
             microsoftStoreForBusinessLastCompletedApplicationSyncTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
@@ -11755,11 +11755,11 @@ components:
           properties:
             customBrowserDisplayName:
               type: string
-              description: Friendly name of the preferred custom browser to open weblink on Android.
+              description: 'Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.'
               nullable: true
             customBrowserPackageId:
               type: string
-              description: Unique identifier of a custom browser to open weblink on Android.
+              description: 'Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.'
               nullable: true
             deployedAppCount:
               maximum: 2147483647
@@ -11819,21 +11819,17 @@ components:
               maximum: 2147483647
               minimum: -2147483648
               type: integer
-              description: Not yet documented
               format: int32
             configurationDeploymentSummaryPerApp:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.managedAppPolicyDeploymentSummaryPerApp'
-              description: Not yet documented
             displayName:
               type: string
-              description: Not yet documented
               nullable: true
             lastRefreshTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: Not yet documented
               format: date-time
             version:
               type: string
@@ -11905,7 +11901,7 @@ components:
               $ref: '#/components/schemas/microsoft.graph.managedAppDataEncryptionType'
             customBrowserProtocol:
               type: string
-              description: A custom browser protocol to open weblink on iOS.
+              description: 'A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.'
               nullable: true
             deployedAppCount:
               maximum: 2147483647
@@ -12725,7 +12721,7 @@ components:
               maximum: 2147483647
               minimum: -2147483648
               type: integer
-              description: Offline interval before app data is wiped (days)
+              description: 'Offline interval before app data is wiped (days) '
               format: int32
             mdmEnrollmentUrl:
               type: string
@@ -13091,7 +13087,6 @@ components:
       properties:
         id:
           type: string
-          description: Read-only.
       additionalProperties:
         type: object
     microsoft.graph.targetedManagedAppProtection:
@@ -13230,7 +13225,7 @@ components:
               description: Indicates whether printing is allowed from managed apps.
             saveAsBlocked:
               type: boolean
-              description: Indicates whether users may use the 'Save As' menu item to save a copy of protected files.
+              description: Indicates whether users may use the "Save As" menu item to save a copy of protected files.
             simplePinBlocked:
               type: boolean
               description: Indicates whether simplePin is blocked.
@@ -13330,7 +13325,7 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.windowsInformationProtectionResourceCollection'
-              description: 'This is the comma-separated list of internal proxy servers. For example, ''157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59''. These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseProxiedDomains policy to force traffic to the matched domains through these proxies'
+              description: 'This is the comma-separated list of internal proxy servers. For example, "157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59". These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseProxiedDomains policy to force traffic to the matched domains through these proxies'
             enterpriseIPRanges:
               type: array
               items:
@@ -13607,7 +13602,7 @@ components:
           nullable: true
         codeIntegrity:
           type: string
-          description: 'When code integrity is enabled, code execution is restricted to integrity verified code'
+          description: ' When code integrity is enabled, code execution is restricted to integrity verified code'
           nullable: true
         codeIntegrityCheckVersion:
           type: string
@@ -13627,7 +13622,7 @@ components:
           nullable: true
         dataExcutionPolicy:
           type: string
-          description: DEP Policy defines a set of hardware and software technologies that perform additional checks on memory
+          description: 'DEP Policy defines a set of hardware and software technologies that perform additional checks on memory '
           nullable: true
         deviceHealthAttestationStatus:
           type: string
@@ -14110,11 +14105,9 @@ components:
       properties:
         displayName:
           type: string
-          description: Not yet documented
           nullable: true
         id:
           type: string
-          description: Not yet documented
           nullable: true
         sourceType:
           $ref: '#/components/schemas/microsoft.graph.settingSourceType'

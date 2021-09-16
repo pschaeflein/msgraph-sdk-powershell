@@ -87,7 +87,6 @@ paths:
       tags:
         - auditLogs.directoryAudit
       summary: Get directoryAudits from auditLogs
-      description: Read-only. Nullable.
       operationId: auditLogs_ListDirectoryAudits
       parameters:
         - $ref: '#/components/parameters/top'
@@ -192,7 +191,6 @@ paths:
       tags:
         - auditLogs.directoryAudit
       summary: Create new navigation property to directoryAudits for auditLogs
-      description: Read-only. Nullable.
       operationId: auditLogs_CreateDirectoryAudits
       requestBody:
         description: New navigation property
@@ -216,7 +214,6 @@ paths:
       tags:
         - auditLogs.directoryAudit
       summary: Get directoryAudits from auditLogs
-      description: Read-only. Nullable.
       operationId: auditLogs_GetDirectoryAudits
       parameters:
         - name: directoryAudit-id
@@ -275,7 +272,6 @@ paths:
       tags:
         - auditLogs.directoryAudit
       summary: Update the navigation property directoryAudits in auditLogs
-      description: Read-only. Nullable.
       operationId: auditLogs_UpdateDirectoryAudits
       parameters:
         - name: directoryAudit-id
@@ -302,7 +298,6 @@ paths:
       tags:
         - auditLogs.directoryAudit
       summary: Delete navigation property directoryAudits for auditLogs
-      description: Read-only. Nullable.
       operationId: auditLogs_DeleteDirectoryAudits
       parameters:
         - name: directoryAudit-id
@@ -872,7 +867,6 @@ paths:
       tags:
         - auditLogs.signIn
       summary: Get signIns from auditLogs
-      description: Read-only. Nullable.
       operationId: auditLogs_ListSignIns
       parameters:
         - $ref: '#/components/parameters/top'
@@ -1013,7 +1007,6 @@ paths:
       tags:
         - auditLogs.signIn
       summary: Create new navigation property to signIns for auditLogs
-      description: Read-only. Nullable.
       operationId: auditLogs_CreateSignIns
       requestBody:
         description: New navigation property
@@ -1037,7 +1030,6 @@ paths:
       tags:
         - auditLogs.signIn
       summary: Get signIns from auditLogs
-      description: Read-only. Nullable.
       operationId: auditLogs_GetSignIns
       parameters:
         - name: signIn-id
@@ -1108,7 +1100,6 @@ paths:
       tags:
         - auditLogs.signIn
       summary: Update the navigation property signIns in auditLogs
-      description: Read-only. Nullable.
       operationId: auditLogs_UpdateSignIns
       parameters:
         - name: signIn-id
@@ -1135,7 +1126,6 @@ paths:
       tags:
         - auditLogs.signIn
       summary: Delete navigation property signIns for auditLogs
-      description: Read-only. Nullable.
       operationId: auditLogs_DeleteSignIns
       parameters:
         - name: signIn-id
@@ -4601,7 +4591,6 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.directoryAudit'
-              description: Read-only. Nullable.
             provisioning:
               type: array
               items:
@@ -4614,7 +4603,6 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.signIn'
-              description: Read-only. Nullable.
           additionalProperties:
             type: object
     microsoft.graph.directoryAudit:
@@ -4626,28 +4614,22 @@ components:
             activityDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.'
               format: date-time
             activityDisplayName:
               type: string
-              description: 'Indicates the activity name or the operation name (E.g. ''Create User'', ''Add member to group''). For a list of activities logged, refer to Azure Ad activity list.'
             additionalDetails:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.keyValue'
-              description: Indicates additional details on the activity.
             category:
               type: string
-              description: 'Indicates which resource category that''s targeted by the activity. (For example: User Management, Group Management etc..)'
             correlationId:
               type: string
-              description: Indicates a unique ID that helps correlate activities that span across various services. Can be used to trace logs across services.
               nullable: true
             initiatedBy:
               $ref: '#/components/schemas/microsoft.graph.auditActivityInitiator'
             loggedByService:
               type: string
-              description: 'Indicates information on which service initiated the activity (For example: Self-service Password Management, Core Directory, B2C, Invited Users, Microsoft Identity Manager, Privileged Identity Management.'
               nullable: true
             operationType:
               type: string
@@ -4656,13 +4638,11 @@ components:
               $ref: '#/components/schemas/microsoft.graph.operationResult'
             resultReason:
               type: string
-              description: Indicates the reason for failure if the result is failure or timeout.
               nullable: true
             targetResources:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.targetResource'
-              description: 'Indicates information on which resource was changed due to the activity. Target Resource Type can be User, Device, Directory, App, Role, Group, Policy or Other.'
           additionalProperties:
             type: object
     microsoft.graph.provisioningObjectSummary:
@@ -4674,34 +4654,28 @@ components:
             activityDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z'
               format: date-time
             changeId:
               type: string
-              description: Unique ID of this change in this cycle.
               nullable: true
             cycleId:
               type: string
-              description: Unique ID per job iteration.
               nullable: true
             durationInMilliseconds:
               maximum: 2147483647
               minimum: -2147483648
               type: integer
-              description: Indicates how long this provisioning action took to finish. Measured in milliseconds.
               format: int32
               nullable: true
             initiatedBy:
               $ref: '#/components/schemas/microsoft.graph.initiator'
             jobId:
               type: string
-              description: The unique ID for the whole provisioning job.
               nullable: true
             modifiedProperties:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.modifiedProperty'
-              description: Details of each property that was modified in this provisioning action on this object.
             provisioningAction:
               $ref: '#/components/schemas/microsoft.graph.provisioningAction'
             provisioningStatusInfo:
@@ -4710,7 +4684,6 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.provisioningStep'
-              description: Details of each step in provisioning.
             servicePrincipal:
               $ref: '#/components/schemas/microsoft.graph.provisioningServicePrincipal'
             sourceIdentity:
@@ -4723,7 +4696,6 @@ components:
               $ref: '#/components/schemas/microsoft.graph.provisioningSystem'
             tenantId:
               type: string
-              description: Unique Azure AD tenant ID.
               nullable: true
           additionalProperties:
             type: object
@@ -4748,51 +4720,41 @@ components:
           properties:
             appDisplayName:
               type: string
-              description: The application name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only).
               nullable: true
             appId:
               type: string
-              description: The application identifier in Azure Active Directory. Supports $filter (eq operator only).
               nullable: true
             appliedConditionalAccessPolicies:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.appliedConditionalAccessPolicy'
-              description: A list of conditional access policies that are triggered by the corresponding sign-in activity.
             clientAppUsed:
               type: string
-              description: 'The legacy client used for sign-in activity. For example: Browser, Exchange Active Sync, Modern clients, IMAP, MAPI, SMTP, or POP. Supports $filter (eq operator only).'
               nullable: true
             conditionalAccessStatus:
               $ref: '#/components/schemas/microsoft.graph.conditionalAccessStatus'
             correlationId:
               type: string
-              description: The identifier that's sent from the client when sign-in is initiated. This is used for troubleshooting the corresponding sign-in activity when calling for support. Supports $filter (eq operator only).
               nullable: true
             createdDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'The date and time the sign-in was initiated. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $orderby and $filter (eq, le, and ge operators only).'
               format: date-time
             deviceDetail:
               $ref: '#/components/schemas/microsoft.graph.deviceDetail'
             ipAddress:
               type: string
-              description: The IP address of the client from where the sign-in occurred. Supports $filter (eq and startsWith operators only).
               nullable: true
             isInteractive:
               type: boolean
-              description: Indicates whether a sign-in is interactive or not.
               nullable: true
             location:
               $ref: '#/components/schemas/microsoft.graph.signInLocation'
             resourceDisplayName:
               type: string
-              description: The name of the resource that the user signed in to. Supports $filter (eq operator only).
               nullable: true
             resourceId:
               type: string
-              description: The identifier of the resource that the user signed in to. Supports $filter (eq operator only).
               nullable: true
             riskDetail:
               $ref: '#/components/schemas/microsoft.graph.riskDetail'
@@ -4800,13 +4762,11 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.riskEventType'
-              description: 'The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue. Supports $filter (eq operator only).'
             riskEventTypes_v2:
               type: array
               items:
                 type: string
                 nullable: true
-              description: 'The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue. Supports $filter (eq and startsWith operators only).'
             riskLevelAggregated:
               $ref: '#/components/schemas/microsoft.graph.riskLevel'
             riskLevelDuringSignIn:
@@ -4817,14 +4777,11 @@ components:
               $ref: '#/components/schemas/microsoft.graph.signInStatus'
             userDisplayName:
               type: string
-              description: The display name of the user. Supports $filter (eq and startsWith operators only).
               nullable: true
             userId:
               type: string
-              description: The identifier of the user. Supports $filter (eq operator only).
             userPrincipalName:
               type: string
-              description: The UPN of the user. Supports $filter (eq and startsWith operators only).
               nullable: true
           additionalProperties:
             type: object
@@ -4931,7 +4888,6 @@ components:
           properties:
             userPrincipalName:
               type: string
-              description: The UPN of the user represented by these statistics.
           additionalProperties:
             type: object
     microsoft.graph.report:
@@ -4940,7 +4896,6 @@ components:
       properties:
         content:
           type: string
-          description: Report content; details vary by report type.
           format: base64url
           nullable: true
       additionalProperties:
@@ -4952,38 +4907,31 @@ components:
       properties:
         acquiredByPrinter:
           type: boolean
-          description: True if the job was acquired by a printer; false otherwise. Read-only.
         acquiredDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'The dateTimeOffset when the job was acquired by the printer, if any. Read-only.'
           format: date-time
           nullable: true
         completionDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'The dateTimeOffset when the job was completed, canceled or aborted. Read-only.'
           format: date-time
           nullable: true
         copiesPrinted:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: The number of copies that were printed. Read-only.
           format: int32
         createdBy:
           $ref: '#/components/schemas/microsoft.graph.userIdentity'
         createdDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: The dateTimeOffset when the job was created. Read-only.
           format: date-time
         id:
           type: string
-          description: The archived print job's GUID. Read-only.
         printerId:
           type: string
-          description: The printer ID that the job was queued for. Read-only.
           nullable: true
         processingState:
           $ref: '#/components/schemas/microsoft.graph.printJobProcessingState'
@@ -4995,7 +4943,6 @@ components:
       properties:
         id:
           type: string
-          description: Read-only.
       additionalProperties:
         type: object
     microsoft.graph.keyValue:
@@ -5004,11 +4951,9 @@ components:
       properties:
         key:
           type: string
-          description: 'Contains the name of the field that a value is associated with. When a sign in or domain hint is included in the sign-in request, corresponding fields are included as key-value pairs. Possible keys: Login hint present, Domain hint present.'
           nullable: true
         value:
           type: string
-          description: Contains the corresponding value for the specified key. The value is true if a sign in hint was included in the sign-in request; otherwise false. The value is true if a domain hint was included in the sign-in request; otherwise false.
           nullable: true
       additionalProperties:
         type: object
@@ -5036,26 +4981,21 @@ components:
       properties:
         displayName:
           type: string
-          description: Indicates the visible name defined for the resource. Typically specified when the resource is created.
           nullable: true
         groupType:
           $ref: '#/components/schemas/microsoft.graph.groupType'
         id:
           type: string
-          description: Indicates the unique ID of the resource.
           nullable: true
         modifiedProperties:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.modifiedProperty'
-          description: 'Indicates name, old value and new value of each attribute that changed. Property values depend on the operation type.'
         type:
           type: string
-          description: 'Describes the resource type.  Example values include Application, Group, ServicePrincipal, and User.'
           nullable: true
         userPrincipalName:
           type: string
-          description: 'When type is set to User, this includes the user name that initiated the action; null for other types.'
           nullable: true
       additionalProperties:
         type: object
@@ -5075,15 +5015,12 @@ components:
       properties:
         displayName:
           type: string
-          description: Name of property that was modified.
           nullable: true
         newValue:
           type: string
-          description: New property value.
           nullable: true
         oldValue:
           type: string
-          description: Old property value.
           nullable: true
       additionalProperties:
         type: object
@@ -5114,13 +5051,11 @@ components:
       properties:
         description:
           type: string
-          description: Summary of what occurred during the step.
           nullable: true
         details:
           $ref: '#/components/schemas/microsoft.graph.detailsInfo'
         name:
           type: string
-          description: Name of the step.
           nullable: true
         provisioningStepType:
           $ref: '#/components/schemas/microsoft.graph.provisioningStepType'
@@ -5145,7 +5080,6 @@ components:
               $ref: '#/components/schemas/microsoft.graph.detailsInfo'
             identityType:
               type: string
-              description: 'Type of identity that has been provisioned, such as ''user'' or ''group''.'
               nullable: true
           additionalProperties:
             type: object
@@ -5165,23 +5099,19 @@ components:
       properties:
         displayName:
           type: string
-          description: 'Refers to the Name of the conditional access policy (example: ''Require MFA for Salesforce'').'
           nullable: true
         enforcedGrantControls:
           type: array
           items:
             type: string
             nullable: true
-          description: 'Refers to the grant controls enforced by the conditional access policy (example: ''Require multi-factor authentication'').'
         enforcedSessionControls:
           type: array
           items:
             type: string
             nullable: true
-          description: 'Refers to the session controls enforced by the conditional access policy (example: ''Require app enforced controls'').'
         id:
           type: string
-          description: Identifier of the conditional access policy.
           nullable: true
         result:
           $ref: '#/components/schemas/microsoft.graph.appliedConditionalAccessPolicyResult'
@@ -5201,31 +5131,24 @@ components:
       properties:
         browser:
           type: string
-          description: Indicates the browser information of the used for signing-in.
           nullable: true
         deviceId:
           type: string
-          description: Refers to the UniqueID of the device used for signing-in.
           nullable: true
         displayName:
           type: string
-          description: Refers to the name of the device used for signing-in.
           nullable: true
         isCompliant:
           type: boolean
-          description: Indicates whether the device is compliant or not.
           nullable: true
         isManaged:
           type: boolean
-          description: Indicates if the device is managed or not.
           nullable: true
         operatingSystem:
           type: string
-          description: Indicates the OS name and version used for signing-in.
           nullable: true
         trustType:
           type: string
-          description: 'Indicates information on whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.'
           nullable: true
       additionalProperties:
         type: object
@@ -5235,17 +5158,14 @@ components:
       properties:
         city:
           type: string
-          description: Provides the city where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity.
           nullable: true
         countryOrRegion:
           type: string
-          description: Provides the country code info (2 letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity.
           nullable: true
         geoCoordinates:
           $ref: '#/components/schemas/microsoft.graph.geoCoordinates'
         state:
           type: string
-          description: Provides the State where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity.
           nullable: true
       additionalProperties:
         type: object
@@ -5311,18 +5231,15 @@ components:
       properties:
         additionalDetails:
           type: string
-          description: Provides additional details on the sign-in activity
           nullable: true
         errorCode:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: Provides the 5-6 digit error code that's generated during a sign-in failure. Check out the list of error codes and messages.
           format: int32
           nullable: true
         failureReason:
           type: string
-          description: Provides the error message or the reason for failure for the corresponding sign-in activity. Check out the list of error codes and messages.
           nullable: true
       additionalProperties:
         type: object
@@ -5379,11 +5296,9 @@ components:
           properties:
             ipAddress:
               type: string
-              description: Indicates the client IP address used by user performing the activity (audit log only).
               nullable: true
             userPrincipalName:
               type: string
-              description: The userPrincipalName attribute of the user.
               nullable: true
           additionalProperties:
             type: object
@@ -5415,19 +5330,15 @@ components:
       properties:
         appId:
           type: string
-          description: Refers to the Unique GUID representing Application Id in the Azure Active Directory.
           nullable: true
         displayName:
           type: string
-          description: Refers to the Application Name displayed in the Azure Portal.
           nullable: true
         servicePrincipalId:
           type: string
-          description: Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App.
           nullable: true
         servicePrincipalName:
           type: string
-          description: Refers to the Service Principal Name is the Application name in the tenant.
           nullable: true
       additionalProperties:
         type: object
@@ -5444,11 +5355,9 @@ components:
       properties:
         displayName:
           type: string
-          description: 'The identity''s display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won''t show up as having changed when using delta.'
           nullable: true
         id:
           type: string
-          description: Unique identifier for the identity.
           nullable: true
       additionalProperties:
         type: object
@@ -5466,21 +5375,17 @@ components:
       properties:
         additionalDetails:
           type: string
-          description: Additional details in case of error.
           nullable: true
         errorCategory:
           $ref: '#/components/schemas/microsoft.graph.provisioningStatusErrorCategory'
         errorCode:
           type: string
-          description: Unique error code if any occurred. Learn more
           nullable: true
         reason:
           type: string
-          description: Summarizes the status and describes why the status happened.
           nullable: true
         recommendedAction:
           type: string
-          description: Provides the resolution for the corresponding error.
           nullable: true
       additionalProperties:
         type: object
@@ -5525,17 +5430,14 @@ components:
       properties:
         altitude:
           type: number
-          description: 'Optional. The altitude (height), in feet,  above sea level for the item. Read-only.'
           format: double
           nullable: true
         latitude:
           type: number
-          description: 'Optional. The latitude, in decimal, for the item. Writable on OneDrive Personal.'
           format: double
           nullable: true
         longitude:
           type: number
-          description: 'Optional. The longitude, in decimal, for the item. Writable on OneDrive Personal.'
           format: double
           nullable: true
       additionalProperties:

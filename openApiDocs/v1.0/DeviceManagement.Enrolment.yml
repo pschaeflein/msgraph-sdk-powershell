@@ -1440,7 +1440,6 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get appScope from roleManagement
-      description: Details of the app specific scope when the assignment scope is app specific. Containment entity.
       operationId: roleManagement.directory.roleAssignments_GetAppScope
       parameters:
         - name: unifiedRoleAssignment-id
@@ -1490,7 +1489,6 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the navigation property appScope in roleManagement
-      description: Details of the app specific scope when the assignment scope is app specific. Containment entity.
       operationId: roleManagement.directory.roleAssignments_UpdateAppScope
       parameters:
         - name: unifiedRoleAssignment-id
@@ -1517,7 +1515,6 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete navigation property appScope for roleManagement
-      description: Details of the app specific scope when the assignment scope is app specific. Containment entity.
       operationId: roleManagement.directory.roleAssignments_DeleteAppScope
       parameters:
         - name: unifiedRoleAssignment-id
@@ -1543,7 +1540,6 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get directoryScope from roleManagement
-      description: The directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
       operationId: roleManagement.directory.roleAssignments_GetDirectoryScope
       parameters:
         - name: unifiedRoleAssignment-id
@@ -1593,7 +1589,6 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of directoryScope from roleManagement
-      description: The directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
       operationId: roleManagement.directory.roleAssignments_GetRefDirectoryScope
       parameters:
         - name: unifiedRoleAssignment-id
@@ -1617,7 +1612,6 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property directoryScope in roleManagement
-      description: The directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
       operationId: roleManagement.directory.roleAssignments_SetRefDirectoryScope
       parameters:
         - name: unifiedRoleAssignment-id
@@ -1646,7 +1640,6 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property directoryScope for roleManagement
-      description: The directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
       operationId: roleManagement.directory.roleAssignments_DeleteRefDirectoryScope
       parameters:
         - name: unifiedRoleAssignment-id
@@ -1672,7 +1665,6 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get principal from roleManagement
-      description: The assigned principal. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
       operationId: roleManagement.directory.roleAssignments_GetPrincipal
       parameters:
         - name: unifiedRoleAssignment-id
@@ -1722,7 +1714,6 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of principal from roleManagement
-      description: The assigned principal. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
       operationId: roleManagement.directory.roleAssignments_GetRefPrincipal
       parameters:
         - name: unifiedRoleAssignment-id
@@ -1746,7 +1737,6 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property principal in roleManagement
-      description: The assigned principal. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
       operationId: roleManagement.directory.roleAssignments_SetRefPrincipal
       parameters:
         - name: unifiedRoleAssignment-id
@@ -1775,7 +1765,6 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property principal for roleManagement
-      description: The assigned principal. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
       operationId: roleManagement.directory.roleAssignments_DeleteRefPrincipal
       parameters:
         - name: unifiedRoleAssignment-id
@@ -1801,7 +1790,6 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get roleDefinition from roleManagement
-      description: The roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.id will be auto expanded. Supports $expand.
       operationId: roleManagement.directory.roleAssignments_GetRoleDefinition
       parameters:
         - name: unifiedRoleAssignment-id
@@ -1865,7 +1853,6 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of roleDefinition from roleManagement
-      description: The roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.id will be auto expanded. Supports $expand.
       operationId: roleManagement.directory.roleAssignments_GetRefRoleDefinition
       parameters:
         - name: unifiedRoleAssignment-id
@@ -1894,7 +1881,6 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property roleDefinition in roleManagement
-      description: The roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.id will be auto expanded. Supports $expand.
       operationId: roleManagement.directory.roleAssignments_SetRefRoleDefinition
       parameters:
         - name: unifiedRoleAssignment-id
@@ -1923,7 +1909,6 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property roleDefinition for roleManagement
-      description: The roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.id will be auto expanded. Supports $expand.
       operationId: roleManagement.directory.roleAssignments_DeleteRefRoleDefinition
       parameters:
         - name: unifiedRoleAssignment-id
@@ -2182,7 +2167,6 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get inheritsPermissionsFrom from roleManagement
-      description: Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
       operationId: roleManagement.directory.roleDefinitions_ListInheritsPermissionsFrom
       parameters:
         - name: unifiedRoleDefinition-id
@@ -2287,7 +2271,6 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Create new navigation property to inheritsPermissionsFrom for roleManagement
-      description: Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
       operationId: roleManagement.directory.roleDefinitions_CreateInheritsPermissionsFrom
       parameters:
         - name: unifiedRoleDefinition-id
@@ -2319,7 +2302,6 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get inheritsPermissionsFrom from roleManagement
-      description: Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
       operationId: roleManagement.directory.roleDefinitions_GetInheritsPermissionsFrom
       parameters:
         - name: unifiedRoleDefinition-id
@@ -2390,7 +2372,6 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the navigation property inheritsPermissionsFrom in roleManagement
-      description: Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
       operationId: roleManagement.directory.roleDefinitions_UpdateInheritsPermissionsFrom
       parameters:
         - name: unifiedRoleDefinition-id
@@ -2424,7 +2405,6 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete navigation property inheritsPermissionsFrom for roleManagement
-      description: Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
       operationId: roleManagement.directory.roleDefinitions_DeleteInheritsPermissionsFrom
       parameters:
         - name: unifiedRoleDefinition-id
@@ -2678,22 +2658,18 @@ components:
           properties:
             appScopeId:
               type: string
-              description: 'Identifier of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.  For the entitlement management provider, use app scopes to specify a catalog, for example /AccessPackageCatalog/beedadfe-01d5-4025-910b-84abb9369997.'
               nullable: true
             condition:
               type: string
               nullable: true
             directoryScopeId:
               type: string
-              description: Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
               nullable: true
             principalId:
               type: string
-              description: Identifier of the principal to which the assignment is granted. Supports $filter (eq operator only).
               nullable: true
             roleDefinitionId:
               type: string
-              description: Identifier of the unifiedRoleDefinition the assignment is for. Read-only. Supports $filter (eq operator only).
               nullable: true
             appScope:
               $ref: '#/components/schemas/microsoft.graph.appScope'
@@ -2713,11 +2689,9 @@ components:
           properties:
             displayName:
               type: string
-              description: 'Provides the display name of the app-specific resource represented by the app scope. Provided for display purposes since appScopeId is often an immutable, non-human-readable id. This property is read only.'
               nullable: true
             type:
               type: string
-              description: 'Describes the type of app-specific resource represented by the app scope. Provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. This property is read only.'
               nullable: true
           additionalProperties:
             type: object
@@ -2743,43 +2717,34 @@ components:
           properties:
             description:
               type: string
-              description: The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true.
               nullable: true
             displayName:
               type: string
-              description: The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq and startsWith operators only).
               nullable: true
             isBuiltIn:
               type: boolean
-              description: Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.  Supports $filter (eq operator only).
               nullable: true
             isEnabled:
               type: boolean
-              description: Flag indicating if the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
               nullable: true
             resourceScopes:
               type: array
               items:
                 type: string
-              description: List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment
             rolePermissions:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.unifiedRolePermission'
-              description: List of permissions included in the role. Read-only when isBuiltIn is true. Required.
             templateId:
               type: string
-              description: Custom template identifier that can be set when isBuiltIn is false. This identifier is typically used if one needs an identifier to be the same across different directories. Read-only when isBuiltIn is true.
               nullable: true
             version:
               type: string
-              description: Indicates version of the unifiedRoleDefinition. Read-only when isBuiltIn is true.
               nullable: true
             inheritsPermissionsFrom:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.unifiedRoleDefinition'
-              description: Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
           additionalProperties:
             type: object
     microsoft.graph.entity:
@@ -2788,7 +2753,6 @@ components:
       properties:
         id:
           type: string
-          description: Read-only.
       additionalProperties:
         type: object
     microsoft.graph.deviceAndAppManagementAssignmentTarget:
@@ -2836,10 +2800,8 @@ components:
           type: array
           items:
             type: string
-          description: Set of tasks that can be performed on a resource.
         condition:
           type: string
-          description: Optional constraints that must be met for the permission to be effective.
           nullable: true
         excludedResourceActions:
           type: array

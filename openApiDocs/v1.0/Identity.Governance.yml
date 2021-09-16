@@ -191,7 +191,6 @@ paths:
       tags:
         - agreements.agreementAcceptance
       summary: Get acceptances from agreements
-      description: Read-only. Information about acceptances of this agreement.
       operationId: agreements_ListAcceptances
       parameters:
         - name: agreement-id
@@ -309,7 +308,6 @@ paths:
       tags:
         - agreements.agreementAcceptance
       summary: Create new navigation property to acceptances for agreements
-      description: Read-only. Information about acceptances of this agreement.
       operationId: agreements_CreateAcceptances
       parameters:
         - name: agreement-id
@@ -341,7 +339,6 @@ paths:
       tags:
         - agreements.agreementAcceptance
       summary: Get acceptances from agreements
-      description: Read-only. Information about acceptances of this agreement.
       operationId: agreements_GetAcceptances
       parameters:
         - name: agreement-id
@@ -409,7 +406,6 @@ paths:
       tags:
         - agreements.agreementAcceptance
       summary: Update the navigation property acceptances in agreements
-      description: Read-only. Information about acceptances of this agreement.
       operationId: agreements_UpdateAcceptances
       parameters:
         - name: agreement-id
@@ -443,7 +439,6 @@ paths:
       tags:
         - agreements.agreementAcceptance
       summary: Delete navigation property acceptances for agreements
-      description: Read-only. Information about acceptances of this agreement.
       operationId: agreements_DeleteAcceptances
       parameters:
         - name: agreement-id
@@ -476,7 +471,6 @@ paths:
       tags:
         - agreements.agreementFile
       summary: Get file from agreements
-      description: Default PDF linked to this agreement.
       operationId: agreements_GetFile
       parameters:
         - name: agreement-id
@@ -538,7 +532,6 @@ paths:
       tags:
         - agreements.agreementFile
       summary: Update the navigation property file in agreements
-      description: Default PDF linked to this agreement.
       operationId: agreements_UpdateFile
       parameters:
         - name: agreement-id
@@ -565,7 +558,6 @@ paths:
       tags:
         - agreements.agreementFile
       summary: Delete navigation property file for agreements
-      description: Default PDF linked to this agreement.
       operationId: agreements_DeleteFile
       parameters:
         - name: agreement-id
@@ -1148,7 +1140,6 @@ paths:
       tags:
         - agreements.agreementFileLocalization
       summary: Get files from agreements
-      description: 'PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.'
       operationId: agreements_ListFiles
       parameters:
         - name: agreement-id
@@ -1250,7 +1241,6 @@ paths:
       tags:
         - agreements.agreementFileLocalization
       summary: Create new navigation property to files for agreements
-      description: 'PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.'
       operationId: agreements_CreateFiles
       parameters:
         - name: agreement-id
@@ -1282,7 +1272,6 @@ paths:
       tags:
         - agreements.agreementFileLocalization
       summary: Get files from agreements
-      description: 'PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.'
       operationId: agreements_GetFiles
       parameters:
         - name: agreement-id
@@ -1352,7 +1341,6 @@ paths:
       tags:
         - agreements.agreementFileLocalization
       summary: Update the navigation property files in agreements
-      description: 'PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.'
       operationId: agreements_UpdateFiles
       parameters:
         - name: agreement-id
@@ -1386,7 +1374,6 @@ paths:
       tags:
         - agreements.agreementFileLocalization
       summary: Delete navigation property files for agreements
-      description: 'PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.'
       operationId: agreements_DeleteFiles
       parameters:
         - name: agreement-id
@@ -2115,7 +2102,6 @@ paths:
       tags:
         - identityGovernance.accessReviewSet
       summary: Get instances from identityGovernance
-      description: 'Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence.'
       operationId: identityGovernance.accessReviews.definitions_ListInstances
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -2214,7 +2200,6 @@ paths:
       tags:
         - identityGovernance.accessReviewSet
       summary: Create new navigation property to instances for identityGovernance
-      description: 'Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence.'
       operationId: identityGovernance.accessReviews.definitions_CreateInstances
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -2246,7 +2231,6 @@ paths:
       tags:
         - identityGovernance.accessReviewSet
       summary: Get instances from identityGovernance
-      description: 'Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence.'
       operationId: identityGovernance.accessReviews.definitions_GetInstances
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -2315,7 +2299,6 @@ paths:
       tags:
         - identityGovernance.accessReviewSet
       summary: Update the navigation property instances in identityGovernance
-      description: 'Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence.'
       operationId: identityGovernance.accessReviews.definitions_UpdateInstances
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -2349,7 +2332,6 @@ paths:
       tags:
         - identityGovernance.accessReviewSet
       summary: Delete navigation property instances for identityGovernance
-      description: 'Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence.'
       operationId: identityGovernance.accessReviews.definitions_DeleteInstances
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -2382,7 +2364,6 @@ paths:
       tags:
         - identityGovernance.accessReviewSet
       summary: Get decisions from identityGovernance
-      description: 'Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.'
       operationId: identityGovernance.accessReviews.definitions.instances_ListDecisions
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -2507,7 +2488,6 @@ paths:
       tags:
         - identityGovernance.accessReviewSet
       summary: Create new navigation property to decisions for identityGovernance
-      description: 'Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.'
       operationId: identityGovernance.accessReviews.definitions.instances_CreateDecisions
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -2546,7 +2526,6 @@ paths:
       tags:
         - identityGovernance.accessReviewSet
       summary: Get decisions from identityGovernance
-      description: 'Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.'
       operationId: identityGovernance.accessReviews.definitions.instances_GetDecisions
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -2621,7 +2600,6 @@ paths:
       tags:
         - identityGovernance.accessReviewSet
       summary: Update the navigation property decisions in identityGovernance
-      description: 'Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.'
       operationId: identityGovernance.accessReviews.definitions.instances_UpdateDecisions
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -2662,7 +2640,6 @@ paths:
       tags:
         - identityGovernance.accessReviewSet
       summary: Delete navigation property decisions for identityGovernance
-      description: 'Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.'
       operationId: identityGovernance.accessReviews.definitions.instances_DeleteDecisions
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -3296,7 +3273,6 @@ paths:
       tags:
         - identityGovernance.appConsentApprovalRoute
       summary: Get userConsentRequests from identityGovernance
-      description: A list of pending user consent requests.
       operationId: identityGovernance.appConsent.appConsentRequests_ListUserConsentRequests
       parameters:
         - name: appConsentRequest-id
@@ -3398,7 +3374,6 @@ paths:
       tags:
         - identityGovernance.appConsentApprovalRoute
       summary: Create new navigation property to userConsentRequests for identityGovernance
-      description: A list of pending user consent requests.
       operationId: identityGovernance.appConsent.appConsentRequests_CreateUserConsentRequests
       parameters:
         - name: appConsentRequest-id
@@ -3430,7 +3405,6 @@ paths:
       tags:
         - identityGovernance.appConsentApprovalRoute
       summary: Get userConsentRequests from identityGovernance
-      description: A list of pending user consent requests.
       operationId: identityGovernance.appConsent.appConsentRequests_GetUserConsentRequests
       parameters:
         - name: appConsentRequest-id
@@ -3500,7 +3474,6 @@ paths:
       tags:
         - identityGovernance.appConsentApprovalRoute
       summary: Update the navigation property userConsentRequests in identityGovernance
-      description: A list of pending user consent requests.
       operationId: identityGovernance.appConsent.appConsentRequests_UpdateUserConsentRequests
       parameters:
         - name: appConsentRequest-id
@@ -3534,7 +3507,6 @@ paths:
       tags:
         - identityGovernance.appConsentApprovalRoute
       summary: Delete navigation property userConsentRequests for identityGovernance
-      description: A list of pending user consent requests.
       operationId: identityGovernance.appConsent.appConsentRequests_DeleteUserConsentRequests
       parameters:
         - name: appConsentRequest-id
@@ -3567,7 +3539,6 @@ paths:
       tags:
         - identityGovernance.appConsentApprovalRoute
       summary: Get approval from identityGovernance
-      description: Approval decisions associated with a request.
       operationId: identityGovernance.appConsent.appConsentRequests.userConsentRequests_GetApproval
       parameters:
         - name: appConsentRequest-id
@@ -3630,7 +3601,6 @@ paths:
       tags:
         - identityGovernance.appConsentApprovalRoute
       summary: Update the navigation property approval in identityGovernance
-      description: Approval decisions associated with a request.
       operationId: identityGovernance.appConsent.appConsentRequests.userConsentRequests_UpdateApproval
       parameters:
         - name: appConsentRequest-id
@@ -3664,7 +3634,6 @@ paths:
       tags:
         - identityGovernance.appConsentApprovalRoute
       summary: Delete navigation property approval for identityGovernance
-      description: Approval decisions associated with a request.
       operationId: identityGovernance.appConsent.appConsentRequests.userConsentRequests_DeleteApproval
       parameters:
         - name: appConsentRequest-id
@@ -3697,7 +3666,6 @@ paths:
       tags:
         - identityGovernance.appConsentApprovalRoute
       summary: Get stages from identityGovernance
-      description: 'Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.'
       operationId: identityGovernance.appConsent.appConsentRequests.userConsentRequests.approval_ListStages
       parameters:
         - name: appConsentRequest-id
@@ -3804,7 +3772,6 @@ paths:
       tags:
         - identityGovernance.appConsentApprovalRoute
       summary: Create new navigation property to stages for identityGovernance
-      description: 'Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.'
       operationId: identityGovernance.appConsent.appConsentRequests.userConsentRequests.approval_CreateStages
       parameters:
         - name: appConsentRequest-id
@@ -3843,7 +3810,6 @@ paths:
       tags:
         - identityGovernance.appConsentApprovalRoute
       summary: Get stages from identityGovernance
-      description: 'Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.'
       operationId: identityGovernance.appConsent.appConsentRequests.userConsentRequests.approval_GetStages
       parameters:
         - name: appConsentRequest-id
@@ -3912,7 +3878,6 @@ paths:
       tags:
         - identityGovernance.appConsentApprovalRoute
       summary: Update the navigation property stages in identityGovernance
-      description: 'Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.'
       operationId: identityGovernance.appConsent.appConsentRequests.userConsentRequests.approval_UpdateStages
       parameters:
         - name: appConsentRequest-id
@@ -3953,7 +3918,6 @@ paths:
       tags:
         - identityGovernance.appConsentApprovalRoute
       summary: Delete navigation property stages for identityGovernance
-      description: 'Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.'
       operationId: identityGovernance.appConsent.appConsentRequests.userConsentRequests.approval_DeleteStages
       parameters:
         - name: appConsentRequest-id
@@ -4332,7 +4296,6 @@ paths:
       tags:
         - identityGovernance.entitlementManagement
       summary: Get stages from identityGovernance
-      description: 'Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.'
       operationId: identityGovernance.entitlementManagement.accessPackageAssignmentApprovals_ListStages
       parameters:
         - name: approval-id
@@ -4432,7 +4395,6 @@ paths:
       tags:
         - identityGovernance.entitlementManagement
       summary: Create new navigation property to stages for identityGovernance
-      description: 'Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.'
       operationId: identityGovernance.entitlementManagement.accessPackageAssignmentApprovals_CreateStages
       parameters:
         - name: approval-id
@@ -4464,7 +4426,6 @@ paths:
       tags:
         - identityGovernance.entitlementManagement
       summary: Get stages from identityGovernance
-      description: 'Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.'
       operationId: identityGovernance.entitlementManagement.accessPackageAssignmentApprovals_GetStages
       parameters:
         - name: approval-id
@@ -4526,7 +4487,6 @@ paths:
       tags:
         - identityGovernance.entitlementManagement
       summary: Update the navigation property stages in identityGovernance
-      description: 'Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.'
       operationId: identityGovernance.entitlementManagement.accessPackageAssignmentApprovals_UpdateStages
       parameters:
         - name: approval-id
@@ -4560,7 +4520,6 @@ paths:
       tags:
         - identityGovernance.entitlementManagement
       summary: Delete navigation property stages for identityGovernance
-      description: 'Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.'
       operationId: identityGovernance.entitlementManagement.accessPackageAssignmentApprovals_DeleteStages
       parameters:
         - name: approval-id
@@ -5184,7 +5143,6 @@ paths:
       tags:
         - identityGovernance.termsOfUseContainer
       summary: Get acceptances from identityGovernance
-      description: Read-only. Information about acceptances of this agreement.
       operationId: identityGovernance.termsOfUse.agreements_ListAcceptances
       parameters:
         - name: agreement-id
@@ -5302,7 +5260,6 @@ paths:
       tags:
         - identityGovernance.termsOfUseContainer
       summary: Create new navigation property to acceptances for identityGovernance
-      description: Read-only. Information about acceptances of this agreement.
       operationId: identityGovernance.termsOfUse.agreements_CreateAcceptances
       parameters:
         - name: agreement-id
@@ -5334,7 +5291,6 @@ paths:
       tags:
         - identityGovernance.termsOfUseContainer
       summary: Get acceptances from identityGovernance
-      description: Read-only. Information about acceptances of this agreement.
       operationId: identityGovernance.termsOfUse.agreements_GetAcceptances
       parameters:
         - name: agreement-id
@@ -5402,7 +5358,6 @@ paths:
       tags:
         - identityGovernance.termsOfUseContainer
       summary: Update the navigation property acceptances in identityGovernance
-      description: Read-only. Information about acceptances of this agreement.
       operationId: identityGovernance.termsOfUse.agreements_UpdateAcceptances
       parameters:
         - name: agreement-id
@@ -5436,7 +5391,6 @@ paths:
       tags:
         - identityGovernance.termsOfUseContainer
       summary: Delete navigation property acceptances for identityGovernance
-      description: Read-only. Information about acceptances of this agreement.
       operationId: identityGovernance.termsOfUse.agreements_DeleteAcceptances
       parameters:
         - name: agreement-id
@@ -5469,7 +5423,6 @@ paths:
       tags:
         - identityGovernance.termsOfUseContainer
       summary: Get file from identityGovernance
-      description: Default PDF linked to this agreement.
       operationId: identityGovernance.termsOfUse.agreements_GetFile
       parameters:
         - name: agreement-id
@@ -5531,7 +5484,6 @@ paths:
       tags:
         - identityGovernance.termsOfUseContainer
       summary: Update the navigation property file in identityGovernance
-      description: Default PDF linked to this agreement.
       operationId: identityGovernance.termsOfUse.agreements_UpdateFile
       parameters:
         - name: agreement-id
@@ -5558,7 +5510,6 @@ paths:
       tags:
         - identityGovernance.termsOfUseContainer
       summary: Delete navigation property file for identityGovernance
-      description: Default PDF linked to this agreement.
       operationId: identityGovernance.termsOfUse.agreements_DeleteFile
       parameters:
         - name: agreement-id
@@ -6141,7 +6092,6 @@ paths:
       tags:
         - identityGovernance.termsOfUseContainer
       summary: Get files from identityGovernance
-      description: 'PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.'
       operationId: identityGovernance.termsOfUse.agreements_ListFiles
       parameters:
         - name: agreement-id
@@ -6243,7 +6193,6 @@ paths:
       tags:
         - identityGovernance.termsOfUseContainer
       summary: Create new navigation property to files for identityGovernance
-      description: 'PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.'
       operationId: identityGovernance.termsOfUse.agreements_CreateFiles
       parameters:
         - name: agreement-id
@@ -6275,7 +6224,6 @@ paths:
       tags:
         - identityGovernance.termsOfUseContainer
       summary: Get files from identityGovernance
-      description: 'PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.'
       operationId: identityGovernance.termsOfUse.agreements_GetFiles
       parameters:
         - name: agreement-id
@@ -6345,7 +6293,6 @@ paths:
       tags:
         - identityGovernance.termsOfUseContainer
       summary: Update the navigation property files in identityGovernance
-      description: 'PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.'
       operationId: identityGovernance.termsOfUse.agreements_UpdateFiles
       parameters:
         - name: agreement-id
@@ -6379,7 +6326,6 @@ paths:
       tags:
         - identityGovernance.termsOfUseContainer
       summary: Delete navigation property files for identityGovernance
-      description: 'PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.'
       operationId: identityGovernance.termsOfUse.agreements_DeleteFiles
       parameters:
         - name: agreement-id
@@ -6703,7 +6649,6 @@ paths:
       tags:
         - users.agreementAcceptance
       summary: Get agreementAcceptances from users
-      description: The user's terms of use acceptance statuses. Read-only. Nullable.
       operationId: users_ListAgreementAcceptances
       parameters:
         - name: user-id
@@ -6822,7 +6767,6 @@ paths:
       tags:
         - users.agreementAcceptance
       summary: Delete ref of navigation property agreementAcceptances for users
-      description: The user's terms of use acceptance statuses. Read-only. Nullable.
       operationId: users_DeleteRefAgreementAcceptances
       parameters:
         - name: user-id
@@ -6860,7 +6804,6 @@ paths:
       tags:
         - users.agreementAcceptance
       summary: Get ref of agreementAcceptances from users
-      description: The user's terms of use acceptance statuses. Read-only. Nullable.
       operationId: users_ListRefAgreementAcceptances
       parameters:
         - name: user-id
@@ -6941,7 +6884,6 @@ paths:
       tags:
         - users.agreementAcceptance
       summary: Create new navigation property ref to agreementAcceptances for users
-      description: The user's terms of use acceptance statuses. Read-only. Nullable.
       operationId: users_CreateRefAgreementAcceptances
       parameters:
         - name: user-id
@@ -6982,36 +6924,30 @@ components:
           properties:
             displayName:
               type: string
-              description: Display name of the agreement. The display name is used for internal tracking of the agreement but is not shown to end users who view the agreement.
               nullable: true
             isPerDeviceAcceptanceRequired:
               type: boolean
-              description: 'This setting enables you to require end users to accept this agreement on every device that they are accessing it from. The end user will be required to register their device in Azure AD, if they haven''t already done so.'
               nullable: true
             isViewingBeforeAcceptanceRequired:
               type: boolean
-              description: Indicates whether the user has to expand the agreement before accepting.
               nullable: true
             termsExpiration:
               $ref: '#/components/schemas/microsoft.graph.termsExpiration'
             userReacceptRequiredFrequency:
               pattern: '^-?P([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+([.][0-9]+)?S)?)?$'
               type: string
-              description: The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations.
               format: duration
               nullable: true
             acceptances:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.agreementAcceptance'
-              description: Read-only. Information about acceptances of this agreement.
             file:
               $ref: '#/components/schemas/microsoft.graph.agreementFile'
             files:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.agreementFileLocalization'
-              description: 'PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.'
           additionalProperties:
             type: object
     microsoft.graph.agreementAcceptance:
@@ -7022,57 +6958,45 @@ components:
           properties:
             agreementFileId:
               type: string
-              description: ID of the agreement file accepted by the user.
               nullable: true
             agreementId:
               type: string
-              description: ID of the agreement.
               nullable: true
             deviceDisplayName:
               type: string
-              description: The display name of the device used for accepting the agreement.
               nullable: true
             deviceId:
               type: string
-              description: The unique identifier of the device used for accepting the agreement.
               nullable: true
             deviceOSType:
               type: string
-              description: The operating system used for accepting the agreement.
               nullable: true
             deviceOSVersion:
               type: string
-              description: The operating system version of the device used for accepting the agreement.
               nullable: true
             expirationDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z'
               format: date-time
               nullable: true
             recordedDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z'
               format: date-time
               nullable: true
             state:
               $ref: '#/components/schemas/microsoft.graph.agreementAcceptanceState'
             userDisplayName:
               type: string
-              description: Display name of the user when the acceptance was recorded.
               nullable: true
             userEmail:
               type: string
-              description: Email of the user when the acceptance was recorded.
               nullable: true
             userId:
               type: string
-              description: ID of the user who accepted the agreement.
               nullable: true
             userPrincipalName:
               type: string
-              description: UPN of the user when the acceptance was recorded.
               nullable: true
           additionalProperties:
             type: object
@@ -7144,52 +7068,43 @@ components:
             createdDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: Timestamp when the access review series was created. Supports $select. Read-only.
               format: date-time
               nullable: true
             descriptionForAdmins:
               type: string
-              description: Description provided by review creators to provide more context of the review to admins. Supports $select.
               nullable: true
             descriptionForReviewers:
               type: string
-              description: Description provided  by review creators to provide more context of the review to reviewers. Reviewers will see this description in the email sent to them requesting their review. Supports $select.
               nullable: true
             displayName:
               type: string
-              description: Name of the access review series. Supports $select and $orderBy. Required on create.
               nullable: true
             fallbackReviewers:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.accessReviewReviewerScope'
-              description: 'This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user''s manager does not exist. See accessReviewReviewerScope. Replaces backupReviewers. Supports $select.'
             instanceEnumerationScope:
               $ref: '#/components/schemas/microsoft.graph.accessReviewScope'
             lastModifiedDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: Timestamp when the access review series was last modified. Supports $select. Read-only.
               format: date-time
               nullable: true
             reviewers:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.accessReviewReviewerScope'
-              description: 'This collection of access review scopes is used to define who are the reviewers. The reviewers property is only updatable if individual users are assigned as reviewers. Required on create. Supports $select. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API.'
             scope:
               $ref: '#/components/schemas/microsoft.graph.accessReviewScope'
             settings:
               $ref: '#/components/schemas/microsoft.graph.accessReviewScheduleSettings'
             status:
               type: string
-              description: 'This read-only field specifies the status of an access review. The typical states include Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.  Supports $select, $orderby, and $filter (eq only). Read-only.'
               nullable: true
             instances:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.accessReviewInstance'
-              description: 'Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence.'
           additionalProperties:
             type: object
     microsoft.graph.accessReviewInstance:
@@ -7201,36 +7116,30 @@ components:
             endDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'DateTime when review instance is scheduled to end.The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $select. Read-only.'
               format: date-time
               nullable: true
             fallbackReviewers:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.accessReviewReviewerScope'
-              description: 'This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user''s manager does not exist. Supports $select.'
             reviewers:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.accessReviewReviewerScope'
-              description: 'This collection of access review scopes is used to define who the reviewers are. Supports $select. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API.'
             scope:
               $ref: '#/components/schemas/microsoft.graph.accessReviewScope'
             startDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'DateTime when review instance is scheduled to start. May be in the future. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $select. Read-only.'
               format: date-time
               nullable: true
             status:
               type: string
-              description: 'Specifies the status of an accessReview. Possible values: Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed. Supports $select, $orderby, and $filter (eq only). Read-only.'
               nullable: true
             decisions:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.accessReviewInstanceDecisionItem'
-              description: 'Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.'
           additionalProperties:
             type: object
     microsoft.graph.accessReviewInstanceDecisionItem:
@@ -7241,49 +7150,40 @@ components:
           properties:
             accessReviewId:
               type: string
-              description: The identifier of the accessReviewInstance parent. Supports $select. Read-only.
             appliedBy:
               $ref: '#/components/schemas/microsoft.graph.userIdentity'
             appliedDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'The timestamp when the approval decision was applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $select. Read-only.'
               format: date-time
               nullable: true
             applyResult:
               type: string
-              description: 'The result of applying the decision. Possible values: New, AppliedSuccessfully, AppliedWithUnknownFailure, AppliedSuccessfullyButObjectNotFound and ApplyNotSupported. Supports $select, $orderby, and $filter (eq only). Read-only.'
               nullable: true
             decision:
               type: string
-              description: 'Result of the review. Possible values: Approve, Deny, NotReviewed, or DontKnow. Supports $select, $orderby, and $filter (eq only).'
               nullable: true
             justification:
               type: string
-              description: Justification left by the reviewer when they made the decision.
               nullable: true
             principal:
               $ref: '#/components/schemas/microsoft.graph.identity'
             principalLink:
               type: string
-              description: 'Link to the principal object. For example: https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.'
               nullable: true
             recommendation:
               type: string
-              description: 'A system-generated recommendation for the approval decision based off last interactive sign-in to tenant. Recommend approve if sign-in is within thirty days of start of review. Recommend deny if sign-in is greater than thirty days of start of review. Recommendation not available otherwise. Possible values: Approve, Deny, or NoInfoAvailable. Supports $select, $orderby, and $filter (eq only). Read-only.'
               nullable: true
             resource:
               $ref: '#/components/schemas/microsoft.graph.accessReviewInstanceDecisionItemResource'
             resourceLink:
               type: string
-              description: 'A link to the resource. For example, https://graph.microsoft.com/v1.0/servicePrincipals/c86300f3-8695-4320-9f6e-32a2555f5ff8. Supports $select. Read-only.'
               nullable: true
             reviewedBy:
               $ref: '#/components/schemas/microsoft.graph.userIdentity'
             reviewedDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: The timestamp when the review decision occurred. Supports $select. Read-only.
               format: date-time
               nullable: true
           additionalProperties:
@@ -7326,21 +7226,17 @@ components:
           properties:
             appDisplayName:
               type: string
-              description: The display name of the app for which consent is requested. Required. Supports $filter (eq only) and $orderby.
               nullable: true
             appId:
               type: string
-              description: The identifier of the application. Required. Supports $filter (eq only) and $orderby.
             pendingScopes:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.appConsentRequestScope'
-              description: A list of pending scopes waiting for approval. This is empty if the consentType is Static. Required.
             userConsentRequests:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.userConsentRequest'
-              description: A list of pending user consent requests.
           additionalProperties:
             type: object
     microsoft.graph.userConsentRequest:
@@ -7351,7 +7247,6 @@ components:
           properties:
             reason:
               type: string
-              description: The user's justification for requiring access to the app. Supports $filter (eq only) and $orderby.
               nullable: true
             approval:
               $ref: '#/components/schemas/microsoft.graph.approval'
@@ -7367,7 +7262,6 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.approvalStage'
-              description: 'Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.'
           additionalProperties:
             type: object
     microsoft.graph.approvalStage:
@@ -7378,31 +7272,25 @@ components:
           properties:
             assignedToMe:
               type: boolean
-              description: Indicates whether the stage is assigned to the calling user to review. Read-only.
               nullable: true
             displayName:
               type: string
-              description: The label provided by the policy creator to identify an approval stage. Read-only.
               nullable: true
             justification:
               type: string
-              description: The justification associated with the approval stage decision.
               nullable: true
             reviewedBy:
               $ref: '#/components/schemas/microsoft.graph.identity'
             reviewedDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'The date and time when a decision was recorded. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.'
               format: date-time
               nullable: true
             reviewResult:
               type: string
-              description: 'The result of this approval record. Possible values include: NotReviewed, Approved, Denied.'
               nullable: true
             status:
               type: string
-              description: 'The stage status. Possible values: InProgress, Initializing, Completed, Expired. Read-only.'
               nullable: true
           additionalProperties:
             type: object
@@ -7454,7 +7342,6 @@ components:
       properties:
         id:
           type: string
-          description: Read-only.
       additionalProperties:
         type: object
     microsoft.graph.termsExpiration:
@@ -7464,13 +7351,11 @@ components:
         frequency:
           pattern: '^-?P([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+([.][0-9]+)?S)?)?$'
           type: string
-          description: 'Represents the frequency at which the terms will expire, after its first expiration as set in startDateTime. The value is represented in ISO 8601 format for durations. For example, PT1M represents a time period of 1 month.'
           format: duration
           nullable: true
         startDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'The DateTime when the agreement is set to expire for all users. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.'
           format: date-time
           nullable: true
       additionalProperties:
@@ -7520,11 +7405,9 @@ components:
           properties:
             ipAddress:
               type: string
-              description: Indicates the client IP address used by user performing the activity (audit log only).
               nullable: true
             userPrincipalName:
               type: string
-              description: The userPrincipalName attribute of the user.
               nullable: true
           additionalProperties:
             type: object
@@ -7534,15 +7417,12 @@ components:
       properties:
         query:
           type: string
-          description: The query specifying who will be the reviewer. See table for examples.
           nullable: true
         queryRoot:
           type: string
-          description: 'In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query, for example, ./manager, is specified. Possible value: decisions.'
           nullable: true
         queryType:
           type: string
-          description: The type of query. Examples include MicrosoftGraph and ARM.
           nullable: true
       additionalProperties:
         type: object
@@ -7559,37 +7439,28 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.accessReviewApplyAction'
-          description: 'Optional field. Describes the  actions to take once a review is complete. There are two types that are currently supported: removeAccessApplyAction (default) and disableAndDeleteUserApplyAction. Field only needs to be specified in the case of disableAndDeleteUserApplyAction. See accessReviewApplyAction.'
         autoApplyDecisionsEnabled:
           type: boolean
-          description: 'Indicates whether decisions are automatically applied. When set to false, a user must apply the decisions manually once the reviewer completes the access review. When set to true, decisions are applied automatically after the access review instance duration ends, whether or not the reviewers have responded. Default value is false.'
         defaultDecision:
           type: string
-          description: 'Decision chosen if defaultDecisionEnabled is enabled. Can be one of Approve, Deny, or Recommendation.'
           nullable: true
         defaultDecisionEnabled:
           type: boolean
-          description: Indicates whether the default decision is enabled or disabled when reviewers do not respond. Default value is false.
         instanceDurationInDays:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: Duration of each recurrence of review (accessReviewInstance) in number of days.
           format: int32
         justificationRequiredOnApproval:
           type: boolean
-          description: Indicates whether reviewers are required to provide justification with their decision. Default value is false.
         mailNotificationsEnabled:
           type: boolean
-          description: Indicates whether emails are enabled or disabled. Default value is false.
         recommendationsEnabled:
           type: boolean
-          description: Indicates whether decision recommendations are enabled/disabled.
         recurrence:
           $ref: '#/components/schemas/microsoft.graph.patternedRecurrence'
         reminderNotificationsEnabled:
           type: boolean
-          description: Indicates whether reminders are enabled or disabled. Default value is false.
       additionalProperties:
         type: object
     microsoft.graph.identity:
@@ -7598,11 +7469,9 @@ components:
       properties:
         displayName:
           type: string
-          description: 'The identity''s display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won''t show up as having changed when using delta.'
           nullable: true
         id:
           type: string
-          description: Unique identifier for the identity.
           nullable: true
       additionalProperties:
         type: object
@@ -7612,15 +7481,12 @@ components:
       properties:
         displayName:
           type: string
-          description: Display name of the resource
           nullable: true
         id:
           type: string
-          description: Resource ID
           nullable: true
         type:
           type: string
-          description: 'Type of resource. Types include: Group, ServicePrincipal, DirectoryRole, AzureRole, AccessPackageAssignmentPolicy.'
           nullable: true
       additionalProperties:
         type: object
@@ -7630,7 +7496,6 @@ components:
       properties:
         displayName:
           type: string
-          description: The name of the scope.
           nullable: true
       additionalProperties:
         type: object
@@ -7642,12 +7507,10 @@ components:
           properties:
             approvalId:
               type: string
-              description: The identifier of the approval of the request.
               nullable: true
             completedDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: The request completion date time.
               format: date-time
               nullable: true
             createdBy:
@@ -7655,16 +7518,13 @@ components:
             createdDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: The request creation date time.
               format: date-time
               nullable: true
             customData:
               type: string
-              description: Free text field to define any custom data for the request. Not used.
               nullable: true
             status:
               type: string
-              description: 'The status of the request. Not nullable. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable.'
           additionalProperties:
             type: object
     odata.error:
@@ -7744,13 +7604,11 @@ components:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: The day of the month on which the event occurs. Required if type is absoluteMonthly or absoluteYearly.
           format: int32
         daysOfWeek:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.dayOfWeek'
-          description: 'A collection of the days of the week on which the event occurs. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly.'
         firstDayOfWeek:
           $ref: '#/components/schemas/microsoft.graph.dayOfWeek'
         index:
@@ -7759,13 +7617,11 @@ components:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: 'The number of units between occurrences, where units can be in days, weeks, months, or years, depending on the type. Required.'
           format: int32
         month:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: The month in which the event occurs.  This is a number from 1 to 12.
           format: int32
         type:
           $ref: '#/components/schemas/microsoft.graph.recurrencePatternType'
@@ -7778,23 +7634,19 @@ components:
         endDate:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$'
           type: string
-          description: 'The date to stop applying the recurrence pattern. Depending on the recurrence pattern of the event, the last occurrence of the meeting may not be this date. Required if type is endDate.'
           format: date
           nullable: true
         numberOfOccurrences:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: The number of times to repeat the event. Required and must be positive if type is numbered.
           format: int32
         recurrenceTimeZone:
           type: string
-          description: 'Time zone for the startDate and endDate properties. Optional. If not specified, the time zone of the event is used.'
           nullable: true
         startDate:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$'
           type: string
-          description: 'The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the start property of the recurring event. Required.'
           format: date
           nullable: true
         type:
