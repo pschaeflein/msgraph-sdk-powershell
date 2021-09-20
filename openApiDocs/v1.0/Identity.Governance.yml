@@ -5361,7 +5361,7 @@ paths:
         - users.agreementAcceptance
       summary: Get ref of agreementAcceptances from users
       description: The user's terms of use acceptance statuses. Read-only. Nullable.
-      operationId: users_ListRefAgreementAcceptances
+      operationId: users_ListAgreementAcceptancesByRef
       parameters:
         - name: user-id
           in: path
@@ -5442,7 +5442,7 @@ paths:
         - users.agreementAcceptance
       summary: Create new navigation property ref to agreementAcceptances for users
       description: The user's terms of use acceptance statuses. Read-only. Nullable.
-      operationId: users_CreateRefAgreementAcceptances
+      operationId: users_CreateAgreementAcceptancesByRef
       parameters:
         - name: user-id
           in: path

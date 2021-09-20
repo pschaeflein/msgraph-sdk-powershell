@@ -1453,7 +1453,7 @@ paths:
         - drives.itemActivityOLD
       summary: Get ref of analytics from drives
       description: Analytics about the view activities that took place on this item.
-      operationId: drives.activities.listItem_GetRefAnalytics
+      operationId: drives.activities.listItem_GetAnalyticsByRef
       parameters:
         - name: drive-id
           in: path
@@ -1500,7 +1500,7 @@ paths:
         - drives.itemActivityOLD
       summary: Update the ref of navigation property analytics in drives
       description: Analytics about the view activities that took place on this item.
-      operationId: drives.activities.listItem_SetRefAnalytics
+      operationId: drives.activities.listItem_SetAnalyticsByRef
       parameters:
         - name: drive-id
           in: path
@@ -1536,7 +1536,7 @@ paths:
         - drives.itemActivityOLD
       summary: Delete ref of navigation property analytics for drives
       description: Analytics about the view activities that took place on this item.
-      operationId: drives.activities.listItem_DeleteRefAnalytics
+      operationId: drives.activities.listItem_DeleteAnalyticsByRef
       parameters:
         - name: drive-id
           in: path
@@ -5460,7 +5460,7 @@ paths:
         - drives.list
       summary: Get ref of analytics from drives
       description: Analytics about the view activities that took place on this item.
-      operationId: drives.list.activities.listItem_GetRefAnalytics
+      operationId: drives.list.activities.listItem_GetAnalyticsByRef
       parameters:
         - name: drive-id
           in: path
@@ -5507,7 +5507,7 @@ paths:
         - drives.list
       summary: Update the ref of navigation property analytics in drives
       description: Analytics about the view activities that took place on this item.
-      operationId: drives.list.activities.listItem_SetRefAnalytics
+      operationId: drives.list.activities.listItem_SetAnalyticsByRef
       parameters:
         - name: drive-id
           in: path
@@ -5543,7 +5543,7 @@ paths:
         - drives.list
       summary: Delete ref of navigation property analytics for drives
       description: Analytics about the view activities that took place on this item.
-      operationId: drives.list.activities.listItem_DeleteRefAnalytics
+      operationId: drives.list.activities.listItem_DeleteAnalyticsByRef
       parameters:
         - name: drive-id
           in: path
@@ -7036,7 +7036,7 @@ paths:
         - drives.list
       summary: Get ref of sourceColumn from drives
       description: The source column for content type column.
-      operationId: drives.list.columns_GetRefSourceColumn
+      operationId: drives.list.columns_GetSourceColumnByRef
       parameters:
         - name: drive-id
           in: path
@@ -7073,7 +7073,7 @@ paths:
         - drives.list
       summary: Update the ref of navigation property sourceColumn in drives
       description: The source column for content type column.
-      operationId: drives.list.columns_SetRefSourceColumn
+      operationId: drives.list.columns_SetSourceColumnByRef
       parameters:
         - name: drive-id
           in: path
@@ -7109,7 +7109,7 @@ paths:
         - drives.list
       summary: Delete ref of navigation property sourceColumn for drives
       description: The source column for content type column.
-      operationId: drives.list.columns_DeleteRefSourceColumn
+      operationId: drives.list.columns_DeleteSourceColumnByRef
       parameters:
         - name: drive-id
           in: path
@@ -7583,7 +7583,7 @@ paths:
         - drives.list
       summary: Get ref of base from drives
       description: Parent contentType from which this content type is derived.
-      operationId: drives.list.contentTypes_GetRefBase
+      operationId: drives.list.contentTypes_GetBaseByRef
       parameters:
         - name: drive-id
           in: path
@@ -7640,7 +7640,7 @@ paths:
         - drives.list
       summary: Update the ref of navigation property base in drives
       description: Parent contentType from which this content type is derived.
-      operationId: drives.list.contentTypes_SetRefBase
+      operationId: drives.list.contentTypes_SetBaseByRef
       parameters:
         - name: drive-id
           in: path
@@ -7676,7 +7676,7 @@ paths:
         - drives.list
       summary: Delete ref of navigation property base for drives
       description: Parent contentType from which this content type is derived.
-      operationId: drives.list.contentTypes_DeleteRefBase
+      operationId: drives.list.contentTypes_DeleteBaseByRef
       parameters:
         - name: drive-id
           in: path
@@ -8021,7 +8021,7 @@ paths:
         - drives.list
       summary: Get ref of baseTypes from drives
       description: The collection of content types that are ancestors of this content type.
-      operationId: drives.list.contentTypes_ListRefBaseTypes
+      operationId: drives.list.contentTypes_ListBaseTypesByRef
       parameters:
         - name: drive-id
           in: path
@@ -8111,7 +8111,7 @@ paths:
         - drives.list
       summary: Create new navigation property ref to baseTypes for drives
       description: The collection of content types that are ancestors of this content type.
-      operationId: drives.list.contentTypes_CreateRefBaseTypes
+      operationId: drives.list.contentTypes_CreateBaseTypesByRef
       parameters:
         - name: drive-id
           in: path
@@ -8648,7 +8648,7 @@ paths:
         - drives.list
       summary: Get ref of columnPositions from drives
       description: Column order information in a content type.
-      operationId: drives.list.contentTypes_ListRefColumnPositions
+      operationId: drives.list.contentTypes_ListColumnPositionsByRef
       parameters:
         - name: drive-id
           in: path
@@ -8770,7 +8770,7 @@ paths:
         - drives.list
       summary: Create new navigation property ref to columnPositions for drives
       description: Column order information in a content type.
-      operationId: drives.list.contentTypes_CreateRefColumnPositions
+      operationId: drives.list.contentTypes_CreateColumnPositionsByRef
       parameters:
         - name: drive-id
           in: path
@@ -9314,7 +9314,7 @@ paths:
         - drives.list
       summary: Get ref of sourceColumn from drives
       description: The source column for content type column.
-      operationId: drives.list.contentTypes.columns_GetRefSourceColumn
+      operationId: drives.list.contentTypes.columns_GetSourceColumnByRef
       parameters:
         - name: drive-id
           in: path
@@ -9359,7 +9359,7 @@ paths:
         - drives.list
       summary: Update the ref of navigation property sourceColumn in drives
       description: The source column for content type column.
-      operationId: drives.list.contentTypes.columns_SetRefSourceColumn
+      operationId: drives.list.contentTypes.columns_SetSourceColumnByRef
       parameters:
         - name: drive-id
           in: path
@@ -9402,7 +9402,7 @@ paths:
         - drives.list
       summary: Delete ref of navigation property sourceColumn for drives
       description: The source column for content type column.
-      operationId: drives.list.contentTypes.columns_DeleteRefSourceColumn
+      operationId: drives.list.contentTypes.columns_DeleteSourceColumnByRef
       parameters:
         - name: drive-id
           in: path
@@ -11219,7 +11219,7 @@ paths:
         - drives.list
       summary: Get ref of analytics from drives
       description: Analytics about the view activities that took place on this item.
-      operationId: drives.list.items_GetRefAnalytics
+      operationId: drives.list.items_GetAnalyticsByRef
       parameters:
         - name: drive-id
           in: path
@@ -11266,7 +11266,7 @@ paths:
         - drives.list
       summary: Update the ref of navigation property analytics in drives
       description: Analytics about the view activities that took place on this item.
-      operationId: drives.list.items_SetRefAnalytics
+      operationId: drives.list.items_SetAnalyticsByRef
       parameters:
         - name: drive-id
           in: path
@@ -11302,7 +11302,7 @@ paths:
         - drives.list
       summary: Delete ref of navigation property analytics for drives
       description: Analytics about the view activities that took place on this item.
-      operationId: drives.list.items_DeleteRefAnalytics
+      operationId: drives.list.items_DeleteAnalyticsByRef
       parameters:
         - name: drive-id
           in: path
@@ -16419,7 +16419,7 @@ paths:
         - shares.list
       summary: Get ref of analytics from shares
       description: Analytics about the view activities that took place on this item.
-      operationId: shares.list.activities.listItem_GetRefAnalytics
+      operationId: shares.list.activities.listItem_GetAnalyticsByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -16466,7 +16466,7 @@ paths:
         - shares.list
       summary: Update the ref of navigation property analytics in shares
       description: Analytics about the view activities that took place on this item.
-      operationId: shares.list.activities.listItem_SetRefAnalytics
+      operationId: shares.list.activities.listItem_SetAnalyticsByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -16502,7 +16502,7 @@ paths:
         - shares.list
       summary: Delete ref of navigation property analytics for shares
       description: Analytics about the view activities that took place on this item.
-      operationId: shares.list.activities.listItem_DeleteRefAnalytics
+      operationId: shares.list.activities.listItem_DeleteAnalyticsByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -17995,7 +17995,7 @@ paths:
         - shares.list
       summary: Get ref of sourceColumn from shares
       description: The source column for content type column.
-      operationId: shares.list.columns_GetRefSourceColumn
+      operationId: shares.list.columns_GetSourceColumnByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -18032,7 +18032,7 @@ paths:
         - shares.list
       summary: Update the ref of navigation property sourceColumn in shares
       description: The source column for content type column.
-      operationId: shares.list.columns_SetRefSourceColumn
+      operationId: shares.list.columns_SetSourceColumnByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -18068,7 +18068,7 @@ paths:
         - shares.list
       summary: Delete ref of navigation property sourceColumn for shares
       description: The source column for content type column.
-      operationId: shares.list.columns_DeleteRefSourceColumn
+      operationId: shares.list.columns_DeleteSourceColumnByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -18542,7 +18542,7 @@ paths:
         - shares.list
       summary: Get ref of base from shares
       description: Parent contentType from which this content type is derived.
-      operationId: shares.list.contentTypes_GetRefBase
+      operationId: shares.list.contentTypes_GetBaseByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -18599,7 +18599,7 @@ paths:
         - shares.list
       summary: Update the ref of navigation property base in shares
       description: Parent contentType from which this content type is derived.
-      operationId: shares.list.contentTypes_SetRefBase
+      operationId: shares.list.contentTypes_SetBaseByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -18635,7 +18635,7 @@ paths:
         - shares.list
       summary: Delete ref of navigation property base for shares
       description: Parent contentType from which this content type is derived.
-      operationId: shares.list.contentTypes_DeleteRefBase
+      operationId: shares.list.contentTypes_DeleteBaseByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -18980,7 +18980,7 @@ paths:
         - shares.list
       summary: Get ref of baseTypes from shares
       description: The collection of content types that are ancestors of this content type.
-      operationId: shares.list.contentTypes_ListRefBaseTypes
+      operationId: shares.list.contentTypes_ListBaseTypesByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -19070,7 +19070,7 @@ paths:
         - shares.list
       summary: Create new navigation property ref to baseTypes for shares
       description: The collection of content types that are ancestors of this content type.
-      operationId: shares.list.contentTypes_CreateRefBaseTypes
+      operationId: shares.list.contentTypes_CreateBaseTypesByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -19607,7 +19607,7 @@ paths:
         - shares.list
       summary: Get ref of columnPositions from shares
       description: Column order information in a content type.
-      operationId: shares.list.contentTypes_ListRefColumnPositions
+      operationId: shares.list.contentTypes_ListColumnPositionsByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -19729,7 +19729,7 @@ paths:
         - shares.list
       summary: Create new navigation property ref to columnPositions for shares
       description: Column order information in a content type.
-      operationId: shares.list.contentTypes_CreateRefColumnPositions
+      operationId: shares.list.contentTypes_CreateColumnPositionsByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -20273,7 +20273,7 @@ paths:
         - shares.list
       summary: Get ref of sourceColumn from shares
       description: The source column for content type column.
-      operationId: shares.list.contentTypes.columns_GetRefSourceColumn
+      operationId: shares.list.contentTypes.columns_GetSourceColumnByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -20318,7 +20318,7 @@ paths:
         - shares.list
       summary: Update the ref of navigation property sourceColumn in shares
       description: The source column for content type column.
-      operationId: shares.list.contentTypes.columns_SetRefSourceColumn
+      operationId: shares.list.contentTypes.columns_SetSourceColumnByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -20361,7 +20361,7 @@ paths:
         - shares.list
       summary: Delete ref of navigation property sourceColumn for shares
       description: The source column for content type column.
-      operationId: shares.list.contentTypes.columns_DeleteRefSourceColumn
+      operationId: shares.list.contentTypes.columns_DeleteSourceColumnByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -22178,7 +22178,7 @@ paths:
         - shares.list
       summary: Get ref of analytics from shares
       description: Analytics about the view activities that took place on this item.
-      operationId: shares.list.items_GetRefAnalytics
+      operationId: shares.list.items_GetAnalyticsByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -22225,7 +22225,7 @@ paths:
         - shares.list
       summary: Update the ref of navigation property analytics in shares
       description: Analytics about the view activities that took place on this item.
-      operationId: shares.list.items_SetRefAnalytics
+      operationId: shares.list.items_SetAnalyticsByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -22261,7 +22261,7 @@ paths:
         - shares.list
       summary: Delete ref of navigation property analytics for shares
       description: Analytics about the view activities that took place on this item.
-      operationId: shares.list.items_DeleteRefAnalytics
+      operationId: shares.list.items_DeleteAnalyticsByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -24663,7 +24663,7 @@ paths:
         - shares.listItem
       summary: Get ref of analytics from shares
       description: Analytics about the view activities that took place on this item.
-      operationId: shares.listItem_GetRefAnalytics
+      operationId: shares.listItem_GetAnalyticsByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -24700,7 +24700,7 @@ paths:
         - shares.listItem
       summary: Update the ref of navigation property analytics in shares
       description: Analytics about the view activities that took place on this item.
-      operationId: shares.listItem_SetRefAnalytics
+      operationId: shares.listItem_SetAnalyticsByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -24729,7 +24729,7 @@ paths:
         - shares.listItem
       summary: Delete ref of navigation property analytics for shares
       description: Analytics about the view activities that took place on this item.
-      operationId: shares.listItem_DeleteRefAnalytics
+      operationId: shares.listItem_DeleteAnalyticsByRef
       parameters:
         - name: sharedDriveItem-id
           in: path

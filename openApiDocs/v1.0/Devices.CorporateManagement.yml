@@ -8125,7 +8125,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Get ref of categories from deviceAppManagement
       description: The list of categories for this app.
-      operationId: deviceAppManagement.mobileApps_ListRefCategories
+      operationId: deviceAppManagement.mobileApps_ListCategoriesByRef
       parameters:
         - name: mobileApp-id
           in: path
@@ -8184,7 +8184,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Create new navigation property ref to categories for deviceAppManagement
       description: The list of categories for this app.
-      operationId: deviceAppManagement.mobileApps_CreateRefCategories
+      operationId: deviceAppManagement.mobileApps_CreateCategoriesByRef
       parameters:
         - name: mobileApp-id
           in: path
@@ -10167,7 +10167,7 @@ paths:
         - users.managedAppRegistration
       summary: Get ref of managedAppRegistrations from users
       description: Zero or more managed app registrations that belong to the user.
-      operationId: users_ListRefManagedAppRegistrations
+      operationId: users_ListManagedAppRegistrationsByRef
       parameters:
         - name: user-id
           in: path
@@ -10246,7 +10246,7 @@ paths:
         - users.managedAppRegistration
       summary: Create new navigation property ref to managedAppRegistrations for users
       description: Zero or more managed app registrations that belong to the user.
-      operationId: users_CreateRefManagedAppRegistrations
+      operationId: users_CreateManagedAppRegistrationsByRef
       parameters:
         - name: user-id
           in: path

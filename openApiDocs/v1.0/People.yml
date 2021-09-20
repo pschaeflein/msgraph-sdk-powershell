@@ -454,7 +454,7 @@ paths:
       tags:
         - users.officeGraphInsights
       summary: Get ref of lastSharedMethod from users
-      operationId: users.insights.shared_GetRefLastSharedMethod
+      operationId: users.insights.shared_GetLastSharedMethodByRef
       parameters:
         - name: user-id
           in: path
@@ -484,7 +484,7 @@ paths:
       tags:
         - users.officeGraphInsights
       summary: Update the ref of navigation property lastSharedMethod in users
-      operationId: users.insights.shared_SetRefLastSharedMethod
+      operationId: users.insights.shared_SetLastSharedMethodByRef
       parameters:
         - name: user-id
           in: path
@@ -519,7 +519,7 @@ paths:
       tags:
         - users.officeGraphInsights
       summary: Delete ref of navigation property lastSharedMethod for users
-      operationId: users.insights.shared_DeleteRefLastSharedMethod
+      operationId: users.insights.shared_DeleteLastSharedMethodByRef
       parameters:
         - name: user-id
           in: path
@@ -608,7 +608,7 @@ paths:
         - users.officeGraphInsights
       summary: Get ref of resource from users
       description: 'Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.'
-      operationId: users.insights.shared_GetRefResource
+      operationId: users.insights.shared_GetResourceByRef
       parameters:
         - name: user-id
           in: path
@@ -639,7 +639,7 @@ paths:
         - users.officeGraphInsights
       summary: Update the ref of navigation property resource in users
       description: 'Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.'
-      operationId: users.insights.shared_SetRefResource
+      operationId: users.insights.shared_SetResourceByRef
       parameters:
         - name: user-id
           in: path
@@ -675,7 +675,7 @@ paths:
         - users.officeGraphInsights
       summary: Delete ref of navigation property resource for users
       description: 'Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.'
-      operationId: users.insights.shared_DeleteRefResource
+      operationId: users.insights.shared_DeleteResourceByRef
       parameters:
         - name: user-id
           in: path
@@ -1023,7 +1023,7 @@ paths:
         - users.officeGraphInsights
       summary: Get ref of resource from users
       description: Used for navigating to the trending document.
-      operationId: users.insights.trending_GetRefResource
+      operationId: users.insights.trending_GetResourceByRef
       parameters:
         - name: user-id
           in: path
@@ -1054,7 +1054,7 @@ paths:
         - users.officeGraphInsights
       summary: Update the ref of navigation property resource in users
       description: Used for navigating to the trending document.
-      operationId: users.insights.trending_SetRefResource
+      operationId: users.insights.trending_SetResourceByRef
       parameters:
         - name: user-id
           in: path
@@ -1090,7 +1090,7 @@ paths:
         - users.officeGraphInsights
       summary: Delete ref of navigation property resource for users
       description: Used for navigating to the trending document.
-      operationId: users.insights.trending_DeleteRefResource
+      operationId: users.insights.trending_DeleteResourceByRef
       parameters:
         - name: user-id
           in: path
@@ -1434,7 +1434,7 @@ paths:
         - users.officeGraphInsights
       summary: Get ref of resource from users
       description: 'Used for navigating to the item that was used. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.'
-      operationId: users.insights.used_GetRefResource
+      operationId: users.insights.used_GetResourceByRef
       parameters:
         - name: user-id
           in: path
@@ -1465,7 +1465,7 @@ paths:
         - users.officeGraphInsights
       summary: Update the ref of navigation property resource in users
       description: 'Used for navigating to the item that was used. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.'
-      operationId: users.insights.used_SetRefResource
+      operationId: users.insights.used_SetResourceByRef
       parameters:
         - name: user-id
           in: path
@@ -1501,7 +1501,7 @@ paths:
         - users.officeGraphInsights
       summary: Delete ref of navigation property resource for users
       description: 'Used for navigating to the item that was used. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.'
-      operationId: users.insights.used_DeleteRefResource
+      operationId: users.insights.used_DeleteResourceByRef
       parameters:
         - name: user-id
           in: path

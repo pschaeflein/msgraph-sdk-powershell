@@ -957,7 +957,7 @@ paths:
         - users.directoryObject
       summary: Get ref of createdObjects from users
       description: Directory objects that were created by the user. Read-only. Nullable.
-      operationId: users_ListRefCreatedObjects
+      operationId: users_ListCreatedObjectsByRef
       parameters:
         - name: user-id
           in: path
@@ -1014,7 +1014,7 @@ paths:
         - users.directoryObject
       summary: Create new navigation property ref to createdObjects for users
       description: Directory objects that were created by the user. Read-only. Nullable.
-      operationId: users_CreateRefCreatedObjects
+      operationId: users_CreateCreatedObjectsByRef
       parameters:
         - name: user-id
           in: path
@@ -1133,7 +1133,7 @@ paths:
         - users.directoryObject
       summary: Get ref of directReports from users
       description: The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable. Supports $expand.
-      operationId: users_ListRefDirectReports
+      operationId: users_ListDirectReportsByRef
       parameters:
         - name: user-id
           in: path
@@ -1190,7 +1190,7 @@ paths:
         - users.directoryObject
       summary: Create new navigation property ref to directReports for users
       description: The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable. Supports $expand.
-      operationId: users_CreateRefDirectReports
+      operationId: users_CreateDirectReportsByRef
       parameters:
         - name: user-id
           in: path
@@ -1754,7 +1754,7 @@ paths:
         - users.directoryObject
       summary: Get ref of manager from users
       description: 'The user or contact that is this user''s manager. Read-only. (HTTP Methods: GET, PUT, DELETE.). Supports $expand.'
-      operationId: users_GetRefManager
+      operationId: users_GetManagerByRef
       parameters:
         - name: user-id
           in: path
@@ -1778,7 +1778,7 @@ paths:
         - users.directoryObject
       summary: Update the ref of navigation property manager in users
       description: 'The user or contact that is this user''s manager. Read-only. (HTTP Methods: GET, PUT, DELETE.). Supports $expand.'
-      operationId: users_SetRefManager
+      operationId: users_SetManagerByRef
       parameters:
         - name: user-id
           in: path
@@ -1807,7 +1807,7 @@ paths:
         - users.directoryObject
       summary: Delete ref of navigation property manager for users
       description: 'The user or contact that is this user''s manager. Read-only. (HTTP Methods: GET, PUT, DELETE.). Supports $expand.'
-      operationId: users_DeleteRefManager
+      operationId: users_DeleteManagerByRef
       parameters:
         - name: user-id
           in: path
@@ -1916,7 +1916,7 @@ paths:
         - users.directoryObject
       summary: Get ref of memberOf from users
       description: 'The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable. Supports $expand.'
-      operationId: users_ListRefMemberOf
+      operationId: users_ListMemberOfByRef
       parameters:
         - name: user-id
           in: path
@@ -1973,7 +1973,7 @@ paths:
         - users.directoryObject
       summary: Create new navigation property ref to memberOf for users
       description: 'The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable. Supports $expand.'
-      operationId: users_CreateRefMemberOf
+      operationId: users_CreateMemberOfByRef
       parameters:
         - name: user-id
           in: path
@@ -2102,7 +2102,7 @@ paths:
       tags:
         - users.oAuth2PermissionGrant
       summary: Get ref of oauth2PermissionGrants from users
-      operationId: users_ListRefOauth2PermissionGrants
+      operationId: users_ListOauth2PermissionGrantsByRef
       parameters:
         - name: user-id
           in: path
@@ -2166,7 +2166,7 @@ paths:
       tags:
         - users.oAuth2PermissionGrant
       summary: Create new navigation property ref to oauth2PermissionGrants for users
-      operationId: users_CreateRefOauth2PermissionGrants
+      operationId: users_CreateOauth2PermissionGrantsByRef
       parameters:
         - name: user-id
           in: path
@@ -2634,7 +2634,7 @@ paths:
         - users.directoryObject
       summary: Get ref of ownedDevices from users
       description: Devices that are owned by the user. Read-only. Nullable. Supports $expand.
-      operationId: users_ListRefOwnedDevices
+      operationId: users_ListOwnedDevicesByRef
       parameters:
         - name: user-id
           in: path
@@ -2691,7 +2691,7 @@ paths:
         - users.directoryObject
       summary: Create new navigation property ref to ownedDevices for users
       description: Devices that are owned by the user. Read-only. Nullable. Supports $expand.
-      operationId: users_CreateRefOwnedDevices
+      operationId: users_CreateOwnedDevicesByRef
       parameters:
         - name: user-id
           in: path
@@ -2810,7 +2810,7 @@ paths:
         - users.directoryObject
       summary: Get ref of ownedObjects from users
       description: Directory objects that are owned by the user. Read-only. Nullable. Supports $expand.
-      operationId: users_ListRefOwnedObjects
+      operationId: users_ListOwnedObjectsByRef
       parameters:
         - name: user-id
           in: path
@@ -2867,7 +2867,7 @@ paths:
         - users.directoryObject
       summary: Create new navigation property ref to ownedObjects for users
       description: Directory objects that are owned by the user. Read-only. Nullable. Supports $expand.
-      operationId: users_CreateRefOwnedObjects
+      operationId: users_CreateOwnedObjectsByRef
       parameters:
         - name: user-id
           in: path
@@ -3450,7 +3450,7 @@ paths:
         - users.directoryObject
       summary: Get ref of registeredDevices from users
       description: Devices that are registered for the user. Read-only. Nullable. Supports $expand.
-      operationId: users_ListRefRegisteredDevices
+      operationId: users_ListRegisteredDevicesByRef
       parameters:
         - name: user-id
           in: path
@@ -3507,7 +3507,7 @@ paths:
         - users.directoryObject
       summary: Create new navigation property ref to registeredDevices for users
       description: Devices that are registered for the user. Read-only. Nullable. Supports $expand.
-      operationId: users_CreateRefRegisteredDevices
+      operationId: users_CreateRegisteredDevicesByRef
       parameters:
         - name: user-id
           in: path
@@ -5442,7 +5442,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get ref of transitiveMemberOf from users
-      operationId: users_ListRefTransitiveMemberOf
+      operationId: users_ListTransitiveMemberOfByRef
       parameters:
         - name: user-id
           in: path
@@ -5498,7 +5498,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Create new navigation property ref to transitiveMemberOf for users
-      operationId: users_CreateRefTransitiveMemberOf
+      operationId: users_CreateTransitiveMemberOfByRef
       parameters:
         - name: user-id
           in: path

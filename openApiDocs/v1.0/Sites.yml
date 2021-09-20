@@ -823,7 +823,7 @@ paths:
         - sites.itemAnalytics
       summary: Get ref of analytics from sites
       description: Analytics about the view activities that took place in this site.
-      operationId: sites_GetRefAnalytics
+      operationId: sites_GetAnalyticsByRef
       parameters:
         - name: site-id
           in: path
@@ -860,7 +860,7 @@ paths:
         - sites.itemAnalytics
       summary: Update the ref of navigation property analytics in sites
       description: Analytics about the view activities that took place in this site.
-      operationId: sites_SetRefAnalytics
+      operationId: sites_SetAnalyticsByRef
       parameters:
         - name: site-id
           in: path
@@ -889,7 +889,7 @@ paths:
         - sites.itemAnalytics
       summary: Delete ref of navigation property analytics for sites
       description: Analytics about the view activities that took place in this site.
-      operationId: sites_DeleteRefAnalytics
+      operationId: sites_DeleteAnalyticsByRef
       parameters:
         - name: site-id
           in: path
@@ -4256,7 +4256,7 @@ paths:
         - sites.list
       summary: Get ref of analytics from sites
       description: Analytics about the view activities that took place on this item.
-      operationId: sites.lists.items_GetRefAnalytics
+      operationId: sites.lists.items_GetAnalyticsByRef
       parameters:
         - name: site-id
           in: path
@@ -4313,7 +4313,7 @@ paths:
         - sites.list
       summary: Update the ref of navigation property analytics in sites
       description: Analytics about the view activities that took place on this item.
-      operationId: sites.lists.items_SetRefAnalytics
+      operationId: sites.lists.items_SetAnalyticsByRef
       parameters:
         - name: site-id
           in: path
@@ -4356,7 +4356,7 @@ paths:
         - sites.list
       summary: Delete ref of navigation property analytics for sites
       description: Analytics about the view activities that took place on this item.
-      operationId: sites.lists.items_DeleteRefAnalytics
+      operationId: sites.lists.items_DeleteAnalyticsByRef
       parameters:
         - name: site-id
           in: path
@@ -13583,7 +13583,7 @@ paths:
       tags:
         - users.site
       summary: Get ref of followedSites from users
-      operationId: users_ListRefFollowedSites
+      operationId: users_ListFollowedSitesByRef
       parameters:
         - name: user-id
           in: path
@@ -13665,7 +13665,7 @@ paths:
       tags:
         - users.site
       summary: Create new navigation property ref to followedSites for users
-      operationId: users_CreateRefFollowedSites
+      operationId: users_CreateFollowedSitesByRef
       parameters:
         - name: user-id
           in: path

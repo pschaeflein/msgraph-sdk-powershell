@@ -1036,7 +1036,7 @@ paths:
         - groups.directoryObject
       summary: Get ref of acceptedSenders from groups
       description: The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post.
-      operationId: groups_ListRefAcceptedSenders
+      operationId: groups_ListAcceptedSendersByRef
       parameters:
         - name: group-id
           in: path
@@ -1093,7 +1093,7 @@ paths:
         - groups.directoryObject
       summary: Create new navigation property ref to acceptedSenders for groups
       description: The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post.
-      operationId: groups_CreateRefAcceptedSenders
+      operationId: groups_CreateAcceptedSendersByRef
       parameters:
         - name: group-id
           in: path
@@ -8860,7 +8860,7 @@ paths:
         - groups.directoryObject
       summary: Get ref of createdOnBehalfOf from groups
       description: 'The user (or application) that created the group. Note: This is not set if the user is an administrator. Read-only.'
-      operationId: groups_GetRefCreatedOnBehalfOf
+      operationId: groups_GetCreatedOnBehalfOfByRef
       parameters:
         - name: group-id
           in: path
@@ -8884,7 +8884,7 @@ paths:
         - groups.directoryObject
       summary: Update the ref of navigation property createdOnBehalfOf in groups
       description: 'The user (or application) that created the group. Note: This is not set if the user is an administrator. Read-only.'
-      operationId: groups_SetRefCreatedOnBehalfOf
+      operationId: groups_SetCreatedOnBehalfOfByRef
       parameters:
         - name: group-id
           in: path
@@ -8913,7 +8913,7 @@ paths:
         - groups.directoryObject
       summary: Delete ref of navigation property createdOnBehalfOf for groups
       description: 'The user (or application) that created the group. Note: This is not set if the user is an administrator. Read-only.'
-      operationId: groups_DeleteRefCreatedOnBehalfOf
+      operationId: groups_DeleteCreatedOnBehalfOfByRef
       parameters:
         - name: group-id
           in: path
@@ -11436,7 +11436,7 @@ paths:
         - groups.directoryObject
       summary: Get ref of memberOf from groups
       description: 'Groups and administrative units that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand.'
-      operationId: groups_ListRefMemberOf
+      operationId: groups_ListMemberOfByRef
       parameters:
         - name: group-id
           in: path
@@ -11493,7 +11493,7 @@ paths:
         - groups.directoryObject
       summary: Create new navigation property ref to memberOf for groups
       description: 'Groups and administrative units that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand.'
-      operationId: groups_CreateRefMemberOf
+      operationId: groups_CreateMemberOfByRef
       parameters:
         - name: group-id
           in: path
@@ -11612,7 +11612,7 @@ paths:
         - groups.directoryObject
       summary: Get ref of members from groups
       description: 'Users, contacts, and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Read-only. Nullable. Supports $expand.'
-      operationId: groups_ListRefMembers
+      operationId: groups_ListMembersByRef
       parameters:
         - name: group-id
           in: path
@@ -11669,7 +11669,7 @@ paths:
         - groups.directoryObject
       summary: Create new navigation property ref to members for groups
       description: 'Users, contacts, and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Read-only. Nullable. Supports $expand.'
-      operationId: groups_CreateRefMembers
+      operationId: groups_CreateMembersByRef
       parameters:
         - name: group-id
           in: path
@@ -11788,7 +11788,7 @@ paths:
         - groups.directoryObject
       summary: Get ref of membersWithLicenseErrors from groups
       description: A list of group members with license errors from this group-based license assignment. Read-only.
-      operationId: groups_ListRefMembersWithLicenseErrors
+      operationId: groups_ListMembersWithLicenseErrorsByRef
       parameters:
         - name: group-id
           in: path
@@ -11845,7 +11845,7 @@ paths:
         - groups.directoryObject
       summary: Create new navigation property ref to membersWithLicenseErrors for groups
       description: A list of group members with license errors from this group-based license assignment. Read-only.
-      operationId: groups_CreateRefMembersWithLicenseErrors
+      operationId: groups_CreateMembersWithLicenseErrorsByRef
       parameters:
         - name: group-id
           in: path
@@ -19141,7 +19141,7 @@ paths:
         - groups.directoryObject
       summary: Get ref of owners from groups
       description: 'The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Read-only. Nullable. Supports $expand.'
-      operationId: groups_ListRefOwners
+      operationId: groups_ListOwnersByRef
       parameters:
         - name: group-id
           in: path
@@ -19198,7 +19198,7 @@ paths:
         - groups.directoryObject
       summary: Create new navigation property ref to owners for groups
       description: 'The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Read-only. Nullable. Supports $expand.'
-      operationId: groups_CreateRefOwners
+      operationId: groups_CreateOwnersByRef
       parameters:
         - name: group-id
           in: path
@@ -20038,7 +20038,7 @@ paths:
         - groups.directoryObject
       summary: Get ref of rejectedSenders from groups
       description: The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
-      operationId: groups_ListRefRejectedSenders
+      operationId: groups_ListRejectedSendersByRef
       parameters:
         - name: group-id
           in: path
@@ -20095,7 +20095,7 @@ paths:
         - groups.directoryObject
       summary: Create new navigation property ref to rejectedSenders for groups
       description: The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
-      operationId: groups_CreateRefRejectedSenders
+      operationId: groups_CreateRejectedSendersByRef
       parameters:
         - name: group-id
           in: path
@@ -23171,7 +23171,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get ref of transitiveMemberOf from groups
-      operationId: groups_ListRefTransitiveMemberOf
+      operationId: groups_ListTransitiveMemberOfByRef
       parameters:
         - name: group-id
           in: path
@@ -23227,7 +23227,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Create new navigation property ref to transitiveMemberOf for groups
-      operationId: groups_CreateRefTransitiveMemberOf
+      operationId: groups_CreateTransitiveMemberOfByRef
       parameters:
         - name: group-id
           in: path
@@ -23344,7 +23344,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get ref of transitiveMembers from groups
-      operationId: groups_ListRefTransitiveMembers
+      operationId: groups_ListTransitiveMembersByRef
       parameters:
         - name: group-id
           in: path
@@ -23400,7 +23400,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Create new navigation property ref to transitiveMembers for groups
-      operationId: groups_CreateRefTransitiveMembers
+      operationId: groups_CreateTransitiveMembersByRef
       parameters:
         - name: group-id
           in: path

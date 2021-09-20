@@ -1321,7 +1321,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Get ref of site from compliance
       description: The SharePoint site associated with the siteSource.
-      operationId: compliance.ediscovery.cases.custodians.siteSources_GetRefSite
+      operationId: compliance.ediscovery.cases.custodians.siteSources_GetSiteByRef
       parameters:
         - name: case-id
           in: path
@@ -1450,7 +1450,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Update the ref of navigation property site in compliance
       description: The SharePoint site associated with the siteSource.
-      operationId: compliance.ediscovery.cases.custodians.siteSources_SetRefSite
+      operationId: compliance.ediscovery.cases.custodians.siteSources_SetSiteByRef
       parameters:
         - name: case-id
           in: path
@@ -1493,7 +1493,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Delete ref of navigation property site for compliance
       description: The SharePoint site associated with the siteSource.
-      operationId: compliance.ediscovery.cases.custodians.siteSources_DeleteRefSite
+      operationId: compliance.ediscovery.cases.custodians.siteSources_DeleteSiteByRef
       parameters:
         - name: case-id
           in: path
@@ -2165,7 +2165,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Get ref of group from compliance
       description: The group associated with the unifiedGroupSource.
-      operationId: compliance.ediscovery.cases.custodians.unifiedGroupSources_GetRefGroup
+      operationId: compliance.ediscovery.cases.custodians.unifiedGroupSources_GetGroupByRef
       parameters:
         - name: case-id
           in: path
@@ -2372,7 +2372,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Update the ref of navigation property group in compliance
       description: The group associated with the unifiedGroupSource.
-      operationId: compliance.ediscovery.cases.custodians.unifiedGroupSources_SetRefGroup
+      operationId: compliance.ediscovery.cases.custodians.unifiedGroupSources_SetGroupByRef
       parameters:
         - name: case-id
           in: path
@@ -2415,7 +2415,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Delete ref of navigation property group for compliance
       description: The group associated with the unifiedGroupSource.
-      operationId: compliance.ediscovery.cases.custodians.unifiedGroupSources_DeleteRefGroup
+      operationId: compliance.ediscovery.cases.custodians.unifiedGroupSources_DeleteGroupByRef
       parameters:
         - name: case-id
           in: path
@@ -3533,7 +3533,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Get ref of site from compliance
       description: The SharePoint site associated with the siteSource.
-      operationId: compliance.ediscovery.cases.legalHolds.siteSources_GetRefSite
+      operationId: compliance.ediscovery.cases.legalHolds.siteSources_GetSiteByRef
       parameters:
         - name: case-id
           in: path
@@ -3662,7 +3662,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Update the ref of navigation property site in compliance
       description: The SharePoint site associated with the siteSource.
-      operationId: compliance.ediscovery.cases.legalHolds.siteSources_SetRefSite
+      operationId: compliance.ediscovery.cases.legalHolds.siteSources_SetSiteByRef
       parameters:
         - name: case-id
           in: path
@@ -3705,7 +3705,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Delete ref of navigation property site for compliance
       description: The SharePoint site associated with the siteSource.
-      operationId: compliance.ediscovery.cases.legalHolds.siteSources_DeleteRefSite
+      operationId: compliance.ediscovery.cases.legalHolds.siteSources_DeleteSiteByRef
       parameters:
         - name: case-id
           in: path
@@ -4372,7 +4372,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Get ref of group from compliance
       description: The group associated with the unifiedGroupSource.
-      operationId: compliance.ediscovery.cases.legalHolds.unifiedGroupSources_GetRefGroup
+      operationId: compliance.ediscovery.cases.legalHolds.unifiedGroupSources_GetGroupByRef
       parameters:
         - name: case-id
           in: path
@@ -4579,7 +4579,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Update the ref of navigation property group in compliance
       description: The group associated with the unifiedGroupSource.
-      operationId: compliance.ediscovery.cases.legalHolds.unifiedGroupSources_SetRefGroup
+      operationId: compliance.ediscovery.cases.legalHolds.unifiedGroupSources_SetGroupByRef
       parameters:
         - name: case-id
           in: path
@@ -4622,7 +4622,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Delete ref of navigation property group for compliance
       description: The group associated with the unifiedGroupSource.
-      operationId: compliance.ediscovery.cases.legalHolds.unifiedGroupSources_DeleteRefGroup
+      operationId: compliance.ediscovery.cases.legalHolds.unifiedGroupSources_DeleteGroupByRef
       parameters:
         - name: case-id
           in: path
@@ -7221,7 +7221,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Get ref of addToReviewSetOperation from compliance
       description: Adds the results of the sourceCollection to the specified reviewSet.
-      operationId: compliance.ediscovery.cases.sourceCollections_GetRefAddToReviewSetOperation
+      operationId: compliance.ediscovery.cases.sourceCollections_GetAddToReviewSetOperationByRef
       parameters:
         - name: case-id
           in: path
@@ -7263,7 +7263,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Update the ref of navigation property addToReviewSetOperation in compliance
       description: Adds the results of the sourceCollection to the specified reviewSet.
-      operationId: compliance.ediscovery.cases.sourceCollections_SetRefAddToReviewSetOperation
+      operationId: compliance.ediscovery.cases.sourceCollections_SetAddToReviewSetOperationByRef
       parameters:
         - name: case-id
           in: path
@@ -7299,7 +7299,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Delete ref of navigation property addToReviewSetOperation for compliance
       description: Adds the results of the sourceCollection to the specified reviewSet.
-      operationId: compliance.ediscovery.cases.sourceCollections_DeleteRefAddToReviewSetOperation
+      operationId: compliance.ediscovery.cases.sourceCollections_DeleteAddToReviewSetOperationByRef
       parameters:
         - name: case-id
           in: path
@@ -7428,7 +7428,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Get ref of custodianSources from compliance
       description: Custodian sources that are included in the sourceCollection.
-      operationId: compliance.ediscovery.cases.sourceCollections_ListRefCustodianSources
+      operationId: compliance.ediscovery.cases.sourceCollections_ListCustodianSourcesByRef
       parameters:
         - name: case-id
           in: path
@@ -7496,7 +7496,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Create new navigation property ref to custodianSources for compliance
       description: Custodian sources that are included in the sourceCollection.
-      operationId: compliance.ediscovery.cases.sourceCollections_CreateRefCustodianSources
+      operationId: compliance.ediscovery.cases.sourceCollections_CreateCustodianSourcesByRef
       parameters:
         - name: case-id
           in: path
@@ -7616,7 +7616,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Get ref of lastEstimateStatisticsOperation from compliance
       description: The last estimate operation associated with the sourceCollection.
-      operationId: compliance.ediscovery.cases.sourceCollections_GetRefLastEstimateStatisticsOperation
+      operationId: compliance.ediscovery.cases.sourceCollections_GetLastEstimateStatisticsOperationByRef
       parameters:
         - name: case-id
           in: path
@@ -7653,7 +7653,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Update the ref of navigation property lastEstimateStatisticsOperation in compliance
       description: The last estimate operation associated with the sourceCollection.
-      operationId: compliance.ediscovery.cases.sourceCollections_SetRefLastEstimateStatisticsOperation
+      operationId: compliance.ediscovery.cases.sourceCollections_SetLastEstimateStatisticsOperationByRef
       parameters:
         - name: case-id
           in: path
@@ -7689,7 +7689,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Delete ref of navigation property lastEstimateStatisticsOperation for compliance
       description: The last estimate operation associated with the sourceCollection.
-      operationId: compliance.ediscovery.cases.sourceCollections_DeleteRefLastEstimateStatisticsOperation
+      operationId: compliance.ediscovery.cases.sourceCollections_DeleteLastEstimateStatisticsOperationByRef
       parameters:
         - name: case-id
           in: path
@@ -7858,7 +7858,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Get ref of noncustodialSources from compliance
       description: noncustodialDataSource sources that are included in the sourceCollection
-      operationId: compliance.ediscovery.cases.sourceCollections_ListRefNoncustodialSources
+      operationId: compliance.ediscovery.cases.sourceCollections_ListNoncustodialSourcesByRef
       parameters:
         - name: case-id
           in: path
@@ -7932,7 +7932,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Create new navigation property ref to noncustodialSources for compliance
       description: noncustodialDataSource sources that are included in the sourceCollection
-      operationId: compliance.ediscovery.cases.sourceCollections_CreateRefNoncustodialSources
+      operationId: compliance.ediscovery.cases.sourceCollections_CreateNoncustodialSourcesByRef
       parameters:
         - name: case-id
           in: path
@@ -8353,7 +8353,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Get ref of childTags from compliance
       description: Returns the tags that are a child of a tag.
-      operationId: compliance.ediscovery.cases.tags_ListRefChildTags
+      operationId: compliance.ediscovery.cases.tags_ListChildTagsByRef
       parameters:
         - name: case-id
           in: path
@@ -8425,7 +8425,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Create new navigation property ref to childTags for compliance
       description: Returns the tags that are a child of a tag.
-      operationId: compliance.ediscovery.cases.tags_CreateRefChildTags
+      operationId: compliance.ediscovery.cases.tags_CreateChildTagsByRef
       parameters:
         - name: case-id
           in: path
@@ -8577,7 +8577,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Get ref of parent from compliance
       description: Returns the parent tag of the specified tag.
-      operationId: compliance.ediscovery.cases.tags_GetRefParent
+      operationId: compliance.ediscovery.cases.tags_GetParentByRef
       parameters:
         - name: case-id
           in: path
@@ -8619,7 +8619,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Update the ref of navigation property parent in compliance
       description: Returns the parent tag of the specified tag.
-      operationId: compliance.ediscovery.cases.tags_SetRefParent
+      operationId: compliance.ediscovery.cases.tags_SetParentByRef
       parameters:
         - name: case-id
           in: path
@@ -8655,7 +8655,7 @@ paths:
         - compliance.ediscoveryroot
       summary: Delete ref of navigation property parent for compliance
       description: Returns the parent tag of the specified tag.
-      operationId: compliance.ediscovery.cases.tags_DeleteRefParent
+      operationId: compliance.ediscovery.cases.tags_DeleteParentByRef
       parameters:
         - name: case-id
           in: path

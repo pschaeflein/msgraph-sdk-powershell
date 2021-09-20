@@ -657,7 +657,7 @@ paths:
         - deviceManagement.detectedApp
       summary: Get ref of managedDevices from deviceManagement
       description: The devices that have the discovered application installed
-      operationId: deviceManagement.detectedApps_ListRefManagedDevices
+      operationId: deviceManagement.detectedApps_ListManagedDevicesByRef
       parameters:
         - name: detectedApp-id
           in: path
@@ -814,7 +814,7 @@ paths:
         - deviceManagement.detectedApp
       summary: Create new navigation property ref to managedDevices for deviceManagement
       description: The devices that have the discovered application installed
-      operationId: deviceManagement.detectedApps_CreateRefManagedDevices
+      operationId: deviceManagement.detectedApps_CreateManagedDevicesByRef
       parameters:
         - name: detectedApp-id
           in: path
@@ -5342,7 +5342,7 @@ paths:
         - deviceManagement.managedDeviceOverview
       summary: Get ref of managedDeviceOverview from deviceManagement
       description: Device overview
-      operationId: deviceManagement_GetRefManagedDeviceOverview
+      operationId: deviceManagement_GetManagedDeviceOverviewByRef
       responses:
         '200':
           description: Retrieved navigation property link
@@ -5358,7 +5358,7 @@ paths:
         - deviceManagement.managedDeviceOverview
       summary: Update the ref of navigation property managedDeviceOverview in deviceManagement
       description: Device overview
-      operationId: deviceManagement_SetRefManagedDeviceOverview
+      operationId: deviceManagement_SetManagedDeviceOverviewByRef
       requestBody:
         description: New navigation property ref values
         content:
@@ -5379,7 +5379,7 @@ paths:
         - deviceManagement.managedDeviceOverview
       summary: Delete ref of navigation property managedDeviceOverview for deviceManagement
       description: Device overview
-      operationId: deviceManagement_DeleteRefManagedDeviceOverview
+      operationId: deviceManagement_DeleteManagedDeviceOverviewByRef
       parameters:
         - name: If-Match
           in: header
@@ -6973,7 +6973,7 @@ paths:
         - deviceManagement.softwareUpdateStatusSummary
       summary: Get ref of softwareUpdateStatusSummary from deviceManagement
       description: The software update status summary.
-      operationId: deviceManagement_GetRefSoftwareUpdateStatusSummary
+      operationId: deviceManagement_GetSoftwareUpdateStatusSummaryByRef
       responses:
         '200':
           description: Retrieved navigation property link
@@ -6989,7 +6989,7 @@ paths:
         - deviceManagement.softwareUpdateStatusSummary
       summary: Update the ref of navigation property softwareUpdateStatusSummary in deviceManagement
       description: The software update status summary.
-      operationId: deviceManagement_SetRefSoftwareUpdateStatusSummary
+      operationId: deviceManagement_SetSoftwareUpdateStatusSummaryByRef
       requestBody:
         description: New navigation property ref values
         content:
@@ -7010,7 +7010,7 @@ paths:
         - deviceManagement.softwareUpdateStatusSummary
       summary: Delete ref of navigation property softwareUpdateStatusSummary for deviceManagement
       description: The software update status summary.
-      operationId: deviceManagement_DeleteRefSoftwareUpdateStatusSummary
+      operationId: deviceManagement_DeleteSoftwareUpdateStatusSummaryByRef
       parameters:
         - name: If-Match
           in: header

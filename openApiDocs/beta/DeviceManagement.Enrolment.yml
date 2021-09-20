@@ -2002,7 +2002,7 @@ paths:
         - deviceManagement.depOnboardingSetting
       summary: Get ref of defaultIosEnrollmentProfile from deviceManagement
       description: Default iOS Enrollment Profile
-      operationId: deviceManagement.depOnboardingSettings_GetRefDefaultIosEnrollmentProfile
+      operationId: deviceManagement.depOnboardingSettings_GetDefaultIosEnrollmentProfileByRef
       parameters:
         - name: depOnboardingSetting-id
           in: path
@@ -2026,7 +2026,7 @@ paths:
         - deviceManagement.depOnboardingSetting
       summary: Update the ref of navigation property defaultIosEnrollmentProfile in deviceManagement
       description: Default iOS Enrollment Profile
-      operationId: deviceManagement.depOnboardingSettings_SetRefDefaultIosEnrollmentProfile
+      operationId: deviceManagement.depOnboardingSettings_SetDefaultIosEnrollmentProfileByRef
       parameters:
         - name: depOnboardingSetting-id
           in: path
@@ -2055,7 +2055,7 @@ paths:
         - deviceManagement.depOnboardingSetting
       summary: Delete ref of navigation property defaultIosEnrollmentProfile for deviceManagement
       description: Default iOS Enrollment Profile
-      operationId: deviceManagement.depOnboardingSettings_DeleteRefDefaultIosEnrollmentProfile
+      operationId: deviceManagement.depOnboardingSettings_DeleteDefaultIosEnrollmentProfileByRef
       parameters:
         - name: depOnboardingSetting-id
           in: path
@@ -2163,7 +2163,7 @@ paths:
         - deviceManagement.depOnboardingSetting
       summary: Get ref of defaultMacOsEnrollmentProfile from deviceManagement
       description: Default MacOs Enrollment Profile
-      operationId: deviceManagement.depOnboardingSettings_GetRefDefaultMacOsEnrollmentProfile
+      operationId: deviceManagement.depOnboardingSettings_GetDefaultMacOsEnrollmentProfileByRef
       parameters:
         - name: depOnboardingSetting-id
           in: path
@@ -2187,7 +2187,7 @@ paths:
         - deviceManagement.depOnboardingSetting
       summary: Update the ref of navigation property defaultMacOsEnrollmentProfile in deviceManagement
       description: Default MacOs Enrollment Profile
-      operationId: deviceManagement.depOnboardingSettings_SetRefDefaultMacOsEnrollmentProfile
+      operationId: deviceManagement.depOnboardingSettings_SetDefaultMacOsEnrollmentProfileByRef
       parameters:
         - name: depOnboardingSetting-id
           in: path
@@ -2216,7 +2216,7 @@ paths:
         - deviceManagement.depOnboardingSetting
       summary: Delete ref of navigation property defaultMacOsEnrollmentProfile for deviceManagement
       description: Default MacOs Enrollment Profile
-      operationId: deviceManagement.depOnboardingSettings_DeleteRefDefaultMacOsEnrollmentProfile
+      operationId: deviceManagement.depOnboardingSettings_DeleteDefaultMacOsEnrollmentProfileByRef
       parameters:
         - name: depOnboardingSetting-id
           in: path
@@ -4619,7 +4619,7 @@ paths:
         - deviceManagement.windowsAutopilotDeploymentProfile
       summary: Get ref of deploymentProfile from deviceManagement
       description: Deployment profile currently assigned to the Windows autopilot device.
-      operationId: deviceManagement.windowsAutopilotDeploymentProfiles.assignedDevices_GetRefDeploymentProfile
+      operationId: deviceManagement.windowsAutopilotDeploymentProfiles.assignedDevices_GetDeploymentProfileByRef
       parameters:
         - name: windowsAutopilotDeploymentProfile-id
           in: path
@@ -4661,7 +4661,7 @@ paths:
         - deviceManagement.windowsAutopilotDeploymentProfile
       summary: Update the ref of navigation property deploymentProfile in deviceManagement
       description: Deployment profile currently assigned to the Windows autopilot device.
-      operationId: deviceManagement.windowsAutopilotDeploymentProfiles.assignedDevices_SetRefDeploymentProfile
+      operationId: deviceManagement.windowsAutopilotDeploymentProfiles.assignedDevices_SetDeploymentProfileByRef
       parameters:
         - name: windowsAutopilotDeploymentProfile-id
           in: path
@@ -4697,7 +4697,7 @@ paths:
         - deviceManagement.windowsAutopilotDeploymentProfile
       summary: Delete ref of navigation property deploymentProfile for deviceManagement
       description: Deployment profile currently assigned to the Windows autopilot device.
-      operationId: deviceManagement.windowsAutopilotDeploymentProfiles.assignedDevices_DeleteRefDeploymentProfile
+      operationId: deviceManagement.windowsAutopilotDeploymentProfiles.assignedDevices_DeleteDeploymentProfileByRef
       parameters:
         - name: windowsAutopilotDeploymentProfile-id
           in: path
@@ -4813,7 +4813,7 @@ paths:
         - deviceManagement.windowsAutopilotDeploymentProfile
       summary: Get ref of intendedDeploymentProfile from deviceManagement
       description: Deployment profile intended to be assigned to the Windows autopilot device.
-      operationId: deviceManagement.windowsAutopilotDeploymentProfiles.assignedDevices_GetRefIntendedDeploymentProfile
+      operationId: deviceManagement.windowsAutopilotDeploymentProfiles.assignedDevices_GetIntendedDeploymentProfileByRef
       parameters:
         - name: windowsAutopilotDeploymentProfile-id
           in: path
@@ -4855,7 +4855,7 @@ paths:
         - deviceManagement.windowsAutopilotDeploymentProfile
       summary: Update the ref of navigation property intendedDeploymentProfile in deviceManagement
       description: Deployment profile intended to be assigned to the Windows autopilot device.
-      operationId: deviceManagement.windowsAutopilotDeploymentProfiles.assignedDevices_SetRefIntendedDeploymentProfile
+      operationId: deviceManagement.windowsAutopilotDeploymentProfiles.assignedDevices_SetIntendedDeploymentProfileByRef
       parameters:
         - name: windowsAutopilotDeploymentProfile-id
           in: path
@@ -4891,7 +4891,7 @@ paths:
         - deviceManagement.windowsAutopilotDeploymentProfile
       summary: Delete ref of navigation property intendedDeploymentProfile for deviceManagement
       description: Deployment profile intended to be assigned to the Windows autopilot device.
-      operationId: deviceManagement.windowsAutopilotDeploymentProfiles.assignedDevices_DeleteRefIntendedDeploymentProfile
+      operationId: deviceManagement.windowsAutopilotDeploymentProfiles.assignedDevices_DeleteIntendedDeploymentProfileByRef
       parameters:
         - name: windowsAutopilotDeploymentProfile-id
           in: path
@@ -5537,7 +5537,7 @@ paths:
         - deviceManagement.windowsAutopilotDeviceIdentity
       summary: Get ref of deploymentProfile from deviceManagement
       description: Deployment profile currently assigned to the Windows autopilot device.
-      operationId: deviceManagement.windowsAutopilotDeviceIdentities_GetRefDeploymentProfile
+      operationId: deviceManagement.windowsAutopilotDeviceIdentities_GetDeploymentProfileByRef
       parameters:
         - name: windowsAutopilotDeviceIdentity-id
           in: path
@@ -5570,7 +5570,7 @@ paths:
         - deviceManagement.windowsAutopilotDeviceIdentity
       summary: Update the ref of navigation property deploymentProfile in deviceManagement
       description: Deployment profile currently assigned to the Windows autopilot device.
-      operationId: deviceManagement.windowsAutopilotDeviceIdentities_SetRefDeploymentProfile
+      operationId: deviceManagement.windowsAutopilotDeviceIdentities_SetDeploymentProfileByRef
       parameters:
         - name: windowsAutopilotDeviceIdentity-id
           in: path
@@ -5599,7 +5599,7 @@ paths:
         - deviceManagement.windowsAutopilotDeviceIdentity
       summary: Delete ref of navigation property deploymentProfile for deviceManagement
       description: Deployment profile currently assigned to the Windows autopilot device.
-      operationId: deviceManagement.windowsAutopilotDeviceIdentities_DeleteRefDeploymentProfile
+      operationId: deviceManagement.windowsAutopilotDeviceIdentities_DeleteDeploymentProfileByRef
       parameters:
         - name: windowsAutopilotDeviceIdentity-id
           in: path
@@ -5699,7 +5699,7 @@ paths:
         - deviceManagement.windowsAutopilotDeviceIdentity
       summary: Get ref of intendedDeploymentProfile from deviceManagement
       description: Deployment profile intended to be assigned to the Windows autopilot device.
-      operationId: deviceManagement.windowsAutopilotDeviceIdentities_GetRefIntendedDeploymentProfile
+      operationId: deviceManagement.windowsAutopilotDeviceIdentities_GetIntendedDeploymentProfileByRef
       parameters:
         - name: windowsAutopilotDeviceIdentity-id
           in: path
@@ -5732,7 +5732,7 @@ paths:
         - deviceManagement.windowsAutopilotDeviceIdentity
       summary: Update the ref of navigation property intendedDeploymentProfile in deviceManagement
       description: Deployment profile intended to be assigned to the Windows autopilot device.
-      operationId: deviceManagement.windowsAutopilotDeviceIdentities_SetRefIntendedDeploymentProfile
+      operationId: deviceManagement.windowsAutopilotDeviceIdentities_SetIntendedDeploymentProfileByRef
       parameters:
         - name: windowsAutopilotDeviceIdentity-id
           in: path
@@ -5761,7 +5761,7 @@ paths:
         - deviceManagement.windowsAutopilotDeviceIdentity
       summary: Delete ref of navigation property intendedDeploymentProfile for deviceManagement
       description: Deployment profile intended to be assigned to the Windows autopilot device.
-      operationId: deviceManagement.windowsAutopilotDeviceIdentities_DeleteRefIntendedDeploymentProfile
+      operationId: deviceManagement.windowsAutopilotDeviceIdentities_DeleteIntendedDeploymentProfileByRef
       parameters:
         - name: windowsAutopilotDeviceIdentity-id
           in: path
@@ -7984,7 +7984,7 @@ paths:
         - roleManagement.rbacApplicationMultiple
       summary: Get ref of directoryScopes from roleManagement
       description: Read-only collection referencing the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
-      operationId: roleManagement.cloudPC.roleAssignments_ListRefDirectoryScopes
+      operationId: roleManagement.cloudPC.roleAssignments_ListDirectoryScopesByRef
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -8041,7 +8041,7 @@ paths:
         - roleManagement.rbacApplicationMultiple
       summary: Create new navigation property ref to directoryScopes for roleManagement
       description: Read-only collection referencing the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
-      operationId: roleManagement.cloudPC.roleAssignments_CreateRefDirectoryScopes
+      operationId: roleManagement.cloudPC.roleAssignments_CreateDirectoryScopesByRef
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -8160,7 +8160,7 @@ paths:
         - roleManagement.rbacApplicationMultiple
       summary: Get ref of principals from roleManagement
       description: Read-only collection referencing the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
-      operationId: roleManagement.cloudPC.roleAssignments_ListRefPrincipals
+      operationId: roleManagement.cloudPC.roleAssignments_ListPrincipalsByRef
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -8217,7 +8217,7 @@ paths:
         - roleManagement.rbacApplicationMultiple
       summary: Create new navigation property ref to principals for roleManagement
       description: Read-only collection referencing the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
-      operationId: roleManagement.cloudPC.roleAssignments_CreateRefPrincipals
+      operationId: roleManagement.cloudPC.roleAssignments_CreatePrincipalsByRef
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -8317,7 +8317,7 @@ paths:
         - roleManagement.rbacApplicationMultiple
       summary: Get ref of roleDefinition from roleManagement
       description: 'Specifies the roleDefinition that the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment.  Supports $filter (eq operator on id, isBuiltIn, and displayName, and startsWith operator on displayName)  and $expand.'
-      operationId: roleManagement.cloudPC.roleAssignments_GetRefRoleDefinition
+      operationId: roleManagement.cloudPC.roleAssignments_GetRoleDefinitionByRef
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -8346,7 +8346,7 @@ paths:
         - roleManagement.rbacApplicationMultiple
       summary: Update the ref of navigation property roleDefinition in roleManagement
       description: 'Specifies the roleDefinition that the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment.  Supports $filter (eq operator on id, isBuiltIn, and displayName, and startsWith operator on displayName)  and $expand.'
-      operationId: roleManagement.cloudPC.roleAssignments_SetRefRoleDefinition
+      operationId: roleManagement.cloudPC.roleAssignments_SetRoleDefinitionByRef
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -8375,7 +8375,7 @@ paths:
         - roleManagement.rbacApplicationMultiple
       summary: Delete ref of navigation property roleDefinition for roleManagement
       description: 'Specifies the roleDefinition that the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment.  Supports $filter (eq operator on id, isBuiltIn, and displayName, and startsWith operator on displayName)  and $expand.'
-      operationId: roleManagement.cloudPC.roleAssignments_DeleteRefRoleDefinition
+      operationId: roleManagement.cloudPC.roleAssignments_DeleteRoleDefinitionByRef
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -10200,7 +10200,7 @@ paths:
         - roleManagement.rbacApplicationMultiple
       summary: Get ref of directoryScopes from roleManagement
       description: Read-only collection referencing the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
-      operationId: roleManagement.deviceManagement.roleAssignments_ListRefDirectoryScopes
+      operationId: roleManagement.deviceManagement.roleAssignments_ListDirectoryScopesByRef
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -10257,7 +10257,7 @@ paths:
         - roleManagement.rbacApplicationMultiple
       summary: Create new navigation property ref to directoryScopes for roleManagement
       description: Read-only collection referencing the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
-      operationId: roleManagement.deviceManagement.roleAssignments_CreateRefDirectoryScopes
+      operationId: roleManagement.deviceManagement.roleAssignments_CreateDirectoryScopesByRef
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -10376,7 +10376,7 @@ paths:
         - roleManagement.rbacApplicationMultiple
       summary: Get ref of principals from roleManagement
       description: Read-only collection referencing the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
-      operationId: roleManagement.deviceManagement.roleAssignments_ListRefPrincipals
+      operationId: roleManagement.deviceManagement.roleAssignments_ListPrincipalsByRef
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -10433,7 +10433,7 @@ paths:
         - roleManagement.rbacApplicationMultiple
       summary: Create new navigation property ref to principals for roleManagement
       description: Read-only collection referencing the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
-      operationId: roleManagement.deviceManagement.roleAssignments_CreateRefPrincipals
+      operationId: roleManagement.deviceManagement.roleAssignments_CreatePrincipalsByRef
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -10533,7 +10533,7 @@ paths:
         - roleManagement.rbacApplicationMultiple
       summary: Get ref of roleDefinition from roleManagement
       description: 'Specifies the roleDefinition that the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment.  Supports $filter (eq operator on id, isBuiltIn, and displayName, and startsWith operator on displayName)  and $expand.'
-      operationId: roleManagement.deviceManagement.roleAssignments_GetRefRoleDefinition
+      operationId: roleManagement.deviceManagement.roleAssignments_GetRoleDefinitionByRef
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -10562,7 +10562,7 @@ paths:
         - roleManagement.rbacApplicationMultiple
       summary: Update the ref of navigation property roleDefinition in roleManagement
       description: 'Specifies the roleDefinition that the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment.  Supports $filter (eq operator on id, isBuiltIn, and displayName, and startsWith operator on displayName)  and $expand.'
-      operationId: roleManagement.deviceManagement.roleAssignments_SetRefRoleDefinition
+      operationId: roleManagement.deviceManagement.roleAssignments_SetRoleDefinitionByRef
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -10591,7 +10591,7 @@ paths:
         - roleManagement.rbacApplicationMultiple
       summary: Delete ref of navigation property roleDefinition for roleManagement
       description: 'Specifies the roleDefinition that the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment.  Supports $filter (eq operator on id, isBuiltIn, and displayName, and startsWith operator on displayName)  and $expand.'
-      operationId: roleManagement.deviceManagement.roleAssignments_DeleteRefRoleDefinition
+      operationId: roleManagement.deviceManagement.roleAssignments_DeleteRoleDefinitionByRef
       parameters:
         - name: unifiedRoleAssignmentMultiple-id
           in: path
@@ -12842,7 +12842,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of directoryScope from roleManagement
       description: The directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
-      operationId: roleManagement.directory.roleAssignments_GetRefDirectoryScope
+      operationId: roleManagement.directory.roleAssignments_GetDirectoryScopeByRef
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -12866,7 +12866,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property directoryScope in roleManagement
       description: The directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
-      operationId: roleManagement.directory.roleAssignments_SetRefDirectoryScope
+      operationId: roleManagement.directory.roleAssignments_SetDirectoryScopeByRef
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -12895,7 +12895,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property directoryScope for roleManagement
       description: The directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
-      operationId: roleManagement.directory.roleAssignments_DeleteRefDirectoryScope
+      operationId: roleManagement.directory.roleAssignments_DeleteDirectoryScopeByRef
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -12971,7 +12971,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of principal from roleManagement
       description: The assigned principal. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
-      operationId: roleManagement.directory.roleAssignments_GetRefPrincipal
+      operationId: roleManagement.directory.roleAssignments_GetPrincipalByRef
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -12995,7 +12995,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property principal in roleManagement
       description: The assigned principal. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
-      operationId: roleManagement.directory.roleAssignments_SetRefPrincipal
+      operationId: roleManagement.directory.roleAssignments_SetPrincipalByRef
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -13024,7 +13024,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property principal for roleManagement
       description: The assigned principal. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
-      operationId: roleManagement.directory.roleAssignments_DeleteRefPrincipal
+      operationId: roleManagement.directory.roleAssignments_DeletePrincipalByRef
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -13114,7 +13114,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of roleDefinition from roleManagement
       description: The roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.id will be auto expanded. Supports $expand.
-      operationId: roleManagement.directory.roleAssignments_GetRefRoleDefinition
+      operationId: roleManagement.directory.roleAssignments_GetRoleDefinitionByRef
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -13143,7 +13143,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property roleDefinition in roleManagement
       description: The roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.id will be auto expanded. Supports $expand.
-      operationId: roleManagement.directory.roleAssignments_SetRefRoleDefinition
+      operationId: roleManagement.directory.roleAssignments_SetRoleDefinitionByRef
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -13172,7 +13172,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property roleDefinition for roleManagement
       description: The roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.id will be auto expanded. Supports $expand.
-      operationId: roleManagement.directory.roleAssignments_DeleteRefRoleDefinition
+      operationId: roleManagement.directory.roleAssignments_DeleteRoleDefinitionByRef
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -13553,7 +13553,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of activatedUsing from roleManagement
       description: 'If the roleAssignmentScheduleInstance is activated by a roleEligibilityScheduleRequest, this is the link to the related schedule instance.'
-      operationId: roleManagement.directory.roleAssignmentScheduleInstances_GetRefActivatedUsing
+      operationId: roleManagement.directory.roleAssignmentScheduleInstances_GetActivatedUsingByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleInstance-id
           in: path
@@ -13594,7 +13594,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property activatedUsing in roleManagement
       description: 'If the roleAssignmentScheduleInstance is activated by a roleEligibilityScheduleRequest, this is the link to the related schedule instance.'
-      operationId: roleManagement.directory.roleAssignmentScheduleInstances_SetRefActivatedUsing
+      operationId: roleManagement.directory.roleAssignmentScheduleInstances_SetActivatedUsingByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleInstance-id
           in: path
@@ -13623,7 +13623,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property activatedUsing for roleManagement
       description: 'If the roleAssignmentScheduleInstance is activated by a roleEligibilityScheduleRequest, this is the link to the related schedule instance.'
-      operationId: roleManagement.directory.roleAssignmentScheduleInstances_DeleteRefActivatedUsing
+      operationId: roleManagement.directory.roleAssignmentScheduleInstances_DeleteActivatedUsingByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleInstance-id
           in: path
@@ -14063,7 +14063,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of activatedUsing from roleManagement
       description: 'If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation.'
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_GetRefActivatedUsing
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_GetActivatedUsingByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -14104,7 +14104,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property activatedUsing in roleManagement
       description: 'If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation.'
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_SetRefActivatedUsing
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_SetActivatedUsingByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -14133,7 +14133,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property activatedUsing for roleManagement
       description: 'If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation.'
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_DeleteRefActivatedUsing
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_DeleteActivatedUsingByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -14210,7 +14210,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of appScope from roleManagement
       description: Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity.
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_GetRefAppScope
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_GetAppScopeByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -14234,7 +14234,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property appScope in roleManagement
       description: Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity.
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_SetRefAppScope
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_SetAppScopeByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -14263,7 +14263,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property appScope for roleManagement
       description: Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity.
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_DeleteRefAppScope
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_DeleteAppScopeByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -14339,7 +14339,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of directoryScope from roleManagement
       description: Property referencing the directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only.
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_GetRefDirectoryScope
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_GetDirectoryScopeByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -14363,7 +14363,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property directoryScope in roleManagement
       description: Property referencing the directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only.
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_SetRefDirectoryScope
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_SetDirectoryScopeByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -14392,7 +14392,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property directoryScope for roleManagement
       description: Property referencing the directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only.
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_DeleteRefDirectoryScope
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_DeleteDirectoryScopeByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -14488,7 +14488,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of principal from roleManagement
       description: Property referencing the principal that is getting a role assignment through the request. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only.
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_GetRefPrincipal
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_GetPrincipalByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -14512,7 +14512,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property principal in roleManagement
       description: Property referencing the principal that is getting a role assignment through the request. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only.
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_SetRefPrincipal
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_SetPrincipalByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -14541,7 +14541,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property principal for roleManagement
       description: Property referencing the principal that is getting a role assignment through the request. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only.
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_DeleteRefPrincipal
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_DeletePrincipalByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -14631,7 +14631,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of roleDefinition from roleManagement
       description: Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded.
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_GetRefRoleDefinition
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_GetRoleDefinitionByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -14660,7 +14660,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property roleDefinition in roleManagement
       description: Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded.
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_SetRefRoleDefinition
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_SetRoleDefinitionByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -14689,7 +14689,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property roleDefinition for roleManagement
       description: Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded.
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_DeleteRefRoleDefinition
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_DeleteRoleDefinitionByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -14804,7 +14804,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of targetSchedule from roleManagement
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_GetRefTargetSchedule
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_GetTargetScheduleByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -14848,7 +14848,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property targetSchedule in roleManagement
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_SetRefTargetSchedule
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_SetTargetScheduleByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -14876,7 +14876,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property targetSchedule for roleManagement
-      operationId: roleManagement.directory.roleAssignmentScheduleRequests_DeleteRefTargetSchedule
+      operationId: roleManagement.directory.roleAssignmentScheduleRequests_DeleteTargetScheduleByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -15288,7 +15288,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of activatedUsing from roleManagement
       description: 'If the roleAssignmentSchedule is activated by a roleEligibilitySchedule, this is the link to that schedule.'
-      operationId: roleManagement.directory.roleAssignmentSchedules_GetRefActivatedUsing
+      operationId: roleManagement.directory.roleAssignmentSchedules_GetActivatedUsingByRef
       parameters:
         - name: unifiedRoleAssignmentSchedule-id
           in: path
@@ -15329,7 +15329,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property activatedUsing in roleManagement
       description: 'If the roleAssignmentSchedule is activated by a roleEligibilitySchedule, this is the link to that schedule.'
-      operationId: roleManagement.directory.roleAssignmentSchedules_SetRefActivatedUsing
+      operationId: roleManagement.directory.roleAssignmentSchedules_SetActivatedUsingByRef
       parameters:
         - name: unifiedRoleAssignmentSchedule-id
           in: path
@@ -15358,7 +15358,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property activatedUsing for roleManagement
       description: 'If the roleAssignmentSchedule is activated by a roleEligibilitySchedule, this is the link to that schedule.'
-      operationId: roleManagement.directory.roleAssignmentSchedules_DeleteRefActivatedUsing
+      operationId: roleManagement.directory.roleAssignmentSchedules_DeleteActivatedUsingByRef
       parameters:
         - name: unifiedRoleAssignmentSchedule-id
           in: path
@@ -16547,7 +16547,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of appScope from roleManagement
       description: Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity.
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_GetRefAppScope
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_GetAppScopeByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -16571,7 +16571,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property appScope in roleManagement
       description: Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity.
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_SetRefAppScope
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_SetAppScopeByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -16600,7 +16600,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property appScope for roleManagement
       description: Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity.
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_DeleteRefAppScope
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_DeleteAppScopeByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -16676,7 +16676,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of directoryScope from roleManagement
       description: Property referencing the directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only.
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_GetRefDirectoryScope
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_GetDirectoryScopeByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -16700,7 +16700,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property directoryScope in roleManagement
       description: Property referencing the directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only.
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_SetRefDirectoryScope
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_SetDirectoryScopeByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -16729,7 +16729,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property directoryScope for roleManagement
       description: Property referencing the directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only.
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_DeleteRefDirectoryScope
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_DeleteDirectoryScopeByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -16825,7 +16825,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of principal from roleManagement
       description: Property referencing the principal that is getting a role assignment through the request. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only.
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_GetRefPrincipal
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_GetPrincipalByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -16849,7 +16849,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property principal in roleManagement
       description: Property referencing the principal that is getting a role assignment through the request. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only.
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_SetRefPrincipal
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_SetPrincipalByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -16878,7 +16878,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property principal for roleManagement
       description: Property referencing the principal that is getting a role assignment through the request. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only.
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_DeleteRefPrincipal
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_DeletePrincipalByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -16968,7 +16968,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of roleDefinition from roleManagement
       description: Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_GetRefRoleDefinition
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_GetRoleDefinitionByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -16997,7 +16997,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property roleDefinition in roleManagement
       description: Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_SetRefRoleDefinition
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_SetRoleDefinitionByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -17026,7 +17026,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property roleDefinition for roleManagement
       description: Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_DeleteRefRoleDefinition
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_DeleteRoleDefinitionByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -17134,7 +17134,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of targetSchedule from roleManagement
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_GetRefTargetSchedule
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_GetTargetScheduleByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -17174,7 +17174,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property targetSchedule in roleManagement
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_SetRefTargetSchedule
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_SetTargetScheduleByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -17202,7 +17202,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property targetSchedule for roleManagement
-      operationId: roleManagement.directory.roleEligibilityScheduleRequests_DeleteRefTargetSchedule
+      operationId: roleManagement.directory.roleEligibilityScheduleRequests_DeleteTargetScheduleByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -19263,7 +19263,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of directoryScope from roleManagement
       description: The directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
-      operationId: roleManagement.entitlementManagement.roleAssignments_GetRefDirectoryScope
+      operationId: roleManagement.entitlementManagement.roleAssignments_GetDirectoryScopeByRef
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -19287,7 +19287,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property directoryScope in roleManagement
       description: The directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
-      operationId: roleManagement.entitlementManagement.roleAssignments_SetRefDirectoryScope
+      operationId: roleManagement.entitlementManagement.roleAssignments_SetDirectoryScopeByRef
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -19316,7 +19316,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property directoryScope for roleManagement
       description: The directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
-      operationId: roleManagement.entitlementManagement.roleAssignments_DeleteRefDirectoryScope
+      operationId: roleManagement.entitlementManagement.roleAssignments_DeleteDirectoryScopeByRef
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -19392,7 +19392,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of principal from roleManagement
       description: The assigned principal. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
-      operationId: roleManagement.entitlementManagement.roleAssignments_GetRefPrincipal
+      operationId: roleManagement.entitlementManagement.roleAssignments_GetPrincipalByRef
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -19416,7 +19416,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property principal in roleManagement
       description: The assigned principal. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
-      operationId: roleManagement.entitlementManagement.roleAssignments_SetRefPrincipal
+      operationId: roleManagement.entitlementManagement.roleAssignments_SetPrincipalByRef
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -19445,7 +19445,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property principal for roleManagement
       description: The assigned principal. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
-      operationId: roleManagement.entitlementManagement.roleAssignments_DeleteRefPrincipal
+      operationId: roleManagement.entitlementManagement.roleAssignments_DeletePrincipalByRef
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -19535,7 +19535,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of roleDefinition from roleManagement
       description: The roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.id will be auto expanded. Supports $expand.
-      operationId: roleManagement.entitlementManagement.roleAssignments_GetRefRoleDefinition
+      operationId: roleManagement.entitlementManagement.roleAssignments_GetRoleDefinitionByRef
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -19564,7 +19564,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property roleDefinition in roleManagement
       description: The roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.id will be auto expanded. Supports $expand.
-      operationId: roleManagement.entitlementManagement.roleAssignments_SetRefRoleDefinition
+      operationId: roleManagement.entitlementManagement.roleAssignments_SetRoleDefinitionByRef
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -19593,7 +19593,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property roleDefinition for roleManagement
       description: The roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.id will be auto expanded. Supports $expand.
-      operationId: roleManagement.entitlementManagement.roleAssignments_DeleteRefRoleDefinition
+      operationId: roleManagement.entitlementManagement.roleAssignments_DeleteRoleDefinitionByRef
       parameters:
         - name: unifiedRoleAssignment-id
           in: path
@@ -19974,7 +19974,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of activatedUsing from roleManagement
       description: 'If the roleAssignmentScheduleInstance is activated by a roleEligibilityScheduleRequest, this is the link to the related schedule instance.'
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleInstances_GetRefActivatedUsing
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleInstances_GetActivatedUsingByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleInstance-id
           in: path
@@ -20015,7 +20015,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property activatedUsing in roleManagement
       description: 'If the roleAssignmentScheduleInstance is activated by a roleEligibilityScheduleRequest, this is the link to the related schedule instance.'
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleInstances_SetRefActivatedUsing
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleInstances_SetActivatedUsingByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleInstance-id
           in: path
@@ -20044,7 +20044,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property activatedUsing for roleManagement
       description: 'If the roleAssignmentScheduleInstance is activated by a roleEligibilityScheduleRequest, this is the link to the related schedule instance.'
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleInstances_DeleteRefActivatedUsing
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleInstances_DeleteActivatedUsingByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleInstance-id
           in: path
@@ -20484,7 +20484,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of activatedUsing from roleManagement
       description: 'If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation.'
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_GetRefActivatedUsing
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_GetActivatedUsingByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -20525,7 +20525,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property activatedUsing in roleManagement
       description: 'If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation.'
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_SetRefActivatedUsing
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_SetActivatedUsingByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -20554,7 +20554,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property activatedUsing for roleManagement
       description: 'If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation.'
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_DeleteRefActivatedUsing
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_DeleteActivatedUsingByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -20631,7 +20631,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of appScope from roleManagement
       description: Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity.
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_GetRefAppScope
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_GetAppScopeByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -20655,7 +20655,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property appScope in roleManagement
       description: Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity.
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_SetRefAppScope
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_SetAppScopeByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -20684,7 +20684,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property appScope for roleManagement
       description: Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity.
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_DeleteRefAppScope
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_DeleteAppScopeByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -20760,7 +20760,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of directoryScope from roleManagement
       description: Property referencing the directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only.
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_GetRefDirectoryScope
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_GetDirectoryScopeByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -20784,7 +20784,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property directoryScope in roleManagement
       description: Property referencing the directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only.
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_SetRefDirectoryScope
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_SetDirectoryScopeByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -20813,7 +20813,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property directoryScope for roleManagement
       description: Property referencing the directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only.
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_DeleteRefDirectoryScope
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_DeleteDirectoryScopeByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -20909,7 +20909,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of principal from roleManagement
       description: Property referencing the principal that is getting a role assignment through the request. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only.
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_GetRefPrincipal
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_GetPrincipalByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -20933,7 +20933,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property principal in roleManagement
       description: Property referencing the principal that is getting a role assignment through the request. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only.
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_SetRefPrincipal
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_SetPrincipalByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -20962,7 +20962,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property principal for roleManagement
       description: Property referencing the principal that is getting a role assignment through the request. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only.
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_DeleteRefPrincipal
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_DeletePrincipalByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -21052,7 +21052,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of roleDefinition from roleManagement
       description: Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded.
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_GetRefRoleDefinition
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_GetRoleDefinitionByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -21081,7 +21081,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property roleDefinition in roleManagement
       description: Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded.
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_SetRefRoleDefinition
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_SetRoleDefinitionByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -21110,7 +21110,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property roleDefinition for roleManagement
       description: Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded.
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_DeleteRefRoleDefinition
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_DeleteRoleDefinitionByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -21225,7 +21225,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of targetSchedule from roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_GetRefTargetSchedule
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_GetTargetScheduleByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -21269,7 +21269,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property targetSchedule in roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_SetRefTargetSchedule
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_SetTargetScheduleByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -21297,7 +21297,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property targetSchedule for roleManagement
-      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_DeleteRefTargetSchedule
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_DeleteTargetScheduleByRef
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
           in: path
@@ -21709,7 +21709,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of activatedUsing from roleManagement
       description: 'If the roleAssignmentSchedule is activated by a roleEligibilitySchedule, this is the link to that schedule.'
-      operationId: roleManagement.entitlementManagement.roleAssignmentSchedules_GetRefActivatedUsing
+      operationId: roleManagement.entitlementManagement.roleAssignmentSchedules_GetActivatedUsingByRef
       parameters:
         - name: unifiedRoleAssignmentSchedule-id
           in: path
@@ -21750,7 +21750,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property activatedUsing in roleManagement
       description: 'If the roleAssignmentSchedule is activated by a roleEligibilitySchedule, this is the link to that schedule.'
-      operationId: roleManagement.entitlementManagement.roleAssignmentSchedules_SetRefActivatedUsing
+      operationId: roleManagement.entitlementManagement.roleAssignmentSchedules_SetActivatedUsingByRef
       parameters:
         - name: unifiedRoleAssignmentSchedule-id
           in: path
@@ -21779,7 +21779,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property activatedUsing for roleManagement
       description: 'If the roleAssignmentSchedule is activated by a roleEligibilitySchedule, this is the link to that schedule.'
-      operationId: roleManagement.entitlementManagement.roleAssignmentSchedules_DeleteRefActivatedUsing
+      operationId: roleManagement.entitlementManagement.roleAssignmentSchedules_DeleteActivatedUsingByRef
       parameters:
         - name: unifiedRoleAssignmentSchedule-id
           in: path
@@ -22968,7 +22968,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of appScope from roleManagement
       description: Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity.
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_GetRefAppScope
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_GetAppScopeByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -22992,7 +22992,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property appScope in roleManagement
       description: Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity.
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_SetRefAppScope
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_SetAppScopeByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -23021,7 +23021,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property appScope for roleManagement
       description: Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity.
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_DeleteRefAppScope
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_DeleteAppScopeByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -23097,7 +23097,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of directoryScope from roleManagement
       description: Property referencing the directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only.
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_GetRefDirectoryScope
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_GetDirectoryScopeByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -23121,7 +23121,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property directoryScope in roleManagement
       description: Property referencing the directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only.
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_SetRefDirectoryScope
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_SetDirectoryScopeByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -23150,7 +23150,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property directoryScope for roleManagement
       description: Property referencing the directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only.
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_DeleteRefDirectoryScope
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_DeleteDirectoryScopeByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -23246,7 +23246,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of principal from roleManagement
       description: Property referencing the principal that is getting a role assignment through the request. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only.
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_GetRefPrincipal
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_GetPrincipalByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -23270,7 +23270,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property principal in roleManagement
       description: Property referencing the principal that is getting a role assignment through the request. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only.
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_SetRefPrincipal
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_SetPrincipalByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -23299,7 +23299,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property principal for roleManagement
       description: Property referencing the principal that is getting a role assignment through the request. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only.
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_DeleteRefPrincipal
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_DeletePrincipalByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -23389,7 +23389,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Get ref of roleDefinition from roleManagement
       description: Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_GetRefRoleDefinition
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_GetRoleDefinitionByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -23418,7 +23418,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property roleDefinition in roleManagement
       description: Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_SetRefRoleDefinition
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_SetRoleDefinitionByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -23447,7 +23447,7 @@ paths:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property roleDefinition for roleManagement
       description: Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_DeleteRefRoleDefinition
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_DeleteRoleDefinitionByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -23555,7 +23555,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Get ref of targetSchedule from roleManagement
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_GetRefTargetSchedule
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_GetTargetScheduleByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -23595,7 +23595,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Update the ref of navigation property targetSchedule in roleManagement
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_SetRefTargetSchedule
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_SetTargetScheduleByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path
@@ -23623,7 +23623,7 @@ paths:
       tags:
         - roleManagement.rbacApplication
       summary: Delete ref of navigation property targetSchedule for roleManagement
-      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_DeleteRefTargetSchedule
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_DeleteTargetScheduleByRef
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
           in: path

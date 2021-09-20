@@ -1909,7 +1909,7 @@ paths:
         - chats.teamsAppInstallation
       summary: Get ref of teamsApp from chats
       description: The app that is installed.
-      operationId: chats.installedApps_GetRefTeamsApp
+      operationId: chats.installedApps_GetTeamsAppByRef
       parameters:
         - name: chat-id
           in: path
@@ -1946,7 +1946,7 @@ paths:
         - chats.teamsAppInstallation
       summary: Update the ref of navigation property teamsApp in chats
       description: The app that is installed.
-      operationId: chats.installedApps_SetRefTeamsApp
+      operationId: chats.installedApps_SetTeamsAppByRef
       parameters:
         - name: chat-id
           in: path
@@ -1982,7 +1982,7 @@ paths:
         - chats.teamsAppInstallation
       summary: Delete ref of navigation property teamsApp for chats
       description: The app that is installed.
-      operationId: chats.installedApps_DeleteRefTeamsApp
+      operationId: chats.installedApps_DeleteTeamsAppByRef
       parameters:
         - name: chat-id
           in: path
@@ -2103,7 +2103,7 @@ paths:
         - chats.teamsAppInstallation
       summary: Get ref of teamsAppDefinition from chats
       description: The details of this version of the app.
-      operationId: chats.installedApps_GetRefTeamsAppDefinition
+      operationId: chats.installedApps_GetTeamsAppDefinitionByRef
       parameters:
         - name: chat-id
           in: path
@@ -2150,7 +2150,7 @@ paths:
         - chats.teamsAppInstallation
       summary: Update the ref of navigation property teamsAppDefinition in chats
       description: The details of this version of the app.
-      operationId: chats.installedApps_SetRefTeamsAppDefinition
+      operationId: chats.installedApps_SetTeamsAppDefinitionByRef
       parameters:
         - name: chat-id
           in: path
@@ -2186,7 +2186,7 @@ paths:
         - chats.teamsAppInstallation
       summary: Delete ref of navigation property teamsAppDefinition for chats
       description: The details of this version of the app.
-      operationId: chats.installedApps_DeleteRefTeamsAppDefinition
+      operationId: chats.installedApps_DeleteTeamsAppDefinitionByRef
       parameters:
         - name: chat-id
           in: path
@@ -4551,7 +4551,7 @@ paths:
         - chats.teamsTab
       summary: Get ref of teamsApp from chats
       description: The application that is linked to the tab.
-      operationId: chats.tabs_GetRefTeamsApp
+      operationId: chats.tabs_GetTeamsAppByRef
       parameters:
         - name: chat-id
           in: path
@@ -4588,7 +4588,7 @@ paths:
         - chats.teamsTab
       summary: Update the ref of navigation property teamsApp in chats
       description: The application that is linked to the tab.
-      operationId: chats.tabs_SetRefTeamsApp
+      operationId: chats.tabs_SetTeamsAppByRef
       parameters:
         - name: chat-id
           in: path
@@ -4624,7 +4624,7 @@ paths:
         - chats.teamsTab
       summary: Delete ref of navigation property teamsApp for chats
       description: The application that is linked to the tab.
-      operationId: chats.tabs_DeleteRefTeamsApp
+      operationId: chats.tabs_DeleteTeamsAppByRef
       parameters:
         - name: chat-id
           in: path
@@ -7787,7 +7787,7 @@ paths:
         - teams.channel
       summary: Get ref of teamsApp from teams
       description: The application that is linked to the tab.
-      operationId: teams.channels.tabs_GetRefTeamsApp
+      operationId: teams.channels.tabs_GetTeamsAppByRef
       parameters:
         - name: team-id
           in: path
@@ -7832,7 +7832,7 @@ paths:
         - teams.channel
       summary: Update the ref of navigation property teamsApp in teams
       description: The application that is linked to the tab.
-      operationId: teams.channels.tabs_SetRefTeamsApp
+      operationId: teams.channels.tabs_SetTeamsAppByRef
       parameters:
         - name: team-id
           in: path
@@ -7875,7 +7875,7 @@ paths:
         - teams.channel
       summary: Delete ref of navigation property teamsApp for teams
       description: The application that is linked to the tab.
-      operationId: teams.channels.tabs_DeleteRefTeamsApp
+      operationId: teams.channels.tabs_DeleteTeamsAppByRef
       parameters:
         - name: team-id
           in: path
@@ -8232,7 +8232,7 @@ paths:
       tags:
         - teams.group
       summary: Get ref of group from teams
-      operationId: teams_GetRefGroup
+      operationId: teams_GetGroupByRef
       parameters:
         - name: team-id
           in: path
@@ -8368,7 +8368,7 @@ paths:
       tags:
         - teams.group
       summary: Update the ref of navigation property group in teams
-      operationId: teams_SetRefGroup
+      operationId: teams_SetGroupByRef
       parameters:
         - name: team-id
           in: path
@@ -8396,7 +8396,7 @@ paths:
       tags:
         - teams.group
       summary: Delete ref of navigation property group for teams
-      operationId: teams_DeleteRefGroup
+      operationId: teams_DeleteGroupByRef
       parameters:
         - name: team-id
           in: path
@@ -8768,7 +8768,7 @@ paths:
         - teams.teamsAppInstallation
       summary: Get ref of teamsApp from teams
       description: The app that is installed.
-      operationId: teams.installedApps_GetRefTeamsApp
+      operationId: teams.installedApps_GetTeamsAppByRef
       parameters:
         - name: team-id
           in: path
@@ -8805,7 +8805,7 @@ paths:
         - teams.teamsAppInstallation
       summary: Update the ref of navigation property teamsApp in teams
       description: The app that is installed.
-      operationId: teams.installedApps_SetRefTeamsApp
+      operationId: teams.installedApps_SetTeamsAppByRef
       parameters:
         - name: team-id
           in: path
@@ -8841,7 +8841,7 @@ paths:
         - teams.teamsAppInstallation
       summary: Delete ref of navigation property teamsApp for teams
       description: The app that is installed.
-      operationId: teams.installedApps_DeleteRefTeamsApp
+      operationId: teams.installedApps_DeleteTeamsAppByRef
       parameters:
         - name: team-id
           in: path
@@ -8962,7 +8962,7 @@ paths:
         - teams.teamsAppInstallation
       summary: Get ref of teamsAppDefinition from teams
       description: The details of this version of the app.
-      operationId: teams.installedApps_GetRefTeamsAppDefinition
+      operationId: teams.installedApps_GetTeamsAppDefinitionByRef
       parameters:
         - name: team-id
           in: path
@@ -9009,7 +9009,7 @@ paths:
         - teams.teamsAppInstallation
       summary: Update the ref of navigation property teamsAppDefinition in teams
       description: The details of this version of the app.
-      operationId: teams.installedApps_SetRefTeamsAppDefinition
+      operationId: teams.installedApps_SetTeamsAppDefinitionByRef
       parameters:
         - name: team-id
           in: path
@@ -9045,7 +9045,7 @@ paths:
         - teams.teamsAppInstallation
       summary: Delete ref of navigation property teamsAppDefinition for teams
       description: The details of this version of the app.
-      operationId: teams.installedApps_DeleteRefTeamsAppDefinition
+      operationId: teams.installedApps_DeleteTeamsAppDefinitionByRef
       parameters:
         - name: team-id
           in: path
@@ -10222,7 +10222,7 @@ paths:
         - teams.user
       summary: Get ref of owners from teams
       description: 'The list of this team''s owners. Currently, when creating a team using application permissions, exactly one owner must be specified. When using user delegated permissions, no owner can be specified (the current user is the owner). Owner must be specified as an object ID (GUID), not a UPN.'
-      operationId: teams_ListRefOwners
+      operationId: teams_ListOwnersByRef
       parameters:
         - name: team-id
           in: path
@@ -10427,7 +10427,7 @@ paths:
         - teams.user
       summary: Create new navigation property ref to owners for teams
       description: 'The list of this team''s owners. Currently, when creating a team using application permissions, exactly one owner must be specified. When using user delegated permissions, no owner can be specified (the current user is the owner). Owner must be specified as an object ID (GUID), not a UPN.'
-      operationId: teams_CreateRefOwners
+      operationId: teams_CreateOwnersByRef
       parameters:
         - name: team-id
           in: path
@@ -12992,7 +12992,7 @@ paths:
         - teams.channel
       summary: Get ref of teamsApp from teams
       description: The application that is linked to the tab.
-      operationId: teams.primaryChannel.tabs_GetRefTeamsApp
+      operationId: teams.primaryChannel.tabs_GetTeamsAppByRef
       parameters:
         - name: team-id
           in: path
@@ -13029,7 +13029,7 @@ paths:
         - teams.channel
       summary: Update the ref of navigation property teamsApp in teams
       description: The application that is linked to the tab.
-      operationId: teams.primaryChannel.tabs_SetRefTeamsApp
+      operationId: teams.primaryChannel.tabs_SetTeamsAppByRef
       parameters:
         - name: team-id
           in: path
@@ -13065,7 +13065,7 @@ paths:
         - teams.channel
       summary: Delete ref of navigation property teamsApp for teams
       description: The application that is linked to the tab.
-      operationId: teams.primaryChannel.tabs_DeleteRefTeamsApp
+      operationId: teams.primaryChannel.tabs_DeleteTeamsAppByRef
       parameters:
         - name: team-id
           in: path
@@ -16870,7 +16870,7 @@ paths:
         - teams.teamsTemplate
       summary: Get ref of template from teams
       description: The template this team was created from. See available templates.
-      operationId: teams_GetRefTemplate
+      operationId: teams_GetTemplateByRef
       parameters:
         - name: team-id
           in: path
@@ -16894,7 +16894,7 @@ paths:
         - teams.teamsTemplate
       summary: Update the ref of navigation property template in teams
       description: The template this team was created from. See available templates.
-      operationId: teams_SetRefTemplate
+      operationId: teams_SetTemplateByRef
       parameters:
         - name: team-id
           in: path
@@ -16923,7 +16923,7 @@ paths:
         - teams.teamsTemplate
       summary: Delete ref of navigation property template for teams
       description: The template this team was created from. See available templates.
-      operationId: teams_DeleteRefTemplate
+      operationId: teams_DeleteTemplateByRef
       parameters:
         - name: team-id
           in: path
@@ -17754,7 +17754,7 @@ paths:
         - users.team
       summary: Get ref of joinedTeams from users
       description: The Microsoft Teams teams that the user is a member of. Read-only. Nullable.
-      operationId: users_ListRefJoinedTeams
+      operationId: users_ListJoinedTeamsByRef
       parameters:
         - name: user-id
           in: path
@@ -17839,7 +17839,7 @@ paths:
         - users.team
       summary: Create new navigation property ref to joinedTeams for users
       description: The Microsoft Teams teams that the user is a member of. Read-only. Nullable.
-      operationId: users_CreateRefJoinedTeams
+      operationId: users_CreateJoinedTeamsByRef
       parameters:
         - name: user-id
           in: path
@@ -18356,7 +18356,7 @@ paths:
         - users.userTeamwork
       summary: Get ref of chat from users
       description: The chat between the user and Teams app.
-      operationId: users.teamwork.installedApps_GetRefChat
+      operationId: users.teamwork.installedApps_GetChatByRef
       parameters:
         - name: user-id
           in: path
@@ -18423,7 +18423,7 @@ paths:
         - users.userTeamwork
       summary: Update the ref of navigation property chat in users
       description: The chat between the user and Teams app.
-      operationId: users.teamwork.installedApps_SetRefChat
+      operationId: users.teamwork.installedApps_SetChatByRef
       parameters:
         - name: user-id
           in: path
@@ -18459,7 +18459,7 @@ paths:
         - users.userTeamwork
       summary: Delete ref of navigation property chat for users
       description: The chat between the user and Teams app.
-      operationId: users.teamwork.installedApps_DeleteRefChat
+      operationId: users.teamwork.installedApps_DeleteChatByRef
       parameters:
         - name: user-id
           in: path

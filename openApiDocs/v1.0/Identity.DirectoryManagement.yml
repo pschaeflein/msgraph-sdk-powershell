@@ -401,7 +401,7 @@ paths:
         - contacts.directoryObject
       summary: Get ref of directReports from contacts
       description: The contact's direct reports. (The users and contacts that have their manager property set to this contact.) Read-only. Nullable. Supports $expand.
-      operationId: contacts_ListRefDirectReports
+      operationId: contacts_ListDirectReportsByRef
       parameters:
         - name: orgContact-id
           in: path
@@ -458,7 +458,7 @@ paths:
         - contacts.directoryObject
       summary: Create new navigation property ref to directReports for contacts
       description: The contact's direct reports. (The users and contacts that have their manager property set to this contact.) Read-only. Nullable. Supports $expand.
-      operationId: contacts_CreateRefDirectReports
+      operationId: contacts_CreateDirectReportsByRef
       parameters:
         - name: orgContact-id
           in: path
@@ -544,7 +544,7 @@ paths:
         - contacts.directoryObject
       summary: Get ref of manager from contacts
       description: The user or contact that is this contact's manager. Read-only. Supports $expand.
-      operationId: contacts_GetRefManager
+      operationId: contacts_GetManagerByRef
       parameters:
         - name: orgContact-id
           in: path
@@ -568,7 +568,7 @@ paths:
         - contacts.directoryObject
       summary: Update the ref of navigation property manager in contacts
       description: The user or contact that is this contact's manager. Read-only. Supports $expand.
-      operationId: contacts_SetRefManager
+      operationId: contacts_SetManagerByRef
       parameters:
         - name: orgContact-id
           in: path
@@ -597,7 +597,7 @@ paths:
         - contacts.directoryObject
       summary: Delete ref of navigation property manager for contacts
       description: The user or contact that is this contact's manager. Read-only. Supports $expand.
-      operationId: contacts_DeleteRefManager
+      operationId: contacts_DeleteManagerByRef
       parameters:
         - name: orgContact-id
           in: path
@@ -706,7 +706,7 @@ paths:
         - contacts.directoryObject
       summary: Get ref of memberOf from contacts
       description: Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
-      operationId: contacts_ListRefMemberOf
+      operationId: contacts_ListMemberOfByRef
       parameters:
         - name: orgContact-id
           in: path
@@ -763,7 +763,7 @@ paths:
         - contacts.directoryObject
       summary: Create new navigation property ref to memberOf for contacts
       description: Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
-      operationId: contacts_CreateRefMemberOf
+      operationId: contacts_CreateMemberOfByRef
       parameters:
         - name: orgContact-id
           in: path
@@ -1064,7 +1064,7 @@ paths:
       tags:
         - contacts.directoryObject
       summary: Get ref of transitiveMemberOf from contacts
-      operationId: contacts_ListRefTransitiveMemberOf
+      operationId: contacts_ListTransitiveMemberOfByRef
       parameters:
         - name: orgContact-id
           in: path
@@ -1120,7 +1120,7 @@ paths:
       tags:
         - contacts.directoryObject
       summary: Create new navigation property ref to transitiveMemberOf for contacts
-      operationId: contacts_CreateRefTransitiveMemberOf
+      operationId: contacts_CreateTransitiveMemberOfByRef
       parameters:
         - name: orgContact-id
           in: path
@@ -2433,7 +2433,7 @@ paths:
         - devices.directoryObject
       summary: Get ref of memberOf from devices
       description: Groups that this device is a member of. Read-only. Nullable. Supports $expand.
-      operationId: devices_ListRefMemberOf
+      operationId: devices_ListMemberOfByRef
       parameters:
         - name: device-id
           in: path
@@ -2490,7 +2490,7 @@ paths:
         - devices.directoryObject
       summary: Create new navigation property ref to memberOf for devices
       description: Groups that this device is a member of. Read-only. Nullable. Supports $expand.
-      operationId: devices_CreateRefMemberOf
+      operationId: devices_CreateMemberOfByRef
       parameters:
         - name: device-id
           in: path
@@ -2793,7 +2793,7 @@ paths:
         - devices.directoryObject
       summary: Get ref of registeredOwners from devices
       description: 'The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable. Supports $expand.'
-      operationId: devices_ListRefRegisteredOwners
+      operationId: devices_ListRegisteredOwnersByRef
       parameters:
         - name: device-id
           in: path
@@ -2850,7 +2850,7 @@ paths:
         - devices.directoryObject
       summary: Create new navigation property ref to registeredOwners for devices
       description: 'The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable. Supports $expand.'
-      operationId: devices_CreateRefRegisteredOwners
+      operationId: devices_CreateRegisteredOwnersByRef
       parameters:
         - name: device-id
           in: path
@@ -2969,7 +2969,7 @@ paths:
         - devices.directoryObject
       summary: Get ref of registeredUsers from devices
       description: 'Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.'
-      operationId: devices_ListRefRegisteredUsers
+      operationId: devices_ListRegisteredUsersByRef
       parameters:
         - name: device-id
           in: path
@@ -3026,7 +3026,7 @@ paths:
         - devices.directoryObject
       summary: Create new navigation property ref to registeredUsers for devices
       description: 'Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.'
-      operationId: devices_CreateRefRegisteredUsers
+      operationId: devices_CreateRegisteredUsersByRef
       parameters:
         - name: device-id
           in: path
@@ -3145,7 +3145,7 @@ paths:
         - devices.directoryObject
       summary: Get ref of transitiveMemberOf from devices
       description: Groups that this device is a member of. This operation is transitive. Supports $expand.
-      operationId: devices_ListRefTransitiveMemberOf
+      operationId: devices_ListTransitiveMemberOfByRef
       parameters:
         - name: device-id
           in: path
@@ -3202,7 +3202,7 @@ paths:
         - devices.directoryObject
       summary: Create new navigation property ref to transitiveMemberOf for devices
       description: Groups that this device is a member of. This operation is transitive. Supports $expand.
-      operationId: devices_CreateRefTransitiveMemberOf
+      operationId: devices_CreateTransitiveMemberOfByRef
       parameters:
         - name: device-id
           in: path
@@ -3960,7 +3960,7 @@ paths:
         - directory.administrativeUnit
       summary: Get ref of members from directory
       description: 'Users and groups that are members of this Adminsitrative Unit. HTTP Methods: GET (list members), POST (add members), DELETE (remove members).'
-      operationId: directory.administrativeUnits_ListRefMembers
+      operationId: directory.administrativeUnits_ListMembersByRef
       parameters:
         - name: administrativeUnit-id
           in: path
@@ -4017,7 +4017,7 @@ paths:
         - directory.administrativeUnit
       summary: Create new navigation property ref to members for directory
       description: 'Users and groups that are members of this Adminsitrative Unit. HTTP Methods: GET (list members), POST (add members), DELETE (remove members).'
-      operationId: directory.administrativeUnits_CreateRefMembers
+      operationId: directory.administrativeUnits_CreateMembersByRef
       parameters:
         - name: administrativeUnit-id
           in: path
@@ -4828,7 +4828,7 @@ paths:
         - directoryRoles.directoryObject
       summary: Get ref of members from directoryRoles
       description: 'Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable.'
-      operationId: directoryRoles_ListRefMembers
+      operationId: directoryRoles_ListMembersByRef
       parameters:
         - name: directoryRole-id
           in: path
@@ -4885,7 +4885,7 @@ paths:
         - directoryRoles.directoryObject
       summary: Create new navigation property ref to members for directoryRoles
       description: 'Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable.'
-      operationId: directoryRoles_CreateRefMembers
+      operationId: directoryRoles_CreateMembersByRef
       parameters:
         - name: directoryRole-id
           in: path
@@ -6321,7 +6321,7 @@ paths:
         - domains.directoryObject
       summary: Get ref of domainNameReferences from domains
       description: 'Read-only, Nullable'
-      operationId: domains_ListRefDomainNameReferences
+      operationId: domains_ListDomainNameReferencesByRef
       parameters:
         - name: domain-id
           in: path
@@ -6378,7 +6378,7 @@ paths:
         - domains.directoryObject
       summary: Create new navigation property ref to domainNameReferences for domains
       description: 'Read-only, Nullable'
-      operationId: domains_CreateRefDomainNameReferences
+      operationId: domains_CreateDomainNameReferencesByRef
       parameters:
         - name: domain-id
           in: path

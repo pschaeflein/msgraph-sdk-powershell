@@ -2934,7 +2934,7 @@ paths:
         - drives.list
       summary: Get ref of analytics from drives
       description: Analytics about the view activities that took place on this item.
-      operationId: drives.list.items_GetRefAnalytics
+      operationId: drives.list.items_GetAnalyticsByRef
       parameters:
         - name: drive-id
           in: path
@@ -2981,7 +2981,7 @@ paths:
         - drives.list
       summary: Update the ref of navigation property analytics in drives
       description: Analytics about the view activities that took place on this item.
-      operationId: drives.list.items_SetRefAnalytics
+      operationId: drives.list.items_SetAnalyticsByRef
       parameters:
         - name: drive-id
           in: path
@@ -3017,7 +3017,7 @@ paths:
         - drives.list
       summary: Delete ref of navigation property analytics for drives
       description: Analytics about the view activities that took place on this item.
-      operationId: drives.list.items_DeleteRefAnalytics
+      operationId: drives.list.items_DeleteAnalyticsByRef
       parameters:
         - name: drive-id
           in: path
@@ -8310,7 +8310,7 @@ paths:
         - shares.list
       summary: Get ref of analytics from shares
       description: Analytics about the view activities that took place on this item.
-      operationId: shares.list.items_GetRefAnalytics
+      operationId: shares.list.items_GetAnalyticsByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -8357,7 +8357,7 @@ paths:
         - shares.list
       summary: Update the ref of navigation property analytics in shares
       description: Analytics about the view activities that took place on this item.
-      operationId: shares.list.items_SetRefAnalytics
+      operationId: shares.list.items_SetAnalyticsByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -8393,7 +8393,7 @@ paths:
         - shares.list
       summary: Delete ref of navigation property analytics for shares
       description: Analytics about the view activities that took place on this item.
-      operationId: shares.list.items_DeleteRefAnalytics
+      operationId: shares.list.items_DeleteAnalyticsByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -9895,7 +9895,7 @@ paths:
         - shares.listItem
       summary: Get ref of analytics from shares
       description: Analytics about the view activities that took place on this item.
-      operationId: shares.listItem_GetRefAnalytics
+      operationId: shares.listItem_GetAnalyticsByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -9932,7 +9932,7 @@ paths:
         - shares.listItem
       summary: Update the ref of navigation property analytics in shares
       description: Analytics about the view activities that took place on this item.
-      operationId: shares.listItem_SetRefAnalytics
+      operationId: shares.listItem_SetAnalyticsByRef
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -9961,7 +9961,7 @@ paths:
         - shares.listItem
       summary: Delete ref of navigation property analytics for shares
       description: Analytics about the view activities that took place on this item.
-      operationId: shares.listItem_DeleteRefAnalytics
+      operationId: shares.listItem_DeleteAnalyticsByRef
       parameters:
         - name: sharedDriveItem-id
           in: path

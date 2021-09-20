@@ -4364,7 +4364,7 @@ paths:
         - invitations.user
       summary: Get ref of invitedUser from invitations
       description: The user created as part of the invitation creation. Read-Only
-      operationId: invitations_GetRefInvitedUser
+      operationId: invitations_GetInvitedUserByRef
       parameters:
         - name: invitation-id
           in: path
@@ -4633,7 +4633,7 @@ paths:
         - invitations.user
       summary: Update the ref of navigation property invitedUser in invitations
       description: The user created as part of the invitation creation. Read-Only
-      operationId: invitations_SetRefInvitedUser
+      operationId: invitations_SetInvitedUserByRef
       parameters:
         - name: invitation-id
           in: path
@@ -4662,7 +4662,7 @@ paths:
         - invitations.user
       summary: Delete ref of navigation property invitedUser for invitations
       description: The user created as part of the invitation creation. Read-Only
-      operationId: invitations_DeleteRefInvitedUser
+      operationId: invitations_DeleteInvitedUserByRef
       parameters:
         - name: invitation-id
           in: path
@@ -5009,7 +5009,7 @@ paths:
         - organization.certificateBasedAuthConfiguration
       summary: Get ref of certificateBasedAuthConfiguration from organization
       description: Navigation property to manage  certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
-      operationId: organization_ListRefCertificateBasedAuthConfiguration
+      operationId: organization_ListCertificateBasedAuthConfigurationByRef
       parameters:
         - name: organization-id
           in: path
@@ -5066,7 +5066,7 @@ paths:
         - organization.certificateBasedAuthConfiguration
       summary: Create new navigation property ref to certificateBasedAuthConfiguration for organization
       description: Navigation property to manage  certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
-      operationId: organization_CreateRefCertificateBasedAuthConfiguration
+      operationId: organization_CreateCertificateBasedAuthConfigurationByRef
       parameters:
         - name: organization-id
           in: path
@@ -9595,7 +9595,7 @@ paths:
         - policies.unifiedRoleManagementPolicyAssignment
       summary: Get ref of policy from policies
       description: The policy for the assignment.
-      operationId: policies.roleManagementPolicyAssignments_GetRefPolicy
+      operationId: policies.roleManagementPolicyAssignments_GetPolicyByRef
       parameters:
         - name: unifiedRoleManagementPolicyAssignment-id
           in: path
@@ -9628,7 +9628,7 @@ paths:
         - policies.unifiedRoleManagementPolicyAssignment
       summary: Update the ref of navigation property policy in policies
       description: The policy for the assignment.
-      operationId: policies.roleManagementPolicyAssignments_SetRefPolicy
+      operationId: policies.roleManagementPolicyAssignments_SetPolicyByRef
       parameters:
         - name: unifiedRoleManagementPolicyAssignment-id
           in: path
@@ -9657,7 +9657,7 @@ paths:
         - policies.unifiedRoleManagementPolicyAssignment
       summary: Delete ref of navigation property policy for policies
       description: The policy for the assignment.
-      operationId: policies.roleManagementPolicyAssignments_DeleteRefPolicy
+      operationId: policies.roleManagementPolicyAssignments_DeletePolicyByRef
       parameters:
         - name: unifiedRoleManagementPolicyAssignment-id
           in: path
