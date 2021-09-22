@@ -3611,7 +3611,7 @@ paths:
         - education.educationClass
       summary: Get ref of group from education
       description: The underlying Microsoft 365 group object.
-      operationId: education.classes_GetRefGroup
+      operationId: education.classes_GetGroupByRef
       parameters:
         - name: educationClass-id
           in: path
@@ -3748,7 +3748,7 @@ paths:
         - education.educationClass
       summary: Update the ref of navigation property group in education
       description: The underlying Microsoft 365 group object.
-      operationId: education.classes_SetRefGroup
+      operationId: education.classes_SetGroupByRef
       parameters:
         - name: educationClass-id
           in: path
@@ -3777,7 +3777,7 @@ paths:
         - education.educationClass
       summary: Delete ref of navigation property group for education
       description: The underlying Microsoft 365 group object.
-      operationId: education.classes_DeleteRefGroup
+      operationId: education.classes_DeleteGroupByRef
       parameters:
         - name: educationClass-id
           in: path
@@ -3991,7 +3991,7 @@ paths:
         - education.educationClass
       summary: Get ref of members from education
       description: All users in the class. Nullable.
-      operationId: education.classes_ListRefMembers
+      operationId: education.classes_ListMembersByRef
       parameters:
         - name: educationClass-id
           in: path
@@ -4110,7 +4110,7 @@ paths:
         - education.educationClass
       summary: Create new navigation property ref to members for education
       description: All users in the class. Nullable.
-      operationId: education.classes_CreateRefMembers
+      operationId: education.classes_CreateMembersByRef
       parameters:
         - name: educationClass-id
           in: path
@@ -4303,7 +4303,7 @@ paths:
         - education.educationClass
       summary: Get ref of schools from education
       description: All schools that this class is associated with. Nullable.
-      operationId: education.classes_ListRefSchools
+      operationId: education.classes_ListSchoolsByRef
       parameters:
         - name: educationClass-id
           in: path
@@ -4388,7 +4388,7 @@ paths:
         - education.educationClass
       summary: Create new navigation property ref to schools for education
       description: All schools that this class is associated with. Nullable.
-      operationId: education.classes_CreateRefSchools
+      operationId: education.classes_CreateSchoolsByRef
       parameters:
         - name: educationClass-id
           in: path
@@ -4638,7 +4638,7 @@ paths:
         - education.educationClass
       summary: Get ref of teachers from education
       description: All teachers in the class. Nullable.
-      operationId: education.classes_ListRefTeachers
+      operationId: education.classes_ListTeachersByRef
       parameters:
         - name: educationClass-id
           in: path
@@ -4757,7 +4757,7 @@ paths:
         - education.educationClass
       summary: Create new navigation property ref to teachers for education
       description: All teachers in the class. Nullable.
-      operationId: education.classes_CreateRefTeachers
+      operationId: education.classes_CreateTeachersByRef
       parameters:
         - name: educationClass-id
           in: path
@@ -7294,7 +7294,7 @@ paths:
         - education.educationUser
       summary: Get ref of classes from education
       description: Classes to which the user belongs. Nullable.
-      operationId: education.me_ListRefClasses
+      operationId: education.me_ListClassesByRef
       parameters:
         - $ref: '#/components/parameters/top'
         - $ref: '#/components/parameters/skip'
@@ -7366,7 +7366,7 @@ paths:
         - education.educationUser
       summary: Create new navigation property ref to classes for education
       description: Classes to which the user belongs. Nullable.
-      operationId: education.me_CreateRefClasses
+      operationId: education.me_CreateClassesByRef
       requestBody:
         description: New navigation property ref value
         content:
@@ -7764,7 +7764,7 @@ paths:
         - education.educationUser
       summary: Get ref of schools from education
       description: Schools to which the user belongs. Nullable.
-      operationId: education.me_ListRefSchools
+      operationId: education.me_ListSchoolsByRef
       parameters:
         - $ref: '#/components/parameters/top'
         - $ref: '#/components/parameters/skip'
@@ -7842,7 +7842,7 @@ paths:
         - education.educationUser
       summary: Create new navigation property ref to schools for education
       description: Schools to which the user belongs. Nullable.
-      operationId: education.me_CreateRefSchools
+      operationId: education.me_CreateSchoolsByRef
       requestBody:
         description: New navigation property ref value
         content:
@@ -8013,7 +8013,7 @@ paths:
         - education.educationUser
       summary: Get ref of taughtClasses from education
       description: Classes for which the user is a teacher.
-      operationId: education.me_ListRefTaughtClasses
+      operationId: education.me_ListTaughtClassesByRef
       parameters:
         - $ref: '#/components/parameters/top'
         - $ref: '#/components/parameters/skip'
@@ -8085,7 +8085,7 @@ paths:
         - education.educationUser
       summary: Create new navigation property ref to taughtClasses for education
       description: Classes for which the user is a teacher.
-      operationId: education.me_CreateRefTaughtClasses
+      operationId: education.me_CreateTaughtClassesByRef
       requestBody:
         description: New navigation property ref value
         content:
@@ -8493,7 +8493,7 @@ paths:
         - education.educationUser
       summary: Get ref of user from education
       description: The directory user corresponding to this user.
-      operationId: education.me_GetRefUser
+      operationId: education.me_GetUserByRef
       responses:
         '200':
           description: Retrieved navigation property link
@@ -8632,7 +8632,7 @@ paths:
         - education.educationUser
       summary: Update the ref of navigation property user in education
       description: The directory user corresponding to this user.
-      operationId: education.me_SetRefUser
+      operationId: education.me_SetUserByRef
       requestBody:
         description: New navigation property ref values
         content:
@@ -8653,7 +8653,7 @@ paths:
         - education.educationUser
       summary: Delete ref of navigation property user for education
       description: The directory user corresponding to this user.
-      operationId: education.me_DeleteRefUser
+      operationId: education.me_DeleteUserByRef
       parameters:
         - name: If-Match
           in: header
@@ -9021,7 +9021,7 @@ paths:
         - education.educationSchool
       summary: Get ref of administrativeUnit from education
       description: The underlying administrativeUnit for this school.
-      operationId: education.schools_GetRefAdministrativeUnit
+      operationId: education.schools_GetAdministrativeUnitByRef
       parameters:
         - name: educationSchool-id
           in: path
@@ -9058,7 +9058,7 @@ paths:
         - education.educationSchool
       summary: Update the ref of navigation property administrativeUnit in education
       description: The underlying administrativeUnit for this school.
-      operationId: education.schools_SetRefAdministrativeUnit
+      operationId: education.schools_SetAdministrativeUnitByRef
       parameters:
         - name: educationSchool-id
           in: path
@@ -9087,7 +9087,7 @@ paths:
         - education.educationSchool
       summary: Delete ref of navigation property administrativeUnit for education
       description: The underlying administrativeUnit for this school.
-      operationId: education.schools_DeleteRefAdministrativeUnit
+      operationId: education.schools_DeleteAdministrativeUnitByRef
       parameters:
         - name: educationSchool-id
           in: path
@@ -9245,7 +9245,7 @@ paths:
         - education.educationSchool
       summary: Get ref of classes from education
       description: Classes taught at the school. Nullable.
-      operationId: education.schools_ListRefClasses
+      operationId: education.schools_ListClassesByRef
       parameters:
         - name: educationSchool-id
           in: path
@@ -9324,7 +9324,7 @@ paths:
         - education.educationSchool
       summary: Create new navigation property ref to classes for education
       description: Classes taught at the school. Nullable.
-      operationId: education.schools_CreateRefClasses
+      operationId: education.schools_CreateClassesByRef
       parameters:
         - name: educationSchool-id
           in: path
@@ -9574,7 +9574,7 @@ paths:
         - education.educationSchool
       summary: Get ref of users from education
       description: Users in the school. Nullable.
-      operationId: education.schools_ListRefUsers
+      operationId: education.schools_ListUsersByRef
       parameters:
         - name: educationSchool-id
           in: path
@@ -9693,7 +9693,7 @@ paths:
         - education.educationSchool
       summary: Create new navigation property ref to users for education
       description: Users in the school. Nullable.
-      operationId: education.schools_CreateRefUsers
+      operationId: education.schools_CreateUsersByRef
       parameters:
         - name: educationSchool-id
           in: path
@@ -13498,7 +13498,7 @@ paths:
         - education.educationUser
       summary: Get ref of classes from education
       description: Classes to which the user belongs. Nullable.
-      operationId: education.users_ListRefClasses
+      operationId: education.users_ListClassesByRef
       parameters:
         - name: educationUser-id
           in: path
@@ -13577,7 +13577,7 @@ paths:
         - education.educationUser
       summary: Create new navigation property ref to classes for education
       description: Classes to which the user belongs. Nullable.
-      operationId: education.users_CreateRefClasses
+      operationId: education.users_CreateClassesByRef
       parameters:
         - name: educationUser-id
           in: path
@@ -14034,7 +14034,7 @@ paths:
         - education.educationUser
       summary: Get ref of schools from education
       description: Schools to which the user belongs. Nullable.
-      operationId: education.users_ListRefSchools
+      operationId: education.users_ListSchoolsByRef
       parameters:
         - name: educationUser-id
           in: path
@@ -14119,7 +14119,7 @@ paths:
         - education.educationUser
       summary: Create new navigation property ref to schools for education
       description: Schools to which the user belongs. Nullable.
-      operationId: education.users_CreateRefSchools
+      operationId: education.users_CreateSchoolsByRef
       parameters:
         - name: educationUser-id
           in: path
@@ -14313,7 +14313,7 @@ paths:
         - education.educationUser
       summary: Get ref of taughtClasses from education
       description: Classes for which the user is a teacher.
-      operationId: education.users_ListRefTaughtClasses
+      operationId: education.users_ListTaughtClassesByRef
       parameters:
         - name: educationUser-id
           in: path
@@ -14392,7 +14392,7 @@ paths:
         - education.educationUser
       summary: Create new navigation property ref to taughtClasses for education
       description: Classes for which the user is a teacher.
-      operationId: education.users_CreateRefTaughtClasses
+      operationId: education.users_CreateTaughtClassesByRef
       parameters:
         - name: educationUser-id
           in: path
@@ -14945,7 +14945,7 @@ paths:
         - education.educationUser
       summary: Get ref of user from education
       description: The directory user corresponding to this user.
-      operationId: education.users_GetRefUser
+      operationId: education.users_GetUserByRef
       parameters:
         - name: educationUser-id
           in: path
@@ -15214,7 +15214,7 @@ paths:
         - education.educationUser
       summary: Update the ref of navigation property user in education
       description: The directory user corresponding to this user.
-      operationId: education.users_SetRefUser
+      operationId: education.users_SetUserByRef
       parameters:
         - name: educationUser-id
           in: path
@@ -15243,7 +15243,7 @@ paths:
         - education.educationUser
       summary: Delete ref of navigation property user for education
       description: The directory user corresponding to this user.
-      operationId: education.users_DeleteRefUser
+      operationId: education.users_DeleteUserByRef
       parameters:
         - name: educationUser-id
           in: path

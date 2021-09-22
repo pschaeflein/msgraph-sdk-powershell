@@ -874,7 +874,7 @@ paths:
         - sites.itemAnalytics
       summary: Get ref of analytics from sites
       description: Analytics about the view activities that took place in this site.
-      operationId: sites_GetRefAnalytics
+      operationId: sites_GetAnalyticsByRef
       parameters:
         - name: site-id
           in: path
@@ -911,7 +911,7 @@ paths:
         - sites.itemAnalytics
       summary: Update the ref of navigation property analytics in sites
       description: Analytics about the view activities that took place in this site.
-      operationId: sites_SetRefAnalytics
+      operationId: sites_SetAnalyticsByRef
       parameters:
         - name: site-id
           in: path
@@ -940,7 +940,7 @@ paths:
         - sites.itemAnalytics
       summary: Delete ref of navigation property analytics for sites
       description: Analytics about the view activities that took place in this site.
-      operationId: sites_DeleteRefAnalytics
+      operationId: sites_DeleteAnalyticsByRef
       parameters:
         - name: site-id
           in: path
@@ -1423,7 +1423,7 @@ paths:
         - sites.columnDefinition
       summary: Get ref of sourceColumn from sites
       description: The source column for content type column.
-      operationId: sites.columns_GetRefSourceColumn
+      operationId: sites.columns_GetSourceColumnByRef
       parameters:
         - name: site-id
           in: path
@@ -1460,7 +1460,7 @@ paths:
         - sites.columnDefinition
       summary: Update the ref of navigation property sourceColumn in sites
       description: The source column for content type column.
-      operationId: sites.columns_SetRefSourceColumn
+      operationId: sites.columns_SetSourceColumnByRef
       parameters:
         - name: site-id
           in: path
@@ -1496,7 +1496,7 @@ paths:
         - sites.columnDefinition
       summary: Delete ref of navigation property sourceColumn for sites
       description: The source column for content type column.
-      operationId: sites.columns_DeleteRefSourceColumn
+      operationId: sites.columns_DeleteSourceColumnByRef
       parameters:
         - name: site-id
           in: path
@@ -1970,7 +1970,7 @@ paths:
         - sites.contentType
       summary: Get ref of base from sites
       description: Parent contentType from which this content type is derived.
-      operationId: sites.contentTypes_GetRefBase
+      operationId: sites.contentTypes_GetBaseByRef
       parameters:
         - name: site-id
           in: path
@@ -2027,7 +2027,7 @@ paths:
         - sites.contentType
       summary: Update the ref of navigation property base in sites
       description: Parent contentType from which this content type is derived.
-      operationId: sites.contentTypes_SetRefBase
+      operationId: sites.contentTypes_SetBaseByRef
       parameters:
         - name: site-id
           in: path
@@ -2063,7 +2063,7 @@ paths:
         - sites.contentType
       summary: Delete ref of navigation property base for sites
       description: Parent contentType from which this content type is derived.
-      operationId: sites.contentTypes_DeleteRefBase
+      operationId: sites.contentTypes_DeleteBaseByRef
       parameters:
         - name: site-id
           in: path
@@ -2408,7 +2408,7 @@ paths:
         - sites.contentType
       summary: Get ref of baseTypes from sites
       description: The collection of content types that are ancestors of this content type.
-      operationId: sites.contentTypes_ListRefBaseTypes
+      operationId: sites.contentTypes_ListBaseTypesByRef
       parameters:
         - name: site-id
           in: path
@@ -2498,7 +2498,7 @@ paths:
         - sites.contentType
       summary: Create new navigation property ref to baseTypes for sites
       description: The collection of content types that are ancestors of this content type.
-      operationId: sites.contentTypes_CreateRefBaseTypes
+      operationId: sites.contentTypes_CreateBaseTypesByRef
       parameters:
         - name: site-id
           in: path
@@ -3035,7 +3035,7 @@ paths:
         - sites.contentType
       summary: Get ref of columnPositions from sites
       description: Column order information in a content type.
-      operationId: sites.contentTypes_ListRefColumnPositions
+      operationId: sites.contentTypes_ListColumnPositionsByRef
       parameters:
         - name: site-id
           in: path
@@ -3157,7 +3157,7 @@ paths:
         - sites.contentType
       summary: Create new navigation property ref to columnPositions for sites
       description: Column order information in a content type.
-      operationId: sites.contentTypes_CreateRefColumnPositions
+      operationId: sites.contentTypes_CreateColumnPositionsByRef
       parameters:
         - name: site-id
           in: path
@@ -3701,7 +3701,7 @@ paths:
         - sites.contentType
       summary: Get ref of sourceColumn from sites
       description: The source column for content type column.
-      operationId: sites.contentTypes.columns_GetRefSourceColumn
+      operationId: sites.contentTypes.columns_GetSourceColumnByRef
       parameters:
         - name: site-id
           in: path
@@ -3746,7 +3746,7 @@ paths:
         - sites.contentType
       summary: Update the ref of navigation property sourceColumn in sites
       description: The source column for content type column.
-      operationId: sites.contentTypes.columns_SetRefSourceColumn
+      operationId: sites.contentTypes.columns_SetSourceColumnByRef
       parameters:
         - name: site-id
           in: path
@@ -3789,7 +3789,7 @@ paths:
         - sites.contentType
       summary: Delete ref of navigation property sourceColumn for sites
       description: The source column for content type column.
-      operationId: sites.contentTypes.columns_DeleteRefSourceColumn
+      operationId: sites.contentTypes.columns_DeleteSourceColumnByRef
       parameters:
         - name: site-id
           in: path
@@ -4751,7 +4751,7 @@ paths:
         - sites.columnDefinition
       summary: Get ref of externalColumns from sites
       description: The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
-      operationId: sites_ListRefExternalColumns
+      operationId: sites_ListExternalColumnsByRef
       parameters:
         - name: site-id
           in: path
@@ -4866,7 +4866,7 @@ paths:
         - sites.columnDefinition
       summary: Create new navigation property ref to externalColumns for sites
       description: The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
-      operationId: sites_CreateRefExternalColumns
+      operationId: sites_CreateExternalColumnsByRef
       parameters:
         - name: site-id
           in: path
@@ -6538,7 +6538,7 @@ paths:
         - sites.list
       summary: Get ref of analytics from sites
       description: Analytics about the view activities that took place on this item.
-      operationId: sites.lists.activities.listItem_GetRefAnalytics
+      operationId: sites.lists.activities.listItem_GetAnalyticsByRef
       parameters:
         - name: site-id
           in: path
@@ -6595,7 +6595,7 @@ paths:
         - sites.list
       summary: Update the ref of navigation property analytics in sites
       description: Analytics about the view activities that took place on this item.
-      operationId: sites.lists.activities.listItem_SetRefAnalytics
+      operationId: sites.lists.activities.listItem_SetAnalyticsByRef
       parameters:
         - name: site-id
           in: path
@@ -6638,7 +6638,7 @@ paths:
         - sites.list
       summary: Delete ref of navigation property analytics for sites
       description: Analytics about the view activities that took place on this item.
-      operationId: sites.lists.activities.listItem_DeleteRefAnalytics
+      operationId: sites.lists.activities.listItem_DeleteAnalyticsByRef
       parameters:
         - name: site-id
           in: path
@@ -8327,7 +8327,7 @@ paths:
         - sites.list
       summary: Get ref of sourceColumn from sites
       description: The source column for content type column.
-      operationId: sites.lists.columns_GetRefSourceColumn
+      operationId: sites.lists.columns_GetSourceColumnByRef
       parameters:
         - name: site-id
           in: path
@@ -8372,7 +8372,7 @@ paths:
         - sites.list
       summary: Update the ref of navigation property sourceColumn in sites
       description: The source column for content type column.
-      operationId: sites.lists.columns_SetRefSourceColumn
+      operationId: sites.lists.columns_SetSourceColumnByRef
       parameters:
         - name: site-id
           in: path
@@ -8415,7 +8415,7 @@ paths:
         - sites.list
       summary: Delete ref of navigation property sourceColumn for sites
       description: The source column for content type column.
-      operationId: sites.lists.columns_DeleteRefSourceColumn
+      operationId: sites.lists.columns_DeleteSourceColumnByRef
       parameters:
         - name: site-id
           in: path
@@ -8948,7 +8948,7 @@ paths:
         - sites.list
       summary: Get ref of base from sites
       description: Parent contentType from which this content type is derived.
-      operationId: sites.lists.contentTypes_GetRefBase
+      operationId: sites.lists.contentTypes_GetBaseByRef
       parameters:
         - name: site-id
           in: path
@@ -9017,7 +9017,7 @@ paths:
         - sites.list
       summary: Update the ref of navigation property base in sites
       description: Parent contentType from which this content type is derived.
-      operationId: sites.lists.contentTypes_SetRefBase
+      operationId: sites.lists.contentTypes_SetBaseByRef
       parameters:
         - name: site-id
           in: path
@@ -9060,7 +9060,7 @@ paths:
         - sites.list
       summary: Delete ref of navigation property base for sites
       description: Parent contentType from which this content type is derived.
-      operationId: sites.lists.contentTypes_DeleteRefBase
+      operationId: sites.lists.contentTypes_DeleteBaseByRef
       parameters:
         - name: site-id
           in: path
@@ -9454,7 +9454,7 @@ paths:
         - sites.list
       summary: Get ref of baseTypes from sites
       description: The collection of content types that are ancestors of this content type.
-      operationId: sites.lists.contentTypes_ListRefBaseTypes
+      operationId: sites.lists.contentTypes_ListBaseTypesByRef
       parameters:
         - name: site-id
           in: path
@@ -9551,7 +9551,7 @@ paths:
         - sites.list
       summary: Create new navigation property ref to baseTypes for sites
       description: The collection of content types that are ancestors of this content type.
-      operationId: sites.lists.contentTypes_CreateRefBaseTypes
+      operationId: sites.lists.contentTypes_CreateBaseTypesByRef
       parameters:
         - name: site-id
           in: path
@@ -10144,7 +10144,7 @@ paths:
         - sites.list
       summary: Get ref of columnPositions from sites
       description: Column order information in a content type.
-      operationId: sites.lists.contentTypes_ListRefColumnPositions
+      operationId: sites.lists.contentTypes_ListColumnPositionsByRef
       parameters:
         - name: site-id
           in: path
@@ -10273,7 +10273,7 @@ paths:
         - sites.list
       summary: Create new navigation property ref to columnPositions for sites
       description: Column order information in a content type.
-      operationId: sites.lists.contentTypes_CreateRefColumnPositions
+      operationId: sites.lists.contentTypes_CreateColumnPositionsByRef
       parameters:
         - name: site-id
           in: path
@@ -10868,7 +10868,7 @@ paths:
         - sites.list
       summary: Get ref of sourceColumn from sites
       description: The source column for content type column.
-      operationId: sites.lists.contentTypes.columns_GetRefSourceColumn
+      operationId: sites.lists.contentTypes.columns_GetSourceColumnByRef
       parameters:
         - name: site-id
           in: path
@@ -10921,7 +10921,7 @@ paths:
         - sites.list
       summary: Update the ref of navigation property sourceColumn in sites
       description: The source column for content type column.
-      operationId: sites.lists.contentTypes.columns_SetRefSourceColumn
+      operationId: sites.lists.contentTypes.columns_SetSourceColumnByRef
       parameters:
         - name: site-id
           in: path
@@ -10971,7 +10971,7 @@ paths:
         - sites.list
       summary: Delete ref of navigation property sourceColumn for sites
       description: The source column for content type column.
-      operationId: sites.lists.contentTypes.columns_DeleteRefSourceColumn
+      operationId: sites.lists.contentTypes.columns_DeleteSourceColumnByRef
       parameters:
         - name: site-id
           in: path
@@ -13044,7 +13044,7 @@ paths:
         - sites.list
       summary: Get ref of analytics from sites
       description: Analytics about the view activities that took place on this item.
-      operationId: sites.lists.items_GetRefAnalytics
+      operationId: sites.lists.items_GetAnalyticsByRef
       parameters:
         - name: site-id
           in: path
@@ -13101,7 +13101,7 @@ paths:
         - sites.list
       summary: Update the ref of navigation property analytics in sites
       description: Analytics about the view activities that took place on this item.
-      operationId: sites.lists.items_SetRefAnalytics
+      operationId: sites.lists.items_SetAnalyticsByRef
       parameters:
         - name: site-id
           in: path
@@ -13144,7 +13144,7 @@ paths:
         - sites.list
       summary: Delete ref of navigation property analytics for sites
       description: Analytics about the view activities that took place on this item.
-      operationId: sites.lists.items_DeleteRefAnalytics
+      operationId: sites.lists.items_DeleteAnalyticsByRef
       parameters:
         - name: site-id
           in: path
@@ -22849,7 +22849,7 @@ paths:
       tags:
         - users.site
       summary: Get ref of followedSites from users
-      operationId: users_ListRefFollowedSites
+      operationId: users_ListFollowedSitesByRef
       parameters:
         - name: user-id
           in: path
@@ -22931,7 +22931,7 @@ paths:
       tags:
         - users.site
       summary: Create new navigation property ref to followedSites for users
-      operationId: users_CreateRefFollowedSites
+      operationId: users_CreateFollowedSitesByRef
       parameters:
         - name: user-id
           in: path

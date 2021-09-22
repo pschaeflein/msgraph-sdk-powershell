@@ -7513,7 +7513,7 @@ paths:
         - deviceAppManagement.managedEBook
       summary: Get ref of categories from deviceAppManagement
       description: The list of categories for this eBook.
-      operationId: deviceAppManagement.managedEBooks_ListRefCategories
+      operationId: deviceAppManagement.managedEBooks_ListCategoriesByRef
       parameters:
         - name: managedEBook-id
           in: path
@@ -7572,7 +7572,7 @@ paths:
         - deviceAppManagement.managedEBook
       summary: Create new navigation property ref to categories for deviceAppManagement
       description: The list of categories for this eBook.
-      operationId: deviceAppManagement.managedEBooks_CreateRefCategories
+      operationId: deviceAppManagement.managedEBooks_CreateCategoriesByRef
       parameters:
         - name: managedEBook-id
           in: path
@@ -11093,7 +11093,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Get ref of categories from deviceAppManagement
       description: The list of categories for this app.
-      operationId: deviceAppManagement.mobileApps_ListRefCategories
+      operationId: deviceAppManagement.mobileApps_ListCategoriesByRef
       parameters:
         - name: mobileApp-id
           in: path
@@ -11152,7 +11152,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Create new navigation property ref to categories for deviceAppManagement
       description: The list of categories for this app.
-      operationId: deviceAppManagement.mobileApps_CreateRefCategories
+      operationId: deviceAppManagement.mobileApps_CreateCategoriesByRef
       parameters:
         - name: mobileApp-id
           in: path
@@ -11597,7 +11597,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Get ref of app from deviceAppManagement
       description: The navigation link to the mobile app.
-      operationId: deviceAppManagement.mobileApps.deviceStatuses_GetRefApp
+      operationId: deviceAppManagement.mobileApps.deviceStatuses_GetAppByRef
       parameters:
         - name: mobileApp-id
           in: path
@@ -11659,7 +11659,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Update the ref of navigation property app in deviceAppManagement
       description: The navigation link to the mobile app.
-      operationId: deviceAppManagement.mobileApps.deviceStatuses_SetRefApp
+      operationId: deviceAppManagement.mobileApps.deviceStatuses_SetAppByRef
       parameters:
         - name: mobileApp-id
           in: path
@@ -11695,7 +11695,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Delete ref of navigation property app for deviceAppManagement
       description: The navigation link to the mobile app.
-      operationId: deviceAppManagement.mobileApps.deviceStatuses_DeleteRefApp
+      operationId: deviceAppManagement.mobileApps.deviceStatuses_DeleteAppByRef
       parameters:
         - name: mobileApp-id
           in: path
@@ -12956,7 +12956,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Get ref of app from deviceAppManagement
       description: The navigation link to the mobile app.
-      operationId: deviceAppManagement.mobileApps.userStatuses_GetRefApp
+      operationId: deviceAppManagement.mobileApps.userStatuses_GetAppByRef
       parameters:
         - name: mobileApp-id
           in: path
@@ -13018,7 +13018,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Update the ref of navigation property app in deviceAppManagement
       description: The navigation link to the mobile app.
-      operationId: deviceAppManagement.mobileApps.userStatuses_SetRefApp
+      operationId: deviceAppManagement.mobileApps.userStatuses_SetAppByRef
       parameters:
         - name: mobileApp-id
           in: path
@@ -13054,7 +13054,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Delete ref of navigation property app for deviceAppManagement
       description: The navigation link to the mobile app.
-      operationId: deviceAppManagement.mobileApps.userStatuses_DeleteRefApp
+      operationId: deviceAppManagement.mobileApps.userStatuses_DeleteAppByRef
       parameters:
         - name: mobileApp-id
           in: path
@@ -13803,7 +13803,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Get ref of app from deviceAppManagement
       description: The navigation link to the mobile app.
-      operationId: deviceAppManagement.mobileApps.userStatuses.deviceStatuses_GetRefApp
+      operationId: deviceAppManagement.mobileApps.userStatuses.deviceStatuses_GetAppByRef
       parameters:
         - name: mobileApp-id
           in: path
@@ -13878,7 +13878,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Update the ref of navigation property app in deviceAppManagement
       description: The navigation link to the mobile app.
-      operationId: deviceAppManagement.mobileApps.userStatuses.deviceStatuses_SetRefApp
+      operationId: deviceAppManagement.mobileApps.userStatuses.deviceStatuses_SetAppByRef
       parameters:
         - name: mobileApp-id
           in: path
@@ -13921,7 +13921,7 @@ paths:
         - deviceAppManagement.mobileApp
       summary: Delete ref of navigation property app for deviceAppManagement
       description: The navigation link to the mobile app.
-      operationId: deviceAppManagement.mobileApps.userStatuses.deviceStatuses_DeleteRefApp
+      operationId: deviceAppManagement.mobileApps.userStatuses.deviceStatuses_DeleteAppByRef
       parameters:
         - name: mobileApp-id
           in: path
@@ -17795,7 +17795,7 @@ paths:
         - deviceAppManagement.windowsDefenderApplicationControlSupplementalPolicy
       summary: Get ref of policy from deviceAppManagement
       description: The navigation link to the WindowsDefenderApplicationControl supplemental policy.
-      operationId: deviceAppManagement.wdacSupplementalPolicies.deviceStatuses_GetRefPolicy
+      operationId: deviceAppManagement.wdacSupplementalPolicies.deviceStatuses_GetPolicyByRef
       parameters:
         - name: windowsDefenderApplicationControlSupplementalPolicy-id
           in: path
@@ -17842,7 +17842,7 @@ paths:
         - deviceAppManagement.windowsDefenderApplicationControlSupplementalPolicy
       summary: Update the ref of navigation property policy in deviceAppManagement
       description: The navigation link to the WindowsDefenderApplicationControl supplemental policy.
-      operationId: deviceAppManagement.wdacSupplementalPolicies.deviceStatuses_SetRefPolicy
+      operationId: deviceAppManagement.wdacSupplementalPolicies.deviceStatuses_SetPolicyByRef
       parameters:
         - name: windowsDefenderApplicationControlSupplementalPolicy-id
           in: path
@@ -17878,7 +17878,7 @@ paths:
         - deviceAppManagement.windowsDefenderApplicationControlSupplementalPolicy
       summary: Delete ref of navigation property policy for deviceAppManagement
       description: The navigation link to the WindowsDefenderApplicationControl supplemental policy.
-      operationId: deviceAppManagement.wdacSupplementalPolicies.deviceStatuses_DeleteRefPolicy
+      operationId: deviceAppManagement.wdacSupplementalPolicies.deviceStatuses_DeletePolicyByRef
       parameters:
         - name: windowsDefenderApplicationControlSupplementalPolicy-id
           in: path
@@ -18880,7 +18880,7 @@ paths:
         - deviceAppManagement.windowsManagementApp
       summary: Get ref of windowsManagementApp from deviceAppManagement
       description: Windows management app.
-      operationId: deviceAppManagement_GetRefWindowsManagementApp
+      operationId: deviceAppManagement_GetWindowsManagementAppByRef
       responses:
         '200':
           description: Retrieved navigation property link
@@ -18899,7 +18899,7 @@ paths:
         - deviceAppManagement.windowsManagementApp
       summary: Update the ref of navigation property windowsManagementApp in deviceAppManagement
       description: Windows management app.
-      operationId: deviceAppManagement_SetRefWindowsManagementApp
+      operationId: deviceAppManagement_SetWindowsManagementAppByRef
       requestBody:
         description: New navigation property ref values
         content:
@@ -18920,7 +18920,7 @@ paths:
         - deviceAppManagement.windowsManagementApp
       summary: Delete ref of navigation property windowsManagementApp for deviceAppManagement
       description: Windows management app.
-      operationId: deviceAppManagement_DeleteRefWindowsManagementApp
+      operationId: deviceAppManagement_DeleteWindowsManagementAppByRef
       parameters:
         - name: If-Match
           in: header
@@ -20604,7 +20604,7 @@ paths:
         - users.managedAppRegistration
       summary: Get ref of managedAppRegistrations from users
       description: Zero or more managed app registrations that belong to the user.
-      operationId: users_ListRefManagedAppRegistrations
+      operationId: users_ListManagedAppRegistrationsByRef
       parameters:
         - name: user-id
           in: path
@@ -20691,7 +20691,7 @@ paths:
         - users.managedAppRegistration
       summary: Create new navigation property ref to managedAppRegistrations for users
       description: Zero or more managed app registrations that belong to the user.
-      operationId: users_CreateRefManagedAppRegistrations
+      operationId: users_CreateManagedAppRegistrationsByRef
       parameters:
         - name: user-id
           in: path
@@ -21736,7 +21736,7 @@ paths:
         - users.managedDevice
       summary: Get ref of detectedApps from users
       description: All applications currently installed on the device
-      operationId: users.managedDevices_ListRefDetectedApps
+      operationId: users.managedDevices_ListDetectedAppsByRef
       parameters:
         - name: user-id
           in: path
@@ -21806,7 +21806,7 @@ paths:
         - users.managedDevice
       summary: Create new navigation property ref to detectedApps for users
       description: All applications currently installed on the device
-      operationId: users.managedDevices_CreateRefDetectedApps
+      operationId: users.managedDevices_CreateDetectedAppsByRef
       parameters:
         - name: user-id
           in: path
@@ -26347,7 +26347,7 @@ paths:
         - users.windowsInformationProtectionDeviceRegistration
       summary: Get ref of windowsInformationProtectionDeviceRegistrations from users
       description: Zero or more WIP device registrations that belong to the user.
-      operationId: users_ListRefWindowsInformationProtectionDeviceRegistrations
+      operationId: users_ListWindowsInformationProtectionDeviceRegistrationsByRef
       parameters:
         - name: user-id
           in: path
@@ -26414,7 +26414,7 @@ paths:
         - users.windowsInformationProtectionDeviceRegistration
       summary: Create new navigation property ref to windowsInformationProtectionDeviceRegistrations for users
       description: Zero or more WIP device registrations that belong to the user.
-      operationId: users_CreateRefWindowsInformationProtectionDeviceRegistrations
+      operationId: users_CreateWindowsInformationProtectionDeviceRegistrationsByRef
       parameters:
         - name: user-id
           in: path

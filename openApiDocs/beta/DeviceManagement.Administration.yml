@@ -3081,7 +3081,7 @@ paths:
         - deviceManagement.groupPolicyCategory
       summary: Get ref of children from deviceManagement
       description: The children categories
-      operationId: deviceManagement.groupPolicyCategories_ListRefChildren
+      operationId: deviceManagement.groupPolicyCategories_ListChildrenByRef
       parameters:
         - name: groupPolicyCategory-id
           in: path
@@ -3142,7 +3142,7 @@ paths:
         - deviceManagement.groupPolicyCategory
       summary: Create new navigation property ref to children for deviceManagement
       description: The children categories
-      operationId: deviceManagement.groupPolicyCategories_CreateRefChildren
+      operationId: deviceManagement.groupPolicyCategories_CreateChildrenByRef
       parameters:
         - name: groupPolicyCategory-id
           in: path
@@ -3242,7 +3242,7 @@ paths:
         - deviceManagement.groupPolicyCategory
       summary: Get ref of definitionFile from deviceManagement
       description: The id of the definition file the category came from
-      operationId: deviceManagement.groupPolicyCategories_GetRefDefinitionFile
+      operationId: deviceManagement.groupPolicyCategories_GetDefinitionFileByRef
       parameters:
         - name: groupPolicyCategory-id
           in: path
@@ -3271,7 +3271,7 @@ paths:
         - deviceManagement.groupPolicyCategory
       summary: Update the ref of navigation property definitionFile in deviceManagement
       description: The id of the definition file the category came from
-      operationId: deviceManagement.groupPolicyCategories_SetRefDefinitionFile
+      operationId: deviceManagement.groupPolicyCategories_SetDefinitionFileByRef
       parameters:
         - name: groupPolicyCategory-id
           in: path
@@ -3300,7 +3300,7 @@ paths:
         - deviceManagement.groupPolicyCategory
       summary: Delete ref of navigation property definitionFile for deviceManagement
       description: The id of the definition file the category came from
-      operationId: deviceManagement.groupPolicyCategories_DeleteRefDefinitionFile
+      operationId: deviceManagement.groupPolicyCategories_DeleteDefinitionFileByRef
       parameters:
         - name: groupPolicyCategory-id
           in: path
@@ -3436,7 +3436,7 @@ paths:
         - deviceManagement.groupPolicyCategory
       summary: Get ref of definitions from deviceManagement
       description: The immediate GroupPolicyDefinition children of the category
-      operationId: deviceManagement.groupPolicyCategories_ListRefDefinitions
+      operationId: deviceManagement.groupPolicyCategories_ListDefinitionsByRef
       parameters:
         - name: groupPolicyCategory-id
           in: path
@@ -3507,7 +3507,7 @@ paths:
         - deviceManagement.groupPolicyCategory
       summary: Create new navigation property ref to definitions for deviceManagement
       description: The immediate GroupPolicyDefinition children of the category
-      operationId: deviceManagement.groupPolicyCategories_CreateRefDefinitions
+      operationId: deviceManagement.groupPolicyCategories_CreateDefinitionsByRef
       parameters:
         - name: groupPolicyCategory-id
           in: path
@@ -3620,7 +3620,7 @@ paths:
         - deviceManagement.groupPolicyCategory
       summary: Get ref of parent from deviceManagement
       description: The parent category
-      operationId: deviceManagement.groupPolicyCategories_GetRefParent
+      operationId: deviceManagement.groupPolicyCategories_GetParentByRef
       parameters:
         - name: groupPolicyCategory-id
           in: path
@@ -3661,7 +3661,7 @@ paths:
         - deviceManagement.groupPolicyCategory
       summary: Update the ref of navigation property parent in deviceManagement
       description: The parent category
-      operationId: deviceManagement.groupPolicyCategories_SetRefParent
+      operationId: deviceManagement.groupPolicyCategories_SetParentByRef
       parameters:
         - name: groupPolicyCategory-id
           in: path
@@ -3690,7 +3690,7 @@ paths:
         - deviceManagement.groupPolicyCategory
       summary: Delete ref of navigation property parent for deviceManagement
       description: The parent category
-      operationId: deviceManagement.groupPolicyCategories_DeleteRefParent
+      operationId: deviceManagement.groupPolicyCategories_DeleteParentByRef
       parameters:
         - name: groupPolicyCategory-id
           in: path
@@ -4064,7 +4064,7 @@ paths:
         - deviceManagement.groupPolicyDefinitionFile
       summary: Get ref of definitions from deviceManagement
       description: The group policy definitions associated with the file.
-      operationId: deviceManagement.groupPolicyDefinitionFiles_ListRefDefinitions
+      operationId: deviceManagement.groupPolicyDefinitionFiles_ListDefinitionsByRef
       parameters:
         - name: groupPolicyDefinitionFile-id
           in: path
@@ -4135,7 +4135,7 @@ paths:
         - deviceManagement.groupPolicyDefinitionFile
       summary: Create new navigation property ref to definitions for deviceManagement
       description: The group policy definitions associated with the file.
-      operationId: deviceManagement.groupPolicyDefinitionFiles_CreateRefDefinitions
+      operationId: deviceManagement.groupPolicyDefinitionFiles_CreateDefinitionsByRef
       parameters:
         - name: groupPolicyDefinitionFile-id
           in: path
@@ -4502,7 +4502,7 @@ paths:
         - deviceManagement.groupPolicyDefinition
       summary: Get ref of category from deviceManagement
       description: The group policy category associated with the definition.
-      operationId: deviceManagement.groupPolicyDefinitions_GetRefCategory
+      operationId: deviceManagement.groupPolicyDefinitions_GetCategoryByRef
       parameters:
         - name: groupPolicyDefinition-id
           in: path
@@ -4543,7 +4543,7 @@ paths:
         - deviceManagement.groupPolicyDefinition
       summary: Update the ref of navigation property category in deviceManagement
       description: The group policy category associated with the definition.
-      operationId: deviceManagement.groupPolicyDefinitions_SetRefCategory
+      operationId: deviceManagement.groupPolicyDefinitions_SetCategoryByRef
       parameters:
         - name: groupPolicyDefinition-id
           in: path
@@ -4572,7 +4572,7 @@ paths:
         - deviceManagement.groupPolicyDefinition
       summary: Delete ref of navigation property category for deviceManagement
       description: The group policy category associated with the definition.
-      operationId: deviceManagement.groupPolicyDefinitions_DeleteRefCategory
+      operationId: deviceManagement.groupPolicyDefinitions_DeleteCategoryByRef
       parameters:
         - name: groupPolicyDefinition-id
           in: path
@@ -4662,7 +4662,7 @@ paths:
         - deviceManagement.groupPolicyDefinition
       summary: Get ref of definitionFile from deviceManagement
       description: The group policy file associated with the definition.
-      operationId: deviceManagement.groupPolicyDefinitions_GetRefDefinitionFile
+      operationId: deviceManagement.groupPolicyDefinitions_GetDefinitionFileByRef
       parameters:
         - name: groupPolicyDefinition-id
           in: path
@@ -4691,7 +4691,7 @@ paths:
         - deviceManagement.groupPolicyDefinition
       summary: Update the ref of navigation property definitionFile in deviceManagement
       description: The group policy file associated with the definition.
-      operationId: deviceManagement.groupPolicyDefinitions_SetRefDefinitionFile
+      operationId: deviceManagement.groupPolicyDefinitions_SetDefinitionFileByRef
       parameters:
         - name: groupPolicyDefinition-id
           in: path
@@ -4720,7 +4720,7 @@ paths:
         - deviceManagement.groupPolicyDefinition
       summary: Delete ref of navigation property definitionFile for deviceManagement
       description: The group policy file associated with the definition.
-      operationId: deviceManagement.groupPolicyDefinitions_DeleteRefDefinitionFile
+      operationId: deviceManagement.groupPolicyDefinitions_DeleteDefinitionFileByRef
       parameters:
         - name: groupPolicyDefinition-id
           in: path
@@ -5083,7 +5083,7 @@ paths:
         - deviceManagement.groupPolicyDefinition
       summary: Get ref of definition from deviceManagement
       description: The group policy definition associated with the presentation.
-      operationId: deviceManagement.groupPolicyDefinitions.presentations_GetRefDefinition
+      operationId: deviceManagement.groupPolicyDefinitions.presentations_GetDefinitionByRef
       parameters:
         - name: groupPolicyDefinition-id
           in: path
@@ -5130,7 +5130,7 @@ paths:
         - deviceManagement.groupPolicyDefinition
       summary: Update the ref of navigation property definition in deviceManagement
       description: The group policy definition associated with the presentation.
-      operationId: deviceManagement.groupPolicyDefinitions.presentations_SetRefDefinition
+      operationId: deviceManagement.groupPolicyDefinitions.presentations_SetDefinitionByRef
       parameters:
         - name: groupPolicyDefinition-id
           in: path
@@ -5166,7 +5166,7 @@ paths:
         - deviceManagement.groupPolicyDefinition
       summary: Delete ref of navigation property definition for deviceManagement
       description: The group policy definition associated with the presentation.
-      operationId: deviceManagement.groupPolicyDefinitions.presentations_DeleteRefDefinition
+      operationId: deviceManagement.groupPolicyDefinitions.presentations_DeleteDefinitionByRef
       parameters:
         - name: groupPolicyDefinition-id
           in: path
@@ -8800,7 +8800,7 @@ paths:
         - deviceManagement.deviceAndAppManagementRoleAssignment
       summary: Get ref of roleScopeTags from deviceManagement
       description: The set of Role Scope Tags defined on the Role Assignment.
-      operationId: deviceManagement.roleAssignments_ListRefRoleScopeTags
+      operationId: deviceManagement.roleAssignments_ListRoleScopeTagsByRef
       parameters:
         - name: deviceAndAppManagementRoleAssignment-id
           in: path
@@ -8861,7 +8861,7 @@ paths:
         - deviceManagement.deviceAndAppManagementRoleAssignment
       summary: Create new navigation property ref to roleScopeTags for deviceManagement
       description: The set of Role Scope Tags defined on the Role Assignment.
-      operationId: deviceManagement.roleAssignments_CreateRefRoleScopeTags
+      operationId: deviceManagement.roleAssignments_CreateRoleScopeTagsByRef
       parameters:
         - name: deviceAndAppManagementRoleAssignment-id
           in: path
@@ -9465,7 +9465,7 @@ paths:
         - deviceManagement.roleDefinition
       summary: Get ref of roleDefinition from deviceManagement
       description: Role definition this assignment is part of.
-      operationId: deviceManagement.roleDefinitions.roleAssignments_GetRefRoleDefinition
+      operationId: deviceManagement.roleDefinitions.roleAssignments_GetRoleDefinitionByRef
       parameters:
         - name: roleDefinition-id
           in: path
@@ -9502,7 +9502,7 @@ paths:
         - deviceManagement.roleDefinition
       summary: Update the ref of navigation property roleDefinition in deviceManagement
       description: Role definition this assignment is part of.
-      operationId: deviceManagement.roleDefinitions.roleAssignments_SetRefRoleDefinition
+      operationId: deviceManagement.roleDefinitions.roleAssignments_SetRoleDefinitionByRef
       parameters:
         - name: roleDefinition-id
           in: path
@@ -9538,7 +9538,7 @@ paths:
         - deviceManagement.roleDefinition
       summary: Delete ref of navigation property roleDefinition for deviceManagement
       description: Role definition this assignment is part of.
-      operationId: deviceManagement.roleDefinitions.roleAssignments_DeleteRefRoleDefinition
+      operationId: deviceManagement.roleDefinitions.roleAssignments_DeleteRoleDefinitionByRef
       parameters:
         - name: roleDefinition-id
           in: path
@@ -10852,7 +10852,7 @@ paths:
         - deviceManagement.termsAndConditions
       summary: Get ref of termsAndConditions from deviceManagement
       description: Navigation link to the terms and conditions that are assigned.
-      operationId: deviceManagement.termsAndConditions.acceptanceStatuses_GetRefTermsAndConditions
+      operationId: deviceManagement.termsAndConditions.acceptanceStatuses_GetTermsAndConditionsByRef
       parameters:
         - name: termsAndConditions-id
           in: path
@@ -10899,7 +10899,7 @@ paths:
         - deviceManagement.termsAndConditions
       summary: Update the ref of navigation property termsAndConditions in deviceManagement
       description: Navigation link to the terms and conditions that are assigned.
-      operationId: deviceManagement.termsAndConditions.acceptanceStatuses_SetRefTermsAndConditions
+      operationId: deviceManagement.termsAndConditions.acceptanceStatuses_SetTermsAndConditionsByRef
       parameters:
         - name: termsAndConditions-id
           in: path
@@ -10935,7 +10935,7 @@ paths:
         - deviceManagement.termsAndConditions
       summary: Delete ref of navigation property termsAndConditions for deviceManagement
       description: Navigation link to the terms and conditions that are assigned.
-      operationId: deviceManagement.termsAndConditions.acceptanceStatuses_DeleteRefTermsAndConditions
+      operationId: deviceManagement.termsAndConditions.acceptanceStatuses_DeleteTermsAndConditionsByRef
       parameters:
         - name: termsAndConditions-id
           in: path
@@ -11540,7 +11540,7 @@ paths:
         - deviceManagement.termsAndConditions
       summary: Get ref of termsAndConditions from deviceManagement
       description: Navigation link to the terms and conditions that are assigned.
-      operationId: deviceManagement.termsAndConditions.groupAssignments_GetRefTermsAndConditions
+      operationId: deviceManagement.termsAndConditions.groupAssignments_GetTermsAndConditionsByRef
       parameters:
         - name: termsAndConditions-id
           in: path
@@ -11587,7 +11587,7 @@ paths:
         - deviceManagement.termsAndConditions
       summary: Update the ref of navigation property termsAndConditions in deviceManagement
       description: Navigation link to the terms and conditions that are assigned.
-      operationId: deviceManagement.termsAndConditions.groupAssignments_SetRefTermsAndConditions
+      operationId: deviceManagement.termsAndConditions.groupAssignments_SetTermsAndConditionsByRef
       parameters:
         - name: termsAndConditions-id
           in: path
@@ -11623,7 +11623,7 @@ paths:
         - deviceManagement.termsAndConditions
       summary: Delete ref of navigation property termsAndConditions for deviceManagement
       description: Navigation link to the terms and conditions that are assigned.
-      operationId: deviceManagement.termsAndConditions.groupAssignments_DeleteRefTermsAndConditions
+      operationId: deviceManagement.termsAndConditions.groupAssignments_DeleteTermsAndConditionsByRef
       parameters:
         - name: termsAndConditions-id
           in: path

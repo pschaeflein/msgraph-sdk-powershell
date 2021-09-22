@@ -936,7 +936,7 @@ paths:
         - print.printer
       summary: Get ref of connectors from print
       description: The connectors that are associated with the printer.
-      operationId: print.printers_ListRefConnectors
+      operationId: print.printers_ListConnectorsByRef
       parameters:
         - name: printer-id
           in: path
@@ -1007,7 +1007,7 @@ paths:
         - print.printer
       summary: Create new navigation property ref to connectors for print
       description: The connectors that are associated with the printer.
-      operationId: print.printers_CreateRefConnectors
+      operationId: print.printers_CreateConnectorsByRef
       parameters:
         - name: printer-id
           in: path
@@ -1190,7 +1190,7 @@ paths:
       tags:
         - print.printer
       summary: Get ref of share from print
-      operationId: print.printers_GetRefShare
+      operationId: print.printers_GetShareByRef
       parameters:
         - name: printer-id
           in: path
@@ -1230,7 +1230,7 @@ paths:
       tags:
         - print.printer
       summary: Update the ref of navigation property share in print
-      operationId: print.printers_SetRefShare
+      operationId: print.printers_SetShareByRef
       parameters:
         - name: printer-id
           in: path
@@ -1258,7 +1258,7 @@ paths:
       tags:
         - print.printer
       summary: Delete ref of navigation property share for print
-      operationId: print.printers_DeleteRefShare
+      operationId: print.printers_DeleteShareByRef
       parameters:
         - name: printer-id
           in: path
@@ -1405,7 +1405,7 @@ paths:
         - print.printer
       summary: Get ref of shares from print
       description: 'The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.'
-      operationId: print.printers_ListRefShares
+      operationId: print.printers_ListSharesByRef
       parameters:
         - name: printer-id
           in: path
@@ -1482,7 +1482,7 @@ paths:
         - print.printer
       summary: Create new navigation property ref to shares for print
       description: 'The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.'
-      operationId: print.printers_CreateRefShares
+      operationId: print.printers_CreateSharesByRef
       parameters:
         - name: printer-id
           in: path
@@ -1831,7 +1831,7 @@ paths:
         - print.printer
       summary: Get ref of definition from print
       description: An abstract definition that will be used to create a printTask when triggered by a print event. Read-only.
-      operationId: print.printers.taskTriggers_GetRefDefinition
+      operationId: print.printers.taskTriggers_GetDefinitionByRef
       parameters:
         - name: printer-id
           in: path
@@ -1868,7 +1868,7 @@ paths:
         - print.printer
       summary: Update the ref of navigation property definition in print
       description: An abstract definition that will be used to create a printTask when triggered by a print event. Read-only.
-      operationId: print.printers.taskTriggers_SetRefDefinition
+      operationId: print.printers.taskTriggers_SetDefinitionByRef
       parameters:
         - name: printer-id
           in: path
@@ -1904,7 +1904,7 @@ paths:
         - print.printer
       summary: Delete ref of navigation property definition for print
       description: An abstract definition that will be used to create a printTask when triggered by a print event. Read-only.
-      operationId: print.printers.taskTriggers_DeleteRefDefinition
+      operationId: print.printers.taskTriggers_DeleteDefinitionByRef
       parameters:
         - name: printer-id
           in: path
@@ -2529,7 +2529,7 @@ paths:
         - print.printerShare
       summary: Get ref of allowedGroups from print
       description: The groups whose users have access to print using the printer.
-      operationId: print.printerShares_ListRefAllowedGroups
+      operationId: print.printerShares_ListAllowedGroupsByRef
       parameters:
         - name: printerShare-id
           in: path
@@ -2682,7 +2682,7 @@ paths:
         - print.printerShare
       summary: Create new navigation property ref to allowedGroups for print
       description: The groups whose users have access to print using the printer.
-      operationId: print.printerShares_CreateRefAllowedGroups
+      operationId: print.printerShares_CreateAllowedGroupsByRef
       parameters:
         - name: printerShare-id
           in: path
@@ -3145,7 +3145,7 @@ paths:
         - print.printerShare
       summary: Get ref of allowedUsers from print
       description: The users who have access to print using the printer.
-      operationId: print.printerShares_ListRefAllowedUsers
+      operationId: print.printerShares_ListAllowedUsersByRef
       parameters:
         - name: printerShare-id
           in: path
@@ -3350,7 +3350,7 @@ paths:
         - print.printerShare
       summary: Create new navigation property ref to allowedUsers for print
       description: The users who have access to print using the printer.
-      operationId: print.printerShares_CreateRefAllowedUsers
+      operationId: print.printerShares_CreateAllowedUsersByRef
       parameters:
         - name: printerShare-id
           in: path
@@ -3480,7 +3480,7 @@ paths:
         - print.printerShare
       summary: Get ref of printer from print
       description: The printer that this printer share is related to.
-      operationId: print.printerShares_GetRefPrinter
+      operationId: print.printerShares_GetPrinterByRef
       parameters:
         - name: printerShare-id
           in: path
@@ -3525,7 +3525,7 @@ paths:
         - print.printerShare
       summary: Update the ref of navigation property printer in print
       description: The printer that this printer share is related to.
-      operationId: print.printerShares_SetRefPrinter
+      operationId: print.printerShares_SetPrinterByRef
       parameters:
         - name: printerShare-id
           in: path
@@ -3554,7 +3554,7 @@ paths:
         - print.printerShare
       summary: Delete ref of navigation property printer for print
       description: The printer that this printer share is related to.
-      operationId: print.printerShares_DeleteRefPrinter
+      operationId: print.printerShares_DeletePrinterByRef
       parameters:
         - name: printerShare-id
           in: path
@@ -4773,7 +4773,7 @@ paths:
         - print.printerShare
       summary: Get ref of allowedGroups from print
       description: The groups whose users have access to print using the printer.
-      operationId: print.shares_ListRefAllowedGroups
+      operationId: print.shares_ListAllowedGroupsByRef
       parameters:
         - name: printerShare-id
           in: path
@@ -4926,7 +4926,7 @@ paths:
         - print.printerShare
       summary: Create new navigation property ref to allowedGroups for print
       description: The groups whose users have access to print using the printer.
-      operationId: print.shares_CreateRefAllowedGroups
+      operationId: print.shares_CreateAllowedGroupsByRef
       parameters:
         - name: printerShare-id
           in: path
@@ -5389,7 +5389,7 @@ paths:
         - print.printerShare
       summary: Get ref of allowedUsers from print
       description: The users who have access to print using the printer.
-      operationId: print.shares_ListRefAllowedUsers
+      operationId: print.shares_ListAllowedUsersByRef
       parameters:
         - name: printerShare-id
           in: path
@@ -5594,7 +5594,7 @@ paths:
         - print.printerShare
       summary: Create new navigation property ref to allowedUsers for print
       description: The users who have access to print using the printer.
-      operationId: print.shares_CreateRefAllowedUsers
+      operationId: print.shares_CreateAllowedUsersByRef
       parameters:
         - name: printerShare-id
           in: path
@@ -5724,7 +5724,7 @@ paths:
         - print.printerShare
       summary: Get ref of printer from print
       description: The printer that this printer share is related to.
-      operationId: print.shares_GetRefPrinter
+      operationId: print.shares_GetPrinterByRef
       parameters:
         - name: printerShare-id
           in: path
@@ -5769,7 +5769,7 @@ paths:
         - print.printerShare
       summary: Update the ref of navigation property printer in print
       description: The printer that this printer share is related to.
-      operationId: print.shares_SetRefPrinter
+      operationId: print.shares_SetPrinterByRef
       parameters:
         - name: printerShare-id
           in: path
@@ -5798,7 +5798,7 @@ paths:
         - print.printerShare
       summary: Delete ref of navigation property printer for print
       description: The printer that this printer share is related to.
-      operationId: print.shares_DeleteRefPrinter
+      operationId: print.shares_DeletePrinterByRef
       parameters:
         - name: printerShare-id
           in: path
@@ -6428,7 +6428,7 @@ paths:
         - print.printTaskDefinition
       summary: Get ref of definition from print
       description: The printTaskDefinition that was used to create this task. Read-only.
-      operationId: print.taskDefinitions.tasks_GetRefDefinition
+      operationId: print.taskDefinitions.tasks_GetDefinitionByRef
       parameters:
         - name: printTaskDefinition-id
           in: path
@@ -6465,7 +6465,7 @@ paths:
         - print.printTaskDefinition
       summary: Update the ref of navigation property definition in print
       description: The printTaskDefinition that was used to create this task. Read-only.
-      operationId: print.taskDefinitions.tasks_SetRefDefinition
+      operationId: print.taskDefinitions.tasks_SetDefinitionByRef
       parameters:
         - name: printTaskDefinition-id
           in: path
@@ -6501,7 +6501,7 @@ paths:
         - print.printTaskDefinition
       summary: Delete ref of navigation property definition for print
       description: The printTaskDefinition that was used to create this task. Read-only.
-      operationId: print.taskDefinitions.tasks_DeleteRefDefinition
+      operationId: print.taskDefinitions.tasks_DeleteDefinitionByRef
       parameters:
         - name: printTaskDefinition-id
           in: path
@@ -6599,7 +6599,7 @@ paths:
         - print.printTaskDefinition
       summary: Get ref of trigger from print
       description: The printTaskTrigger that triggered this task's execution. Read-only.
-      operationId: print.taskDefinitions.tasks_GetRefTrigger
+      operationId: print.taskDefinitions.tasks_GetTriggerByRef
       parameters:
         - name: printTaskDefinition-id
           in: path
@@ -6636,7 +6636,7 @@ paths:
         - print.printTaskDefinition
       summary: Update the ref of navigation property trigger in print
       description: The printTaskTrigger that triggered this task's execution. Read-only.
-      operationId: print.taskDefinitions.tasks_SetRefTrigger
+      operationId: print.taskDefinitions.tasks_SetTriggerByRef
       parameters:
         - name: printTaskDefinition-id
           in: path
@@ -6672,7 +6672,7 @@ paths:
         - print.printTaskDefinition
       summary: Delete ref of navigation property trigger for print
       description: The printTaskTrigger that triggered this task's execution. Read-only.
-      operationId: print.taskDefinitions.tasks_DeleteRefTrigger
+      operationId: print.taskDefinitions.tasks_DeleteTriggerByRef
       parameters:
         - name: printTaskDefinition-id
           in: path

@@ -7045,7 +7045,7 @@ paths:
         - planner.plannerRoster
       summary: Get ref of plans from planner
       description: Retrieves the plans contained by the plannerRoster.
-      operationId: planner.rosters_ListRefPlans
+      operationId: planner.rosters_ListPlansByRef
       parameters:
         - name: plannerRoster-id
           in: path
@@ -7112,7 +7112,7 @@ paths:
         - planner.plannerRoster
       summary: Create new navigation property ref to plans for planner
       description: Retrieves the plans contained by the plannerRoster.
-      operationId: planner.rosters_CreateRefPlans
+      operationId: planner.rosters_CreatePlansByRef
       parameters:
         - name: plannerRoster-id
           in: path
@@ -8350,7 +8350,7 @@ paths:
         - users.plannerUser
       summary: Get ref of favoritePlans from users
       description: Read-only. Nullable. Returns the plannerPlans that the user marked as favorites.
-      operationId: users.planner_ListRefFavoritePlans
+      operationId: users.planner_ListFavoritePlansByRef
       parameters:
         - name: user-id
           in: path
@@ -8417,7 +8417,7 @@ paths:
         - users.plannerUser
       summary: Create new navigation property ref to favoritePlans for users
       description: Read-only. Nullable. Returns the plannerPlans that the user marked as favorites.
-      operationId: users.planner_CreateRefFavoritePlans
+      operationId: users.planner_CreateFavoritePlansByRef
       parameters:
         - name: user-id
           in: path
@@ -11335,7 +11335,7 @@ paths:
         - users.plannerUser
       summary: Get ref of recentPlans from users
       description: Read-only. Nullable. Returns the plannerPlans that have been recently viewed by the user in apps that support recent plans.
-      operationId: users.planner_ListRefRecentPlans
+      operationId: users.planner_ListRecentPlansByRef
       parameters:
         - name: user-id
           in: path
@@ -11402,7 +11402,7 @@ paths:
         - users.plannerUser
       summary: Create new navigation property ref to recentPlans for users
       description: Read-only. Nullable. Returns the plannerPlans that have been recently viewed by the user in apps that support recent plans.
-      operationId: users.planner_CreateRefRecentPlans
+      operationId: users.planner_CreateRecentPlansByRef
       parameters:
         - name: user-id
           in: path
@@ -11542,7 +11542,7 @@ paths:
         - users.plannerUser
       summary: Get ref of rosterPlans from users
       description: Read-only. Nullable. Returns the plannerPlans contained by the plannerRosters the user is a member.
-      operationId: users.planner_ListRefRosterPlans
+      operationId: users.planner_ListRosterPlansByRef
       parameters:
         - name: user-id
           in: path
@@ -11609,7 +11609,7 @@ paths:
         - users.plannerUser
       summary: Create new navigation property ref to rosterPlans for users
       description: Read-only. Nullable. Returns the plannerPlans contained by the plannerRosters the user is a member.
-      operationId: users.planner_CreateRefRosterPlans
+      operationId: users.planner_CreateRosterPlansByRef
       parameters:
         - name: user-id
           in: path
