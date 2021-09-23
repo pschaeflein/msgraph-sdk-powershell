@@ -40,7 +40,7 @@ custom applications.
 
 Full details for all of the possible permissions and the access they authorize, including how to ensure
 that your application or script follows the best security pratice of using the least privilege necessary
-are found in the Microsoft Graph Permissions Reference documenation at https://docs.microsoft.com/en-us/graph/permissions-reference.
+are found in the Microsoft Graph Permissions Reference documentation at https://docs.microsoft.com/en-us/graph/permissions-reference.
 
 In order to search for the specified permissions, Find-MgGraphPermission uses Microsoft Graph itself
 to obtain the latest complete set of permissions; if it is not able to access Microsoft Graph, the command
